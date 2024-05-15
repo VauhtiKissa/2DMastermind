@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://cd0ucewskw06l"]
+
+[ext_resource type="Texture2D" uid="uid://dlqme34b1y556" path="res://sprites/Background.png" id="1_f23sa"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="2_ey6sc"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/ButtonPressed.png" id="3_3hseg"]
+[ext_resource type="PackedScene" uid="uid://prvg6lawgu2y" path="res://prefabs/tutorial/tutorial_row_color_picker.tscn" id="4_67gfo"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_ct2nf"]
+
+[node name="guess_row" type="Node2D"]
+
+[node name="color_picker" parent="." instance=ExtResource("4_67gfo")]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(256, 256)
+scale = Vector2(4, 4)
+texture = ExtResource("1_f23sa")
+
+[node name="buttons" type="Node2D" parent="."]
+position = Vector2(68, 208)
+
+[node name="TextureButton" type="TextureButton" parent="buttons"]
+offset_right = 96.0
+offset_bottom = 96.0
+disabled = true
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_ct2nf")
+texture_normal = ExtResource("2_ey6sc")
+texture_pressed = ExtResource("3_3hseg")
+
+[node name="TextureButton2" type="TextureButton" parent="buttons"]
+offset_left = 96.0
+offset_right = 192.0
+offset_bottom = 96.0
+disabled = true
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_ct2nf")
+texture_normal = ExtResource("2_ey6sc")
+texture_pressed = ExtResource("3_3hseg")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton3" type="TextureButton" parent="buttons"]
+offset_left = 192.0
+offset_right = 288.0
+offset_bottom = 96.0
+disabled = true
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_ct2nf")
+texture_normal = ExtResource("2_ey6sc")
+texture_pressed = ExtResource("3_3hseg")
+
+[node name="TextureButton4" type="TextureButton" parent="buttons"]
+offset_left = 288.0
+offset_right = 384.0
+offset_bottom = 96.0
+disabled = true
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_ct2nf")
+texture_normal = ExtResource("2_ey6sc")
+texture_pressed = ExtResource("3_3hseg")
+
+[node name="correct" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 208.0
+offset_right = 68.0
+offset_bottom = 304.0
+theme_override_font_sizes/font_size = 50
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="wrong_place" type="Label" parent="."]
+modulate = Color(1, 0, 0.0470588, 1)
+offset_left = 452.0
+offset_top = 208.0
+offset_right = 492.0
+offset_bottom = 304.0
+theme_override_font_sizes/font_size = 50
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1

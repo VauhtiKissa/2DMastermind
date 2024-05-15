@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6m08v103wgcg"]
+
+[ext_resource type="Texture2D" uid="uid://dta8n2c2b6ulh" path="res://sprites/icon.svg" id="1_410n0"]
+
+[node name="confetti_cannon" type="CPUParticles2D"]
+emitting = false
+amount = 48
+lifetime = 15.0
+one_shot = true
+texture = ExtResource("1_410n0")
+emission_shape = 4
+emission_points = PackedVector2Array()
+emission_colors = PackedColorArray()
+gravity = Vector2(0, 100)
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
+tangential_accel_min = -100.0
+tangential_accel_max = 100.0
+damping_min = 110.631
+damping_max = 110.631

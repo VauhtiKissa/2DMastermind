@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnd7xkcgjcrcm"]
+
+[ext_resource type="Script" path="res://code/tutorial.cs" id="1_h4gew"]
+[ext_resource type="PackedScene" uid="uid://f8r4pemisnxs" path="res://prefabs/tutorial/tutorial_cube.tscn" id="2_d4yyi"]
+[ext_resource type="PackedScene" uid="uid://cd0ucewskw06l" path="res://prefabs/tutorial/tutorial_guess_row.tscn" id="2_isms7"]
+
+[node name="tutorial" type="Node2D"]
+script = ExtResource("1_h4gew")
+
+[node name="text" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="guess_row" parent="." instance=ExtResource("2_isms7")]
+position = Vector2(180, 16)
+
+[node name="tutorial_cube" parent="." instance=ExtResource("2_d4yyi")]
+position = Vector2(-764, -128)

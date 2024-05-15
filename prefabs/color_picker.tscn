@@ -1,0 +1,140 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfliice1hm1nj"]
+
+[ext_resource type="Texture2D" uid="uid://dh1p16dgoxu0" path="res://sprites/Background2.png" id="1_2xa7x"]
+[ext_resource type="Script" path="res://code/Color_picker.cs" id="1_oggl2"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="2_nxkdc"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/ButtonPressed.png" id="3_81fic"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_43n2e"]
+
+[node name="color_picker" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_oggl2")
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(104, 192)
+scale = Vector2(1.625, 3)
+texture = ExtResource("1_2xa7x")
+
+[node name="buttons" type="Node2D" parent="."]
+position = Vector2(24, 24)
+
+[node name="TextureButton" type="TextureButton" parent="buttons"]
+offset_top = 8.0
+offset_right = 80.0
+offset_bottom = 88.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_43n2e")
+texture_normal = ExtResource("2_nxkdc")
+texture_pressed = ExtResource("3_81fic")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="buttons"]
+offset_left = 80.0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 88.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_43n2e")
+texture_normal = ExtResource("2_nxkdc")
+texture_pressed = ExtResource("3_81fic")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="buttons"]
+offset_top = 88.0
+offset_right = 80.0
+offset_bottom = 168.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_43n2e")
+texture_normal = ExtResource("2_nxkdc")
+texture_pressed = ExtResource("3_81fic")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton4" type="TextureButton" parent="buttons"]
+offset_left = 80.0
+offset_top = 88.0
+offset_right = 160.0
+offset_bottom = 168.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_43n2e")
+texture_normal = ExtResource("2_nxkdc")
+texture_pressed = ExtResource("3_81fic")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton5" type="TextureButton" parent="buttons"]
+offset_top = 168.0
+offset_right = 80.0
+offset_bottom = 248.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_43n2e")
+texture_normal = ExtResource("2_nxkdc")
+texture_pressed = ExtResource("3_81fic")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton6" type="TextureButton" parent="buttons"]
+offset_left = 80.0
+offset_top = 168.0
+offset_right = 160.0
+offset_bottom = 248.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_43n2e")
+texture_normal = ExtResource("2_nxkdc")
+texture_pressed = ExtResource("3_81fic")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton7" type="TextureButton" parent="buttons"]
+offset_top = 248.0
+offset_right = 80.0
+offset_bottom = 328.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_43n2e")
+texture_normal = ExtResource("2_nxkdc")
+texture_pressed = ExtResource("3_81fic")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton8" type="TextureButton" parent="buttons"]
+offset_left = 80.0
+offset_top = 248.0
+offset_right = 160.0
+offset_bottom = 328.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_43n2e")
+texture_normal = ExtResource("2_nxkdc")
+texture_pressed = ExtResource("3_81fic")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="done_button" type="TextureButton" parent="buttons"]
+offset_left = 176.0
+offset_top = 8.0
+offset_right = 184.0
+offset_bottom = 328.0
+texture_normal = ExtResource("2_nxkdc")
+texture_pressed = ExtResource("3_81fic")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="button_down" from="buttons/TextureButton" to="." method="pick_color" binds= [0]]
+[connection signal="button_down" from="buttons/TextureButton2" to="." method="pick_color" binds= [1]]
+[connection signal="button_down" from="buttons/TextureButton3" to="." method="pick_color" binds= [2]]
+[connection signal="button_down" from="buttons/TextureButton4" to="." method="pick_color" binds= [3]]
+[connection signal="button_down" from="buttons/TextureButton5" to="." method="pick_color" binds= [4]]
+[connection signal="button_down" from="buttons/TextureButton6" to="." method="pick_color" binds= [5]]
+[connection signal="button_down" from="buttons/TextureButton7" to="." method="pick_color" binds= [6]]
+[connection signal="button_down" from="buttons/TextureButton8" to="." method="pick_color" binds= [7]]
+[connection signal="button_down" from="buttons/done_button" to="." method="round_end_button_pressed"]

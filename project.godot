@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="2DMastermind"
+run/main_scene="res://prefabs/menu.tscn"
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
+config/icon="res://sprites/icon.svg"
+
+[audio]
+
+buses/default_bus_layout=""
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/stretch/mode="viewport"
+
+[dotnet]
+
+project/assembly_name="2DMastermind"
+
+[file_customization]
+
+folder_colors={
+"res://code/": "gray",
+"res://prefabs/": "green",
+"res://prefabs/tutorial/": "yellow",
+"res://sounds/": "purple",
+"res://sprites/": "red"
+}
