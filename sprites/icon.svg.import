@@ -17,7 +17,7 @@ dest_files=["res://.godot/imported/icon.svg-964d8c66fbd3bda40c44ca195472a8e1.cte
 
 compress/mode=0
 compress/high_quality=false
-compress/lossy_quality=0.7
+compress/lossy_quality=1.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

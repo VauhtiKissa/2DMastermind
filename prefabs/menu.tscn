@@ -22,13 +22,5 @@ offset_right = 704.0
 offset_bottom = 320.0
 text = "TUTORIAL"
 
-[node name="options" type="Button" parent="."]
-offset_left = 256.0
-offset_top = 352.0
-offset_right = 704.0
-offset_bottom = 448.0
-text = "OPTIONS"
-
 [connection signal="pressed" from="start" to="." method="play_pressed"]
 [connection signal="pressed" from="tutorial" to="." method="tutorial_pressed"]
-[connection signal="pressed" from="options" to="." method="options_pressed"]

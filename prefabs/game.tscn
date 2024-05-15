@@ -8,3 +8,6 @@
 position = Vector2(480, 270)
 
 [node name="game_coordinator" parent="." instance=ExtResource("1_obfu3")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
