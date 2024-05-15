@@ -31,4 +31,5 @@ public partial class Color_picker : Node2D
 		this.Position = new Vector2(504,64);
 	}
 
+
 }
