@@ -20,4 +20,8 @@ public partial class tutorial : Node2D
 	{
 		
 	}
+
+	public void change_page(){
+		GD.Print("testing testing");
+	}
 }

@@ -1,29 +1,32 @@
-[gd_scene load_steps=6 format=3 uid="uid://cd0ucewskw06l"]
+[gd_scene load_steps=7 format=3 uid="uid://cd0ucewskw06l"]
 
 [ext_resource type="Texture2D" uid="uid://dlqme34b1y556" path="res://sprites/Background.png" id="1_f23sa"]
+[ext_resource type="PackedScene" uid="uid://prvg6lawgu2y" path="res://prefabs/tutorial/tutorial_colors.tscn" id="1_kjfwh"]
+[ext_resource type="Script" path="res://code/tutorial_guess_row.cs" id="1_klq3v"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="2_ey6sc"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/ButtonPressed.png" id="3_3hseg"]
-[ext_resource type="PackedScene" uid="uid://prvg6lawgu2y" path="res://prefabs/tutorial/tutorial_row_color_picker.tscn" id="4_67gfo"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_ct2nf"]
 
 [node name="guess_row" type="Node2D"]
+position = Vector2(228, 132)
+script = ExtResource("1_klq3v")
 
-[node name="color_picker" parent="." instance=ExtResource("4_67gfo")]
+[node name="color_picker" parent="." instance=ExtResource("1_kjfwh")]
+position = Vector2(88, 128)
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(256, 256)
-scale = Vector2(4, 4)
+position = Vector2(258, 56)
+scale = Vector2(4.03125, 0.875)
 texture = ExtResource("1_f23sa")
 
 [node name="buttons" type="Node2D" parent="."]
-position = Vector2(68, 208)
+position = Vector2(68, 8)
 
 [node name="TextureButton" type="TextureButton" parent="buttons"]
 offset_right = 96.0
 offset_bottom = 96.0
-disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_ct2nf")
@@ -34,7 +37,6 @@ texture_pressed = ExtResource("3_3hseg")
 offset_left = 96.0
 offset_right = 192.0
 offset_bottom = 96.0
-disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_ct2nf")
@@ -46,7 +48,6 @@ metadata/_edit_use_anchors_ = true
 offset_left = 192.0
 offset_right = 288.0
 offset_bottom = 96.0
-disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_ct2nf")
@@ -57,7 +58,6 @@ texture_pressed = ExtResource("3_3hseg")
 offset_left = 288.0
 offset_right = 384.0
 offset_bottom = 96.0
-disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_ct2nf")
@@ -66,9 +66,9 @@ texture_pressed = ExtResource("3_3hseg")
 
 [node name="correct" type="Label" parent="."]
 offset_left = 28.0
-offset_top = 208.0
+offset_top = 8.0
 offset_right = 68.0
-offset_bottom = 304.0
+offset_bottom = 104.0
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
@@ -77,10 +77,68 @@ vertical_alignment = 1
 [node name="wrong_place" type="Label" parent="."]
 modulate = Color(1, 0, 0.0470588, 1)
 offset_left = 452.0
-offset_top = 208.0
+offset_top = 8.0
 offset_right = 492.0
-offset_bottom = 304.0
+offset_bottom = 104.0
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="texts" type="Node2D" parent="."]
+
+[node name="Label5" type="Label" parent="texts"]
+offset_left = 36.0
+offset_top = -84.0
+offset_right = 492.0
+offset_bottom = -12.0
+text = "a normal game of mastermind has a color combination of four colors. that you need to decode."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="texts"]
+offset_left = -144.0
+offset_top = 192.0
+offset_right = 72.0
+offset_bottom = 228.0
+text = "You can pick from 8 colors."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="texts"]
+offset_left = -204.0
+offset_top = 12.0
+offset_bottom = 96.0
+text = "this number shows how many colors you guessed right."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="texts"]
+offset_left = 528.0
+offset_top = 12.0
+offset_right = 732.0
+offset_bottom = 96.0
+text = "this number shows how many colors you guessed that were in the wrong place."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+offset_left = 636.0
+offset_top = 108.0
+offset_right = 721.0
+offset_bottom = 312.0
+text = "next page"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 444.0
+offset_top = 156.0
+offset_right = 552.0
+offset_bottom = 264.0
+text = "check guess"
+
+[connection signal="pressed" from="buttons/TextureButton" to="." method="button_pressed" binds= [0]]
+[connection signal="pressed" from="buttons/TextureButton2" to="." method="button_pressed" binds= [1]]
+[connection signal="pressed" from="buttons/TextureButton3" to="." method="button_pressed" binds= [2]]
+[connection signal="pressed" from="buttons/TextureButton4" to="." method="button_pressed" binds= [3]]
+[connection signal="pressed" from="Button" to="." method="page_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="round_end"]

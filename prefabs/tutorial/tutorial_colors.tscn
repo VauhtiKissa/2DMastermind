@@ -1,0 +1,127 @@
+[gd_scene load_steps=5 format=3 uid="uid://prvg6lawgu2y"]
+
+[ext_resource type="Script" path="res://code/tutorial_colors.cs" id="1_g5m2j"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="1_ro2j3"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/ButtonPressed.png" id="2_e74pj"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_fuikl"]
+
+[node name="tutorial_color_picker" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_g5m2j")
+
+[node name="buttons" type="Node2D" parent="."]
+position = Vector2(24, 24)
+
+[node name="TextureButton" type="TextureButton" parent="buttons"]
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 56.0
+offset_bottom = 56.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("1_ro2j3")
+texture_pressed = ExtResource("2_e74pj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="buttons"]
+offset_left = 64.0
+offset_top = -24.0
+offset_right = 144.0
+offset_bottom = 56.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("1_ro2j3")
+texture_pressed = ExtResource("2_e74pj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="buttons"]
+offset_left = 152.0
+offset_top = -24.0
+offset_right = 232.0
+offset_bottom = 56.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("1_ro2j3")
+texture_pressed = ExtResource("2_e74pj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton4" type="TextureButton" parent="buttons"]
+offset_left = 240.0
+offset_top = -24.0
+offset_right = 320.0
+offset_bottom = 56.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("1_ro2j3")
+texture_pressed = ExtResource("2_e74pj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton5" type="TextureButton" parent="buttons"]
+offset_left = -24.0
+offset_top = 64.0
+offset_right = 56.0
+offset_bottom = 144.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("1_ro2j3")
+texture_pressed = ExtResource("2_e74pj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton6" type="TextureButton" parent="buttons"]
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 144.0
+offset_bottom = 144.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("1_ro2j3")
+texture_pressed = ExtResource("2_e74pj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton7" type="TextureButton" parent="buttons"]
+offset_left = 152.0
+offset_top = 64.0
+offset_right = 232.0
+offset_bottom = 144.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("1_ro2j3")
+texture_pressed = ExtResource("2_e74pj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton8" type="TextureButton" parent="buttons"]
+offset_left = 240.0
+offset_top = 64.0
+offset_right = 320.0
+offset_bottom = 144.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("1_ro2j3")
+texture_pressed = ExtResource("2_e74pj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="buttons/TextureButton" to="." method="pick_color" binds= [0]]
+[connection signal="pressed" from="buttons/TextureButton2" to="." method="pick_color" binds= [1]]
+[connection signal="pressed" from="buttons/TextureButton3" to="." method="pick_color" binds= [2]]
+[connection signal="pressed" from="buttons/TextureButton4" to="." method="pick_color" binds= [3]]
+[connection signal="pressed" from="buttons/TextureButton5" to="." method="pick_color" binds= [4]]
+[connection signal="pressed" from="buttons/TextureButton6" to="." method="pick_color" binds= [5]]
+[connection signal="pressed" from="buttons/TextureButton7" to="." method="pick_color" binds= [6]]
+[connection signal="pressed" from="buttons/TextureButton8" to="." method="pick_color" binds= [7]]

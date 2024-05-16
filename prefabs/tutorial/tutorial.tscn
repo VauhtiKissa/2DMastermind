@@ -7,12 +7,8 @@
 [node name="tutorial" type="Node2D"]
 script = ExtResource("1_h4gew")
 
-[node name="text" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-
 [node name="guess_row" parent="." instance=ExtResource("2_isms7")]
-position = Vector2(180, 16)
+position = Vector2(228, 148)
 
 [node name="tutorial_cube" parent="." instance=ExtResource("2_d4yyi")]
-position = Vector2(-764, -128)
+position = Vector2(-1092, 0)

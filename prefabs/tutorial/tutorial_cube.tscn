@@ -374,20 +374,3 @@ theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[connection signal="pressed" from="buttons/TextureButton" to="." method="button_pressed" binds= [0]]
-[connection signal="pressed" from="buttons/TextureButton2" to="." method="button_pressed" binds= [1]]
-[connection signal="button_down" from="buttons/TextureButton3" to="." method="button_pressed" binds= [2]]
-[connection signal="button_down" from="buttons/TextureButton4" to="." method="button_pressed" binds= [3]]
-[connection signal="button_down" from="buttons/TextureButton5" to="." method="button_pressed" binds= [4]]
-[connection signal="button_down" from="buttons/TextureButton6" to="." method="button_pressed" binds= [5]]
-[connection signal="button_down" from="buttons/TextureButton7" to="." method="button_pressed" binds= [6]]
-[connection signal="button_down" from="buttons/TextureButton8" to="." method="button_pressed" binds= [7]]
-[connection signal="button_down" from="buttons/TextureButton9" to="." method="button_pressed" binds= [8]]
-[connection signal="button_down" from="buttons/TextureButton10" to="." method="button_pressed" binds= [9]]
-[connection signal="button_down" from="buttons/TextureButton11" to="." method="button_pressed" binds= [10]]
-[connection signal="button_down" from="buttons/TextureButton12" to="." method="button_pressed" binds= [11]]
-[connection signal="button_down" from="buttons/TextureButton13" to="." method="button_pressed" binds= [12]]
-[connection signal="button_down" from="buttons/TextureButton14" to="." method="button_pressed" binds= [13]]
-[connection signal="button_down" from="buttons/TextureButton15" to="." method="button_pressed" binds= [14]]
-[connection signal="button_down" from="buttons/TextureButton16" to="." method="button_pressed" binds= [15]]
