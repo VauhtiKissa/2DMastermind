@@ -38,7 +38,7 @@ public partial class Guess_cube : Node2D
 
 	public void round_end(){
 
-		// fort checking victory condition
+		// for checking victory condition
 		int corrects = 0;
 
 		for (int x = 0; x < 8; x++)
