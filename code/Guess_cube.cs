@@ -13,8 +13,6 @@ public partial class Guess_cube : Node2D
 	// Ordered rows then colums
 	private Node correct_answer_numbers;
 	private Node wrong_place_numbers;
-
-
  
 	public override void _Ready()
 	{

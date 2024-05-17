@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://code/Guess_cube.cs" id="1_0jmdb"]
 [ext_resource type="PackedScene" uid="uid://bfliice1hm1nj" path="res://prefabs/color_picker.tscn" id="2_qwtfa"]
-[ext_resource type="Texture2D" uid="uid://dlqme34b1y556" path="res://sprites/Background.png" id="3_hy75q"]
+[ext_resource type="Texture2D" uid="uid://bs3a8hp3pkalb" path="res://sprites/cube_background.png" id="3_36wu3"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="4_djmtw"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/ButtonPressed.png" id="5_vfyh0"]
 
@@ -14,13 +14,12 @@ script = ExtResource("1_0jmdb")
 
 [node name="color_picker" parent="." instance=ExtResource("2_qwtfa")]
 texture_filter = 0
-position = Vector2(304, 68)
+position = Vector2(508, 32)
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(256, 256)
-scale = Vector2(4, 4)
-texture = ExtResource("3_hy75q")
+texture = ExtResource("3_36wu3")
 
 [node name="buttons" type="Node2D" parent="."]
 position = Vector2(64, 64)
