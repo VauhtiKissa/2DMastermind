@@ -36,5 +36,6 @@ folder_colors={
 "res://prefabs/": "green",
 "res://prefabs/tutorial/": "yellow",
 "res://sounds/": "purple",
-"res://sprites/": "red"
+"res://sprites/": "red",
+"res://sprites/button_sprites/": "orange"
 }

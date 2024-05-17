@@ -13,7 +13,7 @@ offset_left = 256.0
 offset_top = 96.0
 offset_right = 704.0
 offset_bottom = 192.0
-text = "START"
+text = "PLAY"
 
 [node name="tutorial" type="Button" parent="."]
 offset_left = 256.0

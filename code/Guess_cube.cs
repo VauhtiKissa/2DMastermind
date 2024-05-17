@@ -25,15 +25,16 @@ public partial class Guess_cube : Node2D
 		correct_answer_numbers = GetChild(3);
 		wrong_place_numbers = GetChild(4);
 
-		for (int i = 0 ; i < buttons.GetChildCount()-1; i++){
-			((TextureButton)buttons.GetChild(i)).Modulate = Color_values.Colors[0];
+		for (int i = 0 ; i < buttons.GetChildCount(); i++){
+			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[0]);
+			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[0]);
 		}
 	}
 
 	public void button_pressed(int number){
 		current_values[number] = current_color;
-		// Colors the button
-		((TextureButton)buttons.GetChild(number)).Modulate = Color_values.Colors[(int)current_color];
+		((TextureButton)buttons.GetChild(number)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[(int)current_color]);
+		((TextureButton)buttons.GetChild(number)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[(int)current_color]);
 	}
 
 	public void round_end(){

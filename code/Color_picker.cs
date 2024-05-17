@@ -9,7 +9,8 @@ public partial class Color_picker : Node2D
 	{
 		buttons = GetChild(1);
 		for (int i = 0 ; i < buttons.GetChildCount()-1; i++){
-			((TextureButton)buttons.GetChild(i)).Modulate = Color_values.Colors[i];
+			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[i]);
+			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[i]);
 		}
 		parent = (Guess_cube)GetParent();
 	}
