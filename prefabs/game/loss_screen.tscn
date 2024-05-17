@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://drgfoluvb1m83"]
+
+[ext_resource type="Script" path="res://code/loss_screen.cs" id="1_82uua"]
+[ext_resource type="Texture2D" uid="uid://c2fqy0ygoebwi" path="res://sprites/loss_background.png" id="1_atf01"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_82uua")
+
+[node name="LossBackground" type="Sprite2D" parent="."]
+position = Vector2(512, 256)
+texture = ExtResource("1_atf01")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 384.0
+offset_top = 96.0
+offset_right = 469.0
+offset_bottom = 119.0
+scale = Vector2(3, 3)
+text = "YOU LOST!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 392.0
+offset_top = 320.0
+offset_right = 632.0
+offset_bottom = 384.0
+text = "Back to menu"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 392.0
+offset_top = 200.0
+offset_right = 632.0
+offset_bottom = 264.0
+text = "Try again"
+
+[connection signal="pressed" from="Button" to="." method="back_to_menu"]
+[connection signal="pressed" from="Button2" to="." method="restart"]
