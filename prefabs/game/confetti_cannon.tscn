@@ -3,18 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://dta8n2c2b6ulh" path="res://sprites/icon.svg" id="1_410n0"]
 
 [node name="confetti_cannon" type="CPUParticles2D"]
+position = Vector2(480, -40)
 emitting = false
-amount = 48
-lifetime = 15.0
-one_shot = true
+amount = 75
+lifetime = 2.5
 texture = ExtResource("1_410n0")
-emission_shape = 4
-emission_points = PackedVector2Array()
-emission_colors = PackedColorArray()
-gravity = Vector2(0, 100)
+emission_shape = 3
+emission_rect_extents = Vector2(600, 1)
+gravity = Vector2(0, 245)
+initial_velocity_max = 100.0
 angular_velocity_min = -50.0
 angular_velocity_max = 50.0
-tangential_accel_min = -100.0
-tangential_accel_max = 100.0
-damping_min = 110.631
-damping_max = 110.631
+scale_amount_min = 0.25
+scale_amount_max = 0.5
