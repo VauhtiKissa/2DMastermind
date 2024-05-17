@@ -1,45 +1,48 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-
+using System.Linq;
+using System.Numerics;
 
 public partial class tutorial_guess_row : Node2D
 {
 	public GameColors current_color;
 	private GameColors[] current_values;
-
 	private GameColors[] correct_values;
-
+	private Node color_picker;
 	private Node buttons;
-	private Node correct_number;
+	// Ordered rows then colums
+	private Node correct_answer_number;
 	private Node wrong_place_number;
-
-
+ 
 	public override void _Ready()
 	{
 		current_values = new GameColors[4];
 
-		buttons = GetChild(2);
-		correct_number = GetChild(3);
-		wrong_place_number = GetChild(4);
+		color_picker = GetChild(0);
+		buttons = GetChild(1);
+		correct_answer_number = GetChild(2);
+		wrong_place_number = GetChild(3);
 
 		for (int i = 0 ; i < buttons.GetChildCount(); i++){
-			((TextureButton)buttons.GetChild(i)).Modulate = Color_values.Colors[0];
+			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[0]);
+			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[0]);
 		}
 
 		correct_values = new GameColors[4];
-		for (int i = 0 ; i < 4 ; i++){
+		for (int i = 0 ; i < correct_values.Length ; i++){
 			correct_values[i] = (GameColors)GD.RandRange(0,7);
 		}
 	}
 
 	public void button_pressed(int number){
-
 		current_values[number] = current_color;
-		((TextureButton)buttons.GetChild(number)).Modulate = Color_values.Colors[(int)current_color];
+		((TextureButton)buttons.GetChild(number)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[(int)current_color]);
+		((TextureButton)buttons.GetChild(number)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[(int)current_color]);
 	}
 
 	public void round_end(){
+
 		int correct = 0; 
 		int wrong_position = 0;
 
@@ -61,7 +64,7 @@ public partial class tutorial_guess_row : Node2D
 			}
 		}
 
-		((Label)GetChild(3)).Text = correct.ToString();
+		((Label)correct_answer_number).Text = correct.ToString();
 
 		for (int i = 0; i < input_colors.Count; i++)
 		{
@@ -73,6 +76,8 @@ public partial class tutorial_guess_row : Node2D
 				}
 			}
 		}
+
 		((Label)wrong_place_number).Text = wrong_position.ToString();
+
 	}
 }

@@ -10,7 +10,7 @@ public partial class menu : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		normal_game = ResourceLoader.Load<PackedScene>("res://prefabs/game.tscn").Instantiate();
+		normal_game = ResourceLoader.Load<PackedScene>("res://prefabs/game/game.tscn").Instantiate();
 		tutorial_game = ResourceLoader.Load<PackedScene>("res://prefabs/tutorial/tutorial.tscn").Instantiate();
 	}
 

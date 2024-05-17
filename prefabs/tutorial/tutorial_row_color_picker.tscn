@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://prvg6lawgu2y"]
 
-[ext_resource type="Script" path="res://code/tutorial_colors.cs" id="1_g5m2j"]
+[ext_resource type="Script" path="res://code/tutorial/tutorial_row_color_picker.cs" id="1_58c2y"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="1_ro2j3"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/ButtonPressed.png" id="2_e74pj"]
 
@@ -8,7 +8,7 @@
 
 [node name="tutorial_color_picker" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_g5m2j")
+script = ExtResource("1_58c2y")
 
 [node name="buttons" type="Node2D" parent="."]
 position = Vector2(24, 24)

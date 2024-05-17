@@ -1,24 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://f8r4pemisnxs"]
+[gd_scene load_steps=7 format=3 uid="uid://dmp7lrp2l6qjy"]
 
-[ext_resource type="Texture2D" uid="uid://dlqme34b1y556" path="res://sprites/Background.png" id="2_g1fbq"]
-[ext_resource type="PackedScene" uid="uid://c7b12spfya211" path="res://prefabs/tutorial/tutorial_color_picker.tscn" id="2_hptan"]
-[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="3_8c1ja"]
-[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/ButtonPressed.png" id="4_uh4tp"]
+[ext_resource type="Script" path="res://code/Guess_cube.cs" id="1_0jmdb"]
+[ext_resource type="PackedScene" uid="uid://bfliice1hm1nj" path="res://prefabs/game/color_picker.tscn" id="2_qwtfa"]
+[ext_resource type="Texture2D" uid="uid://bs3a8hp3pkalb" path="res://sprites/cube_background.png" id="3_36wu3"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="4_djmtw"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/ButtonPressed.png" id="5_vfyh0"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_idses"]
 
-[node name="tutorial_cube" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 texture_filter = 1
+script = ExtResource("1_0jmdb")
 
-[node name="color_picker" parent="." instance=ExtResource("2_hptan")]
-position = Vector2(304, 64)
-script = null
+[node name="color_picker" parent="." instance=ExtResource("2_qwtfa")]
+texture_filter = 0
+position = Vector2(508, 32)
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(256, 256)
-scale = Vector2(4, 4)
-texture = ExtResource("2_g1fbq")
+texture = ExtResource("3_36wu3")
 
 [node name="buttons" type="Node2D" parent="."]
 position = Vector2(64, 64)
@@ -30,8 +31,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton2" type="TextureButton" parent="buttons"]
 offset_left = 96.0
@@ -41,8 +42,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureButton3" type="TextureButton" parent="buttons"]
@@ -53,8 +54,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton4" type="TextureButton" parent="buttons"]
 offset_left = 288.0
@@ -64,8 +65,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton5" type="TextureButton" parent="buttons"]
 offset_top = 96.0
@@ -75,8 +76,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton6" type="TextureButton" parent="buttons"]
 offset_left = 96.0
@@ -87,8 +88,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton7" type="TextureButton" parent="buttons"]
 offset_left = 192.0
@@ -99,8 +100,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton8" type="TextureButton" parent="buttons"]
 offset_left = 288.0
@@ -111,8 +112,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton9" type="TextureButton" parent="buttons"]
 offset_top = 192.0
@@ -122,8 +123,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton10" type="TextureButton" parent="buttons"]
 offset_left = 96.0
@@ -134,8 +135,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton11" type="TextureButton" parent="buttons"]
 offset_left = 192.0
@@ -146,8 +147,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton12" type="TextureButton" parent="buttons"]
 offset_left = 288.0
@@ -158,8 +159,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton13" type="TextureButton" parent="buttons"]
 offset_top = 288.0
@@ -169,8 +170,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton14" type="TextureButton" parent="buttons"]
 offset_left = 96.0
@@ -181,8 +182,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton15" type="TextureButton" parent="buttons"]
 offset_left = 192.0
@@ -193,8 +194,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="TextureButton16" type="TextureButton" parent="buttons"]
 offset_left = 288.0
@@ -205,8 +206,8 @@ disabled = true
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_idses")
-texture_normal = ExtResource("3_8c1ja")
-texture_pressed = ExtResource("4_uh4tp")
+texture_normal = ExtResource("4_djmtw")
+texture_pressed = ExtResource("5_vfyh0")
 
 [node name="correct_answer_numbers" type="Node2D" parent="."]
 texture_filter = 1
@@ -374,3 +375,20 @@ theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="button_down" from="buttons/TextureButton" to="." method="button_pressed" binds= [0]]
+[connection signal="button_down" from="buttons/TextureButton2" to="." method="button_pressed" binds= [1]]
+[connection signal="button_down" from="buttons/TextureButton3" to="." method="button_pressed" binds= [2]]
+[connection signal="button_down" from="buttons/TextureButton4" to="." method="button_pressed" binds= [3]]
+[connection signal="button_down" from="buttons/TextureButton5" to="." method="button_pressed" binds= [4]]
+[connection signal="button_down" from="buttons/TextureButton6" to="." method="button_pressed" binds= [5]]
+[connection signal="button_down" from="buttons/TextureButton7" to="." method="button_pressed" binds= [6]]
+[connection signal="button_down" from="buttons/TextureButton8" to="." method="button_pressed" binds= [7]]
+[connection signal="button_down" from="buttons/TextureButton9" to="." method="button_pressed" binds= [8]]
+[connection signal="button_down" from="buttons/TextureButton10" to="." method="button_pressed" binds= [9]]
+[connection signal="button_down" from="buttons/TextureButton11" to="." method="button_pressed" binds= [10]]
+[connection signal="button_down" from="buttons/TextureButton12" to="." method="button_pressed" binds= [11]]
+[connection signal="button_down" from="buttons/TextureButton13" to="." method="button_pressed" binds= [12]]
+[connection signal="button_down" from="buttons/TextureButton14" to="." method="button_pressed" binds= [13]]
+[connection signal="button_down" from="buttons/TextureButton15" to="." method="button_pressed" binds= [14]]
+[connection signal="button_down" from="buttons/TextureButton16" to="." method="button_pressed" binds= [15]]

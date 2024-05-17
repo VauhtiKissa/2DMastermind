@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://csghcuy8h8yn3"]
 
-[ext_resource type="PackedScene" uid="uid://d0bfuitfo4vlu" path="res://prefabs/game_coordinator.tscn" id="1_obfu3"]
+[ext_resource type="PackedScene" uid="uid://d0bfuitfo4vlu" path="res://prefabs/game/game_coordinator.tscn" id="1_obfu3"]
 
 [node name="game" type="Node2D"]
 
@@ -8,6 +8,3 @@
 position = Vector2(480, 270)
 
 [node name="game_coordinator" parent="." instance=ExtResource("1_obfu3")]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-autoplay = true

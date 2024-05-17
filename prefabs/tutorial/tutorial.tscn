@@ -1,14 +1,32 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnd7xkcgjcrcm"]
 
-[ext_resource type="Script" path="res://code/tutorial.cs" id="1_h4gew"]
-[ext_resource type="PackedScene" uid="uid://f8r4pemisnxs" path="res://prefabs/tutorial/tutorial_cube.tscn" id="2_d4yyi"]
+[ext_resource type="Script" path="res://code/tutorial/tutorial.cs" id="1_h4gew"]
 [ext_resource type="PackedScene" uid="uid://cd0ucewskw06l" path="res://prefabs/tutorial/tutorial_guess_row.tscn" id="2_isms7"]
+[ext_resource type="PackedScene" uid="uid://bc0ml7noxam2a" path="res://prefabs/tutorial/tutorial_guess_cube.tscn" id="3_y3y48"]
 
 [node name="tutorial" type="Node2D"]
+texture_filter = 3
 script = ExtResource("1_h4gew")
 
 [node name="guess_row" parent="." instance=ExtResource("2_isms7")]
-position = Vector2(228, 148)
+position = Vector2(320, 159)
 
-[node name="tutorial_cube" parent="." instance=ExtResource("2_d4yyi")]
-position = Vector2(-1092, 0)
+[node name="Node2D" parent="." instance=ExtResource("3_y3y48")]
+position = Vector2(-684, 128)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 836.0
+offset_top = 320.0
+offset_right = 952.0
+offset_bottom = 372.0
+text = "Next page"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 836.0
+offset_top = 376.0
+offset_right = 952.0
+offset_bottom = 428.0
+text = "Back to menu"
+
+[connection signal="pressed" from="Button" to="." method="change_page"]
+[connection signal="pressed" from="Button2" to="." method="back_to_menu"]
