@@ -7,7 +7,7 @@ public partial class tutorial_color_picker : Node2D
 	private Node buttons;
 	public override void _Ready()
 	{
-		buttons = GetChild(0);
+		buttons = GetChild(1);
 		for (int i = 0 ; i < buttons.GetChildCount()-1; i++){
 			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[i]);
 			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[i]);
