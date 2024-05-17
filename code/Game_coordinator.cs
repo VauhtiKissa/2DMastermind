@@ -10,12 +10,8 @@ public partial class Game_coordinator : Node2D
 	public static GameColors[] guessed_colors;
 	private Guess_cube[] cubes;
 
-	private CpuParticles2D confetti_cannon;
-
-
 	public override void _Ready()
 	{
-		confetti_cannon = (CpuParticles2D)GetChild(1);
 		cubes = new Guess_cube[8];
 		for (int i = 0; i < GetChild(0).GetChildren().Count(); i++)
 		{
@@ -42,6 +38,7 @@ public partial class Game_coordinator : Node2D
 	}
 
 	public void victory(){
-		confetti_cannon.Emitting = true;
+		AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/confetti_cannon.tscn").Instantiate());
+		GD.Print("cxonfetti?");
 	}
 }
