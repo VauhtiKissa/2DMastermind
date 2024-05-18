@@ -18,6 +18,6 @@ public partial class loss_screen : Node2D
 		music_box.restart_sound_level();
 
 		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/game.tscn").Instantiate());
-		GetParent().QueueFree();
+		GetParent().GetParent().QueueFree();
 	}
 }
