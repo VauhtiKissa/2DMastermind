@@ -46,9 +46,6 @@ public partial class tutorial_guess_cube : Node2D
 
 	public void round_end(){
 
-		// for checking victory condition
-		int corrects = 0;
-
 		for (int x = 0; x < 8; x++)
 		{
 			
@@ -58,7 +55,7 @@ public partial class tutorial_guess_cube : Node2D
 
 			List<GameColors> correct_colors = new List<GameColors>();
 			List<GameColors> input_colors = new List<GameColors>();
-		
+
 			for (int i = 0; i < 4; i++)
 			{
 				correct_colors.Add(correct_values[correct_answer_indexer(x,i)]);
@@ -89,13 +86,6 @@ public partial class tutorial_guess_cube : Node2D
 
 			((Label)wrong_place_numbers.GetChild(x)).Text = wrong_position.ToString();
 			
-
-			// VICTORYT CHECKER
-			corrects += correct;
-			if(corrects == 32){
-				((Game_coordinator)GetNode("../..")).victory();
-			}
-
 		}
 	}
 

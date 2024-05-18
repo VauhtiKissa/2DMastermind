@@ -46,14 +46,12 @@ public partial class Guess_cube : Node2D
 		for (int x = 0; x < 8; x++)
 		{
 			
-
 			int correct = 0; 
 			int wrong_position = 0;
 
 			List<GameColors> correct_colors = new List<GameColors>();
 			List<GameColors> input_colors = new List<GameColors>();
 		
-			// checks right answers
 			for (int i = 0; i < 4; i++)
 			{
 				correct_colors.Add(Game_coordinator.correct_answer[correct_answer_indexer(x,i)]);
@@ -71,7 +69,6 @@ public partial class Guess_cube : Node2D
 
 			((Label)correct_answer_numbers.GetChild(x)).Text = correct.ToString();
 
-			// checks wrong position answers
 			for (int i = 0; i < input_colors.Count; i++)
 			{
 				for (int e = 0; e < correct_colors.Count; e++){
@@ -81,8 +78,6 @@ public partial class Guess_cube : Node2D
 						break;
 					}
 				}
-
-
 			}
 			((Label)wrong_place_numbers.GetChild(x)).Text = wrong_position.ToString();
 			
