@@ -46,6 +46,7 @@ public partial class Guess_cube : Node2D
 		for (int x = 0; x < 8; x++)
 		{
 			
+
 			int correct = 0; 
 			int wrong_position = 0;
 
@@ -79,6 +80,7 @@ public partial class Guess_cube : Node2D
 					}
 				}
 			}
+
 			((Label)wrong_place_numbers.GetChild(x)).Text = wrong_position.ToString();
 			
 			for (int i = 0; i < 16; i++)
@@ -87,13 +89,14 @@ public partial class Guess_cube : Node2D
 			}
 
 			corrects += correct;
+
 			if(corrects == 32){
 				((Game_coordinator)GetNode("../..")).victory();
 			}
 		}
-	if(corrects != 32){
-		((Game_coordinator)GetNode("../..")).start_round();
-	}
+		if(corrects != 32){
+			((Game_coordinator)GetNode("../..")).start_round();
+		}
 	}
 
 	private int correct_answer_indexer(int index, int internal_index){
