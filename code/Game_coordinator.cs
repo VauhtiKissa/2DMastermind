@@ -10,11 +10,8 @@ public partial class Game_coordinator : Node2D
 	public static GameColors[] guessed_colors;
 	private Guess_cube[] cubes;
 
-	private music_player music_box;
-
 	public override void _Ready()
 	{
-		music_box = (music_player)GetChild(1);
 		cubes = new Guess_cube[8];
 		for (int i = 0; i < GetChild(0).GetChildren().Count(); i++)
 		{
@@ -34,13 +31,13 @@ public partial class Game_coordinator : Node2D
 	public void start_round(){
 		if(round_number < 8){
 
-			music_box.round_changed(round_number);
+        	music_player music_box = (music_player)GetTree().Root.GetChild(0);
+			music_box.round_up(round_number);
 
 			cubes[round_number].activate();
 			round_number += 1;
 		}else{
 			AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/loss_screen.tscn").Instantiate());
-			GD.Print("you lost womp womp");
 		}
 	}
 

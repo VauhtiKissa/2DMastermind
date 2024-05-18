@@ -1,12 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0bfuitfo4vlu"]
+[gd_scene load_steps=3 format=3 uid="uid://d0bfuitfo4vlu"]
 
 [ext_resource type="Script" path="res://code/Game_coordinator.cs" id="1_m2ipn"]
 [ext_resource type="PackedScene" uid="uid://bjlkni4jxtcrw" path="res://prefabs/game/cube_positioner.tscn" id="2_4sait"]
-[ext_resource type="PackedScene" uid="uid://bxm8ue4tipotl" path="res://prefabs/game/music_player.tscn" id="3_daqk1"]
 
 [node name="game_coordinator" type="Node2D"]
 script = ExtResource("1_m2ipn")
 
 [node name="cube_positioner" parent="." instance=ExtResource("2_4sait")]
-
-[node name="music_player" parent="." instance=ExtResource("3_daqk1")]

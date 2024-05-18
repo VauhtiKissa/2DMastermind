@@ -21,7 +21,7 @@ buses/default_bus_layout=""
 
 [autoload]
 
-MusicPlayer="*res://code/music_player.cs"
+MusicPlayer="*res://prefabs/game/music_player.tscn"
 
 [display]
 

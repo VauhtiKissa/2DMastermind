@@ -18,6 +18,10 @@ public partial class menu : Node2D
 	{
 		normal_game = ResourceLoader.Load<PackedScene>("res://prefabs/game/game.tscn").Instantiate();
 		tutorial_game = ResourceLoader.Load<PackedScene>("res://prefabs/tutorial/tutorial.tscn").Instantiate();
+
+		// restarts sound when getting back into menu
+		music_player music_box = (music_player)GetTree().Root.GetChild(0);
+		music_box.restart_sound_level();
 	}
 
 	public override void _Process(double delta)

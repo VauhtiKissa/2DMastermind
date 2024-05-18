@@ -16,7 +16,14 @@ public partial class music_player : Node
 		}
 	}
 
-	public void round_changed(int number){
+	public void round_up(int number){
 		((Godot.AudioStreamPlayer)sources[number]).VolumeDb = 0;
+	}
+
+	public void restart_sound_level(){
+		for (int i = 1; i < sources.Length; i++)
+		{
+					((Godot.AudioStreamPlayer)sources[i]).VolumeDb = -80;
+		}
 	}
 }
