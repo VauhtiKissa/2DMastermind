@@ -369,10 +369,10 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Label6" type="Label" parent="texts"]
-offset_left = 323.0
-offset_top = 241.0
-offset_right = 551.0
-offset_bottom = 304.0
+offset_left = 293.0
+offset_top = 219.0
+offset_right = 521.0
+offset_bottom = 282.0
 theme_override_fonts/font = ExtResource("6_c81b2")
 text = "Press here to check your answer"
 horizontal_alignment = 2

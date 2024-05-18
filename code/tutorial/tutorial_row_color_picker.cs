@@ -14,7 +14,7 @@ public partial class tutorial_row_color_picker : Node2D
 			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[i]);
 			((TextureButton)buttons.GetChild(i)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[i]);
 		}
-
+		
 		parent = (tutorial_guess_row)GetParent();
 	}
 
