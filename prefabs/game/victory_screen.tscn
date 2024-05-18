@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://hisj55gj1gkd"]
+
+[ext_resource type="Script" path="res://code/victory_screen.cs" id="1_vc4vs"]
+[ext_resource type="Texture2D" uid="uid://c2fqy0ygoebwi" path="res://sprites/loss_background.png" id="2_rmp2x"]
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="3_inckh"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/menu_button_background.png" id="4_lksm3"]
+
+[node name="Node2D" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_vc4vs")
+
+[node name="LossBackground" type="Sprite2D" parent="."]
+position = Vector2(512, 240)
+scale = Vector2(0.75, 0.833333)
+texture = ExtResource("2_rmp2x")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 360.0
+offset_top = 104.0
+offset_right = 664.0
+offset_bottom = 155.0
+theme_override_fonts/font = ExtResource("3_inckh")
+theme_override_font_sizes/font_size = 45
+text = "YOU WON!"
+horizontal_alignment = 1
+
+[node name="Button" type="TextureButton" parent="."]
+offset_left = 392.0
+offset_top = 320.0
+offset_right = 632.0
+offset_bottom = 384.0
+texture_normal = ExtResource("4_lksm3")
+texture_pressed = ExtResource("4_lksm3")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("3_inckh")
+theme_override_font_sizes/font_size = 24
+text = "BACK TO MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="TextureButton" parent="."]
+offset_left = 392.0
+offset_top = 200.0
+offset_right = 632.0
+offset_bottom = 264.0
+texture_normal = ExtResource("4_lksm3")
+texture_pressed = ExtResource("4_lksm3")
+
+[node name="Label" type="Label" parent="Button2"]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("3_inckh")
+theme_override_font_sizes/font_size = 24
+text = "NEW GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="back_to_menu"]
+[connection signal="pressed" from="Button2" to="." method="restart"]

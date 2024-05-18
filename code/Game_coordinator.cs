@@ -43,5 +43,6 @@ public partial class Game_coordinator : Node2D
 
 	public void victory(){
 		AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/confetti_cannon.tscn").Instantiate());
+		AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/victory_screen.tscn").Instantiate());
 	}
 }
