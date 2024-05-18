@@ -24,6 +24,8 @@ public partial class Color_picker : Node2D
 		{
 			((TextureButton)buttons.GetChild(i)).Disabled = true;
 		}
+		((AnimationPlayer)GetChild(1)).Active = true;
+		((AnimationPlayer)GetChild(1)).PlayBackwards("color_picker");
 		parent.round_end();
 	}
 	
