@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://de3pa55pwsysx"]
+
+[ext_resource type="Script" path="res://code/button_sound.cs" id="1_xp5qe"]
+[ext_resource type="AudioStream" uid="uid://cadcd4q50cbq1" path="res://sounds/button_sounds/hover-sound-effect.mp3" id="2_hiye3"]
+[ext_resource type="AudioStream" uid="uid://batk5ydkuhf70" path="res://sounds/button_sounds/totally_just_a_button_press_lol.wav" id="3_opcbp"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_xp5qe")
+
+[node name="hover_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_hiye3")
+volume_db = -4.0
+
+[node name="click_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_opcbp")
+volume_db = -6.0

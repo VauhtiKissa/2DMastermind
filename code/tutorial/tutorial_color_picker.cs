@@ -9,10 +9,15 @@ public partial class tutorial_color_picker : Node2D
 	{
 		buttons = GetChild(1);
 		for (int i = 0 ; i < buttons.GetChildCount()-1; i++){
+			((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)buttons.GetChild(i), false);
 			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[i]);
 			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[i]);
 		}
+
+        ((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)buttons.GetChild(8), false);
+
 		parent = (tutorial_guess_cube)GetParent();
+	
 	}
 
 	public void pick_color(int given_color){

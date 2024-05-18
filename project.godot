@@ -22,6 +22,7 @@ buses/default_bus_layout=""
 [autoload]
 
 MusicPlayer="*res://prefabs/game/music_player.tscn"
+ButtonSoundMaker="*res://prefabs/game/button_sound_maker.tscn"
 
 [display]
 

@@ -24,6 +24,9 @@ public partial class Guess_cube : Node2D
 		wrong_place_numbers = GetChild(4);
 
 		for (int i = 0 ; i < buttons.GetChildCount(); i++){
+			
+        	((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)buttons.GetChild(i), false);
+
 			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[0]);
 			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[0]);
 		}
