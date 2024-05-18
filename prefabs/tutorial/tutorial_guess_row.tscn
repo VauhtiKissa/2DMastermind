@@ -133,6 +133,7 @@ texture_normal = ExtResource("6_50fy0")
 texture_hover = ExtResource("7_4strr")
 
 [node name="Label1" type="Label" parent="Button2"]
+layout_mode = 0
 offset_left = 12.0
 offset_right = 228.0
 offset_bottom = 60.0

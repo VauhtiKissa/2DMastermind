@@ -7,6 +7,8 @@ public partial class music_player : Node
 
 	public override void _Ready()
 	{
+
+
 		sources = new Node[8];
 		for (int i = 0; i < GetChildCount(); i++)
 		{

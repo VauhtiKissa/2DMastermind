@@ -4,7 +4,7 @@ importer="texture_atlas"
 type="Texture2D"
 uid="uid://bnvtt54vge8yf"
 path="res://.godot/imported/6turquoise.png-92e7e4b9b1d2a36f3b7838a60a2a707d.res"
-group_file="res://sprites/button_sprites/colored_buttons.png"
+group_file="res://sprites/colored_buttons.png"
 valid=true
 [deps]
 
@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/6turquoise.png-92e7e4b9b1d2a36f3b7838a60a2a70
 
 [params]
 
-atlas_file="res://sprites/button_sprites/colored_buttons.png"
+atlas_file="res://sprites/colored_buttons.png"
 import_mode=0
 crop_to_region=true
 trim_alpha_border_from_region=true

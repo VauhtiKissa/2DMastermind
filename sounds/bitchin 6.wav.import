@@ -2,7 +2,7 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bk74mxuv81vq8"
+uid="uid://j5tpbqo0nafi"
 path="res://.godot/imported/bitchin 6.wav-d2531a7a97d08ff865f36c1b49cfbb2b.sample"
 
 [deps]
@@ -18,7 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop_mode=2
+edit/loop_mode=0
 edit/loop_begin=0
 edit/loop_end=-1
 compress/mode=0

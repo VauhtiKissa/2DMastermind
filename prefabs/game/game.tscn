@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://csghcuy8h8yn3"]
+[gd_scene load_steps=3 format=3 uid="uid://csghcuy8h8yn3"]
 
 [ext_resource type="PackedScene" uid="uid://d0bfuitfo4vlu" path="res://prefabs/game/game_coordinator.tscn" id="1_obfu3"]
+[ext_resource type="Texture2D" uid="uid://bo8tvmhvmxit0" path="res://sprites/game_background.png" id="1_xn0ix"]
 
 [node name="game" type="Node2D"]
+
+[node name="GameBackground" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(480, 270)
+texture = ExtResource("1_xn0ix")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(480, 270)

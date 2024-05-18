@@ -14,8 +14,8 @@ public partial class tutorial : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		page1 = (tutorial_guess_row)GetChild(0);
-		page2 = (tutorial_guess_cube)GetChild(1);
+		page1 = (tutorial_guess_row)GetChild(1);
+		page2 = (tutorial_guess_cube)GetChild(2);
 	}
 
 

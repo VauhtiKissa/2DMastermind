@@ -19,6 +19,10 @@ config/icon="res://sprites/icon.svg"
 
 buses/default_bus_layout=""
 
+[autoload]
+
+MusicPlayer="*res://code/music_player.cs"
+
 [display]
 
 window/size/viewport_width=960
