@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://r4ylgkpc4y5g"
-path="res://.godot/imported/ka1.ttf-279588e16c82672f25e0673d2d4d61b3.fontdata"
+uid="uid://b21rxwvclwwgp"
+path="res://.godot/imported/Bullpen3D.ttf-dcdb3843f044b62de43fe60e3c19149e.fontdata"
 
 [deps]
 
-source_file="res://fonts/ka1.ttf"
-dest_files=["res://.godot/imported/ka1.ttf-279588e16c82672f25e0673d2d4d61b3.fontdata"]
+source_file="res://prefabs/game/fonts/Bullpen3D.ttf"
+dest_files=["res://.godot/imported/Bullpen3D.ttf-dcdb3843f044b62de43fe60e3c19149e.fontdata"]
 
 [params]
 

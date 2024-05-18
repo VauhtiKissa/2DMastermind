@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr62evgaywidk"
-path="res://.godot/imported/backgorund.png-68fb8a7a43668e71040c5d2045959009.ctex"
+uid="uid://govdynpc4hru"
+path="res://.godot/imported/end_button_hover_background.png-01311afcb272b416e525647785910d41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/backgorund.png"
-dest_files=["res://.godot/imported/backgorund.png-68fb8a7a43668e71040c5d2045959009.ctex"]
+source_file="res://sprites/end_button_hover_background.png"
+dest_files=["res://.godot/imported/end_button_hover_background.png-01311afcb272b416e525647785910d41.ctex"]
 
 [params]
 

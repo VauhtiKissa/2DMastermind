@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://code/tutorial/tutorial_guess_cube.cs" id="1_33wmh"]
 [ext_resource type="PackedScene" uid="uid://d1n08im7pbraq" path="res://prefabs/tutorial/tutorial_color_picker.tscn" id="2_6k0wl"]
 [ext_resource type="Texture2D" uid="uid://bs3a8hp3pkalb" path="res://sprites/cube_background.png" id="3_6s8d1"]
-[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="4_5o0oy"]
-[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/ButtonPressed.png" id="5_hors1"]
-[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="6_c81b2"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/button_sprites/Button.png" id="4_5o0oy"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/button_sprites/ButtonPressed.png" id="5_hors1"]
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://prefabs/game/fonts/ka1.ttf" id="6_c81b2"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_idses"]
 

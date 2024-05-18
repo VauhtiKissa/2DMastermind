@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1n08im7pbraq"]
+[gd_scene load_steps=8 format=3 uid="uid://d1n08im7pbraq"]
 
 [ext_resource type="Script" path="res://code/tutorial/tutorial_color_picker.cs" id="1_j520n"]
 [ext_resource type="Texture2D" uid="uid://rrl7wea34xrw" path="res://sprites/color_picker_background.png" id="2_2cntf"]
-[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="3_pcdtx"]
-[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/ButtonPressed.png" id="4_h4yqt"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/button_sprites/Button.png" id="3_pcdtx"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/button_sprites/ButtonPressed.png" id="4_h4yqt"]
 [ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/end_button_background.png" id="5_oydq0"]
+[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/end_button_hover_background.png" id="6_fqr72"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_43n2e"]
 
@@ -128,7 +129,8 @@ offset_right = 180.0
 offset_bottom = 448.0
 action_mode = 0
 texture_normal = ExtResource("5_oydq0")
-texture_pressed = ExtResource("5_oydq0")
+texture_pressed = ExtResource("6_fqr72")
+texture_hover = ExtResource("6_fqr72")
 
 [connection signal="pressed" from="buttons/TextureButton" to="." method="pick_color" binds= [0]]
 [connection signal="pressed" from="buttons/TextureButton2" to="." method="pick_color" binds= [1]]
