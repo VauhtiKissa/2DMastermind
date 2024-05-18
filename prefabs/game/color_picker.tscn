@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfliice1hm1nj"]
+[gd_scene load_steps=9 format=3 uid="uid://bfliice1hm1nj"]
 
 [ext_resource type="Script" path="res://code/Color_picker.cs" id="1_oggl2"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="2_nxkdc"]
@@ -8,17 +8,40 @@
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_43n2e"]
 
+[sub_resource type="Animation" id="Animation_ub12q"]
+resource_name = "color_picker"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5, 0.5001, 0.5002),
+"transitions": PackedFloat32Array(0.267943, 1, 0.267943, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(210, 0), Vector2(200, 0), Vector2(0, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5yosu"]
+_data = {
+"color_picker": SubResource("Animation_ub12q")
+}
+
 [node name="color_picker" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_oggl2")
 
-[node name="ColorPickerBackground" type="Sprite2D" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ColorPickerBackground" type="Sprite2D" parent="Node2D"]
 position = Vector2(114, 190)
 texture = ExtResource("2_x5bi3")
 
-[node name="buttons" type="Node2D" parent="."]
+[node name="buttons" type="Node2D" parent="Node2D"]
 
-[node name="TextureButton" type="TextureButton" parent="buttons"]
+[node name="TextureButton" type="TextureButton" parent="Node2D/buttons"]
 offset_left = 24.0
 offset_top = 16.0
 offset_right = 112.0
@@ -32,7 +55,7 @@ texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton2" type="TextureButton" parent="buttons"]
+[node name="TextureButton2" type="TextureButton" parent="Node2D/buttons"]
 offset_left = 112.0
 offset_top = 16.0
 offset_right = 200.0
@@ -46,7 +69,7 @@ texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton3" type="TextureButton" parent="buttons"]
+[node name="TextureButton3" type="TextureButton" parent="Node2D/buttons"]
 offset_left = 24.0
 offset_top = 104.0
 offset_right = 112.0
@@ -60,7 +83,7 @@ texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton4" type="TextureButton" parent="buttons"]
+[node name="TextureButton4" type="TextureButton" parent="Node2D/buttons"]
 offset_left = 112.0
 offset_top = 104.0
 offset_right = 200.0
@@ -74,7 +97,7 @@ texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton5" type="TextureButton" parent="buttons"]
+[node name="TextureButton5" type="TextureButton" parent="Node2D/buttons"]
 offset_left = 24.0
 offset_top = 192.0
 offset_right = 112.0
@@ -88,7 +111,7 @@ texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton6" type="TextureButton" parent="buttons"]
+[node name="TextureButton6" type="TextureButton" parent="Node2D/buttons"]
 offset_left = 112.0
 offset_top = 192.0
 offset_right = 200.0
@@ -102,7 +125,7 @@ texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton7" type="TextureButton" parent="buttons"]
+[node name="TextureButton7" type="TextureButton" parent="Node2D/buttons"]
 offset_left = 24.0
 offset_top = 280.0
 offset_right = 112.0
@@ -116,7 +139,7 @@ texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton8" type="TextureButton" parent="buttons"]
+[node name="TextureButton8" type="TextureButton" parent="Node2D/buttons"]
 offset_left = 112.0
 offset_top = 280.0
 offset_right = 200.0
@@ -130,7 +153,7 @@ texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="done_button" type="TextureButton" parent="buttons"]
+[node name="done_button" type="TextureButton" parent="Node2D/buttons"]
 offset_top = 384.0
 offset_right = 180.0
 offset_bottom = 448.0
@@ -139,12 +162,19 @@ action_mode = 0
 texture_normal = ExtResource("5_xajew")
 texture_pressed = ExtResource("5_xajew")
 
-[connection signal="button_down" from="buttons/TextureButton" to="." method="pick_color" binds= [0]]
-[connection signal="button_down" from="buttons/TextureButton2" to="." method="pick_color" binds= [1]]
-[connection signal="button_down" from="buttons/TextureButton3" to="." method="pick_color" binds= [2]]
-[connection signal="button_down" from="buttons/TextureButton4" to="." method="pick_color" binds= [3]]
-[connection signal="button_down" from="buttons/TextureButton5" to="." method="pick_color" binds= [4]]
-[connection signal="button_down" from="buttons/TextureButton6" to="." method="pick_color" binds= [5]]
-[connection signal="button_down" from="buttons/TextureButton7" to="." method="pick_color" binds= [6]]
-[connection signal="button_down" from="buttons/TextureButton8" to="." method="pick_color" binds= [7]]
-[connection signal="button_down" from="buttons/done_button" to="." method="round_end_button_pressed"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+root_node = NodePath("../Node2D")
+libraries = {
+"": SubResource("AnimationLibrary_5yosu")
+}
+
+[connection signal="button_down" from="Node2D/buttons/TextureButton" to="." method="pick_color" binds= [0]]
+[connection signal="button_down" from="Node2D/buttons/TextureButton2" to="." method="pick_color" binds= [1]]
+[connection signal="button_down" from="Node2D/buttons/TextureButton3" to="." method="pick_color" binds= [2]]
+[connection signal="button_down" from="Node2D/buttons/TextureButton4" to="." method="pick_color" binds= [3]]
+[connection signal="button_down" from="Node2D/buttons/TextureButton5" to="." method="pick_color" binds= [4]]
+[connection signal="button_down" from="Node2D/buttons/TextureButton6" to="." method="pick_color" binds= [5]]
+[connection signal="button_down" from="Node2D/buttons/TextureButton7" to="." method="pick_color" binds= [6]]
+[connection signal="button_down" from="Node2D/buttons/TextureButton8" to="." method="pick_color" binds= [7]]
+[connection signal="button_down" from="Node2D/buttons/done_button" to="." method="round_end_button_pressed"]

@@ -15,7 +15,7 @@ script = ExtResource("1_0jmdb")
 
 [node name="color_picker" parent="." instance=ExtResource("2_qwtfa")]
 texture_filter = 0
-position = Vector2(508, 32)
+position = Vector2(300, 32)
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 1
