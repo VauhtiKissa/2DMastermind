@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://code/tutorial/tutorial_color_picker.cs" id="1_j520n"]
 [ext_resource type="Texture2D" uid="uid://rrl7wea34xrw" path="res://sprites/color_picker_background.png" id="2_2cntf"]
-[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/button_sprites/Button.png" id="3_pcdtx"]
-[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/button_sprites/ButtonPressed.png" id="4_h4yqt"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/button_sprites/Button.png" id="3_7x87s"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/button_sprites/ButtonPressed.png" id="4_qj5gb"]
 [ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/end_button_background.png" id="5_oydq0"]
 [ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/end_button_hover_background.png" id="6_fqr72"]
 
@@ -27,8 +27,8 @@ offset_bottom = 104.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_43n2e")
-texture_normal = ExtResource("3_pcdtx")
-texture_pressed = ExtResource("4_h4yqt")
+texture_normal = ExtResource("3_7x87s")
+texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -40,8 +40,8 @@ offset_bottom = 104.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_43n2e")
-texture_normal = ExtResource("3_pcdtx")
-texture_pressed = ExtResource("4_h4yqt")
+texture_normal = ExtResource("3_7x87s")
+texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -53,8 +53,8 @@ offset_bottom = 192.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_43n2e")
-texture_normal = ExtResource("3_pcdtx")
-texture_pressed = ExtResource("4_h4yqt")
+texture_normal = ExtResource("3_7x87s")
+texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -66,8 +66,8 @@ offset_bottom = 192.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_43n2e")
-texture_normal = ExtResource("3_pcdtx")
-texture_pressed = ExtResource("4_h4yqt")
+texture_normal = ExtResource("3_7x87s")
+texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -79,8 +79,8 @@ offset_bottom = 280.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_43n2e")
-texture_normal = ExtResource("3_pcdtx")
-texture_pressed = ExtResource("4_h4yqt")
+texture_normal = ExtResource("3_7x87s")
+texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -92,8 +92,8 @@ offset_bottom = 280.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_43n2e")
-texture_normal = ExtResource("3_pcdtx")
-texture_pressed = ExtResource("4_h4yqt")
+texture_normal = ExtResource("3_7x87s")
+texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -105,8 +105,8 @@ offset_bottom = 368.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_43n2e")
-texture_normal = ExtResource("3_pcdtx")
-texture_pressed = ExtResource("4_h4yqt")
+texture_normal = ExtResource("3_7x87s")
+texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -118,8 +118,8 @@ offset_bottom = 368.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_43n2e")
-texture_normal = ExtResource("3_pcdtx")
-texture_pressed = ExtResource("4_h4yqt")
+texture_normal = ExtResource("3_7x87s")
+texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
