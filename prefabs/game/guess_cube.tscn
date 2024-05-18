@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmp7lrp2l6qjy"]
+[gd_scene load_steps=7 format=3 uid="uid://dmp7lrp2l6qjy"]
 
 [ext_resource type="Script" path="res://code/Guess_cube.cs" id="1_0jmdb"]
 [ext_resource type="PackedScene" uid="uid://bfliice1hm1nj" path="res://prefabs/game/color_picker.tscn" id="2_qwtfa"]
@@ -6,8 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/button_sprites/Button.png" id="4_djmtw"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/button_sprites/ButtonPressed.png" id="5_vfyh0"]
 [ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://prefabs/game/fonts/ka1.ttf" id="6_skewm"]
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_idses"]
 
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
@@ -29,9 +27,7 @@ position = Vector2(64, 64)
 offset_right = 96.0
 offset_bottom = 96.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -40,9 +36,7 @@ offset_left = 96.0
 offset_right = 192.0
 offset_bottom = 96.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 metadata/_edit_use_anchors_ = true
@@ -52,9 +46,7 @@ offset_left = 192.0
 offset_right = 288.0
 offset_bottom = 96.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -63,9 +55,7 @@ offset_left = 288.0
 offset_right = 384.0
 offset_bottom = 96.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -74,9 +64,7 @@ offset_top = 96.0
 offset_right = 96.0
 offset_bottom = 192.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -86,9 +74,7 @@ offset_top = 96.0
 offset_right = 192.0
 offset_bottom = 192.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -98,9 +84,7 @@ offset_top = 96.0
 offset_right = 288.0
 offset_bottom = 192.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -110,9 +94,7 @@ offset_top = 96.0
 offset_right = 384.0
 offset_bottom = 192.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -121,9 +103,7 @@ offset_top = 192.0
 offset_right = 96.0
 offset_bottom = 288.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -133,9 +113,7 @@ offset_top = 192.0
 offset_right = 192.0
 offset_bottom = 288.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -145,9 +123,7 @@ offset_top = 192.0
 offset_right = 288.0
 offset_bottom = 288.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -157,9 +133,7 @@ offset_top = 192.0
 offset_right = 384.0
 offset_bottom = 288.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -168,9 +142,7 @@ offset_top = 288.0
 offset_right = 96.0
 offset_bottom = 384.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -180,9 +152,7 @@ offset_top = 288.0
 offset_right = 192.0
 offset_bottom = 384.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -192,9 +162,7 @@ offset_top = 288.0
 offset_right = 288.0
 offset_bottom = 384.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
@@ -204,9 +172,7 @@ offset_top = 288.0
 offset_right = 384.0
 offset_bottom = 384.0
 disabled = true
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_idses")
 texture_normal = ExtResource("4_djmtw")
 texture_pressed = ExtResource("5_vfyh0")
 
