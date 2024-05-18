@@ -1,7 +1,6 @@
 using Godot;
 using System;
 using System.Linq;
-using System.Threading;
 
 public partial class Game_coordinator : Node2D
 {
@@ -13,7 +12,7 @@ public partial class Game_coordinator : Node2D
 	public override void _Ready()
 	{
 		cubes = new Guess_cube[8];
-		for (int i = 0; i < GetChild(0).GetChildren().Count(); i++)
+		for (int i = 0; i < GetChild(0).GetChildren().Count; i++)
 		{
 			cubes[i] = (Guess_cube)GetChild(0).GetChildren()[i];
 		}

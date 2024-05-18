@@ -3,12 +3,13 @@ using System;
 
 public partial class music_player : Node
 {
+	/*
+		a music player that is autoloaded in
+	*/
 	private Node[] sources;
 
 	public override void _Ready()
 	{
-
-
 		sources = new Node[8];
 		for (int i = 0; i < GetChildCount(); i++)
 		{
@@ -23,7 +24,7 @@ public partial class music_player : Node
 	public void restart_sound_level(){
 		for (int i = 1; i < sources.Length; i++)
 		{
-					((Godot.AudioStreamPlayer)sources[i]).VolumeDb = -80;
+			((Godot.AudioStreamPlayer)sources[i]).VolumeDb = -80;
 		}
 	}
 }

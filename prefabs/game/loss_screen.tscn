@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/menu_button_background.png" id="4_nxuug"]
 [ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/menu_button_hover.png" id="5_s2l87"]
 
-[node name="Node2D" type="Node2D"]
+[node name="loss_screen" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_82uua")
 

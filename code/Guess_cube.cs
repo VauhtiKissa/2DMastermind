@@ -1,8 +1,6 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-
 
 public partial class Guess_cube : Node2D
 {
@@ -38,7 +36,6 @@ public partial class Guess_cube : Node2D
 		((TextureButton)buttons.GetChild(number)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[(int)current_color]);
 		((TextureButton)buttons.GetChild(number)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[(int)current_color]);
 		((TextureButton)buttons.GetChild(number)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[(int)current_color]);
-
 	}
 
 	public void round_end(){
@@ -56,6 +53,7 @@ public partial class Guess_cube : Node2D
 			List<GameColors> correct_colors = new List<GameColors>();
 			List<GameColors> input_colors = new List<GameColors>();
 		
+			// checks right answers
 			for (int i = 0; i < 4; i++)
 			{
 				correct_colors.Add(Game_coordinator.correct_answer[correct_answer_indexer(x,i)]);
@@ -73,6 +71,7 @@ public partial class Guess_cube : Node2D
 
 			((Label)correct_answer_numbers.GetChild(x)).Text = correct.ToString();
 
+			// checks wrong position answers
 			for (int i = 0; i < input_colors.Count; i++)
 			{
 				for (int e = 0; e < correct_colors.Count; e++){

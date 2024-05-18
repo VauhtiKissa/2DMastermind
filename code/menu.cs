@@ -13,7 +13,7 @@ public partial class menu : Node2D
 	private float circle_distance = 5;
 	[Export]
 	private float circle_speed = 1;
-	// Called when the node enters the scene tree for the first time.
+
 	public override void _Ready()
 	{
 		normal_game = ResourceLoader.Load<PackedScene>("res://prefabs/game/game.tscn").Instantiate();
