@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmp7lrp2l6qjy"]
+[gd_scene load_steps=8 format=3 uid="uid://dmp7lrp2l6qjy"]
 
 [ext_resource type="Script" path="res://code/Guess_cube.cs" id="1_0jmdb"]
 [ext_resource type="PackedScene" uid="uid://bfliice1hm1nj" path="res://prefabs/game/color_picker.tscn" id="2_qwtfa"]
 [ext_resource type="Texture2D" uid="uid://bs3a8hp3pkalb" path="res://sprites/cube_background.png" id="3_36wu3"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="4_djmtw"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/ButtonPressed.png" id="5_vfyh0"]
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="6_skewm"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_idses"]
 
@@ -213,80 +214,88 @@ texture_pressed = ExtResource("5_vfyh0")
 texture_filter = 1
 
 [node name="Label" type="Label" parent="correct_answer_numbers"]
-offset_left = 24.0
+offset_left = 13.0
 offset_top = 63.0
-offset_right = 64.0
+offset_right = 57.0
 offset_bottom = 159.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="correct_answer_numbers"]
-offset_left = 24.0
+offset_left = 13.0
 offset_top = 160.0
-offset_right = 64.0
+offset_right = 57.0
 offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="correct_answer_numbers"]
-offset_left = 24.0
+offset_left = 13.0
 offset_top = 256.0
-offset_right = 64.0
+offset_right = 57.0
 offset_bottom = 352.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="correct_answer_numbers"]
-offset_left = 24.0
+offset_left = 13.0
 offset_top = 352.0
-offset_right = 64.0
+offset_right = 57.0
 offset_bottom = 448.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label5" type="Label" parent="correct_answer_numbers"]
-offset_left = 96.0
-offset_top = 420.0
-offset_right = 136.0
-offset_bottom = 516.0
+offset_left = 90.0
+offset_top = 425.0
+offset_right = 134.0
+offset_bottom = 521.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label6" type="Label" parent="correct_answer_numbers"]
-offset_left = 192.0
-offset_top = 420.0
-offset_right = 232.0
-offset_bottom = 516.0
+offset_left = 186.0
+offset_top = 425.0
+offset_right = 230.0
+offset_bottom = 521.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label7" type="Label" parent="correct_answer_numbers"]
-offset_left = 288.0
-offset_top = 420.0
-offset_right = 328.0
-offset_bottom = 516.0
+offset_left = 282.0
+offset_top = 425.0
+offset_right = 326.0
+offset_bottom = 521.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label8" type="Label" parent="correct_answer_numbers"]
-offset_left = 384.0
-offset_top = 420.0
-offset_right = 424.0
-offset_bottom = 516.0
+offset_left = 378.0
+offset_top = 425.0
+offset_right = 422.0
+offset_bottom = 521.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
@@ -297,80 +306,88 @@ modulate = Color(1, 0, 0.0470588, 1)
 texture_filter = 1
 
 [node name="Label" type="Label" parent="wrong_place_numbers"]
-offset_left = 448.0
-offset_top = 64.0
-offset_right = 488.0
-offset_bottom = 160.0
+offset_left = 452.0
+offset_top = 65.0
+offset_right = 496.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="wrong_place_numbers"]
-offset_left = 448.0
-offset_top = 160.0
-offset_right = 488.0
-offset_bottom = 256.0
+offset_left = 452.0
+offset_top = 161.0
+offset_right = 496.0
+offset_bottom = 257.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="wrong_place_numbers"]
-offset_left = 448.0
-offset_top = 256.0
-offset_right = 488.0
-offset_bottom = 352.0
+offset_left = 452.0
+offset_top = 257.0
+offset_right = 496.0
+offset_bottom = 353.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="wrong_place_numbers"]
-offset_left = 448.0
-offset_top = 352.0
-offset_right = 488.0
-offset_bottom = 448.0
+offset_left = 452.0
+offset_top = 353.0
+offset_right = 496.0
+offset_bottom = 449.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label5" type="Label" parent="wrong_place_numbers"]
-offset_left = 92.0
-offset_top = -8.0
-offset_right = 132.0
-offset_bottom = 88.0
+offset_left = 91.0
+offset_top = -14.0
+offset_right = 135.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label6" type="Label" parent="wrong_place_numbers"]
-offset_left = 188.0
-offset_top = -8.0
-offset_right = 228.0
-offset_bottom = 88.0
+offset_left = 187.0
+offset_top = -14.0
+offset_right = 231.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label7" type="Label" parent="wrong_place_numbers"]
-offset_left = 284.0
-offset_top = -8.0
-offset_right = 324.0
-offset_bottom = 88.0
+offset_left = 283.0
+offset_top = -14.0
+offset_right = 327.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label8" type="Label" parent="wrong_place_numbers"]
-offset_left = 380.0
-offset_top = -8.0
-offset_right = 420.0
-offset_bottom = 88.0
+offset_left = 379.0
+offset_top = -14.0
+offset_right = 423.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("6_skewm")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1

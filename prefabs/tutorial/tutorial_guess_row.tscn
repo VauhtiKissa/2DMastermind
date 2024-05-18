@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cd0ucewskw06l"]
+[gd_scene load_steps=9 format=3 uid="uid://cd0ucewskw06l"]
 
 [ext_resource type="PackedScene" uid="uid://prvg6lawgu2y" path="res://prefabs/tutorial/tutorial_row_color_picker.tscn" id="1_kjfwh"]
 [ext_resource type="Script" path="res://code/tutorial/tutorial_guess_row.cs" id="1_ur3ac"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/Button.png" id="2_ey6sc"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/ButtonPressed.png" id="3_3hseg"]
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="5_rwps4"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/menu_button_background.png" id="6_50fy0"]
+[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/menu_button_hover.png" id="7_4strr"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_ct2nf"]
 
@@ -12,10 +15,10 @@ position = Vector2(320, 150)
 script = ExtResource("1_ur3ac")
 
 [node name="color_picker" parent="." instance=ExtResource("1_kjfwh")]
-position = Vector2(-40, 134)
+position = Vector2(-76, 134)
 
 [node name="buttons" type="Node2D" parent="."]
-position = Vector2(-60, 14)
+position = Vector2(-96, 14)
 
 [node name="TextureButton" type="TextureButton" parent="buttons"]
 offset_right = 96.0
@@ -58,10 +61,11 @@ texture_normal = ExtResource("2_ey6sc")
 texture_pressed = ExtResource("3_3hseg")
 
 [node name="correct" type="Label" parent="."]
-offset_left = -100.0
+offset_left = -153.0
 offset_top = 14.0
-offset_right = -60.0
+offset_right = -109.0
 offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("5_rwps4")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
@@ -69,59 +73,74 @@ vertical_alignment = 1
 
 [node name="wrong_place" type="Label" parent="."]
 modulate = Color(1, 0, 0.0470588, 1)
-offset_left = 324.0
+offset_left = 295.0
 offset_top = 14.0
-offset_right = 364.0
+offset_right = 339.0
 offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("5_rwps4")
 theme_override_font_sizes/font_size = 50
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="texts" type="Node2D" parent="."]
-position = Vector2(-128, 6)
+position = Vector2(-164, 6)
 
-[node name="Label5" type="Label" parent="texts"]
-offset_left = 36.0
+[node name="Label1" type="Label" parent="texts"]
+offset_left = 2.0
 offset_top = -84.0
-offset_right = 492.0
+offset_right = 516.0
 offset_bottom = -12.0
-text = "a Normal game of mastermind has a color combination of four colors. that you need to decode"
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="Label2" type="Label" parent="texts"]
-offset_left = -144.0
-offset_top = 192.0
-offset_right = 72.0
-offset_bottom = 228.0
-text = "You can pick from 8 colors"
+theme_override_fonts/font = ExtResource("5_rwps4")
+text = "a game of mastermind has a code of 4 colors"
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="texts"]
-offset_left = -120.0
-offset_top = 12.0
-offset_right = 36.0
-offset_bottom = 96.0
-text = "This number shows how many colors  you guessed right"
+offset_left = -135.0
+offset_top = 34.0
+offset_right = 21.0
+offset_bottom = 103.0
+theme_override_fonts/font = ExtResource("5_rwps4")
+text = "the amount of correct colors"
 autowrap_mode = 2
 
-[node name="Label4" type="Label" parent="texts"]
-offset_left = 492.0
-offset_top = 12.0
-offset_right = 672.0
-offset_bottom = 113.0
-text = "This number shows how many colors you guessed that were in the wrong place"
+[node name="Label5" type="Label" parent="texts"]
+offset_left = -96.0
+offset_top = 192.0
+offset_right = 84.0
+offset_bottom = 233.0
+theme_override_fonts/font = ExtResource("5_rwps4")
+text = "Select a color"
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Button2" type="Button" parent="."]
-offset_left = 316.0
-offset_top = 162.0
-offset_right = 424.0
-offset_bottom = 270.0
-text = "Check guess"
+[node name="Label4" type="Label" parent="texts"]
+offset_left = 521.0
+offset_top = 27.0
+offset_right = 725.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("5_rwps4")
+text = "THe amount of colors in wrong places"
+autowrap_mode = 2
+
+[node name="Button2" type="TextureButton" parent="."]
+offset_left = 292.0
+offset_top = 186.0
+offset_right = 532.0
+offset_bottom = 250.0
+texture_normal = ExtResource("6_50fy0")
+texture_hover = ExtResource("7_4strr")
+
+[node name="Label1" type="Label" parent="Button2"]
+offset_left = 12.0
+offset_right = 228.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("5_rwps4")
+text = "CHECK GUESS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="pressed" from="buttons/TextureButton" to="." method="button_pressed" binds= [0]]
 [connection signal="pressed" from="buttons/TextureButton2" to="." method="button_pressed" binds= [1]]

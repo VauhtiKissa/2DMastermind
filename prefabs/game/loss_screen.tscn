@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://drgfoluvb1m83"]
+[gd_scene load_steps=5 format=3 uid="uid://drgfoluvb1m83"]
 
 [ext_resource type="Script" path="res://code/loss_screen.cs" id="1_82uua"]
 [ext_resource type="Texture2D" uid="uid://c2fqy0ygoebwi" path="res://sprites/loss_background.png" id="1_atf01"]
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="3_2r7yl"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/menu_button_background.png" id="4_nxuug"]
 
 [node name="Node2D" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_82uua")
 
 [node name="LossBackground" type="Sprite2D" parent="."]
@@ -11,27 +14,51 @@ position = Vector2(512, 256)
 texture = ExtResource("1_atf01")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 384.0
+texture_filter = 1
+offset_left = 360.0
 offset_top = 96.0
-offset_right = 469.0
-offset_bottom = 119.0
-scale = Vector2(3, 3)
+offset_right = 664.0
+offset_bottom = 147.0
+theme_override_fonts/font = ExtResource("3_2r7yl")
+theme_override_font_sizes/font_size = 45
 text = "YOU LOST!"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="TextureButton" parent="."]
 offset_left = 392.0
 offset_top = 320.0
 offset_right = 632.0
 offset_bottom = 384.0
-text = "Back to menu"
+texture_normal = ExtResource("4_nxuug")
+texture_pressed = ExtResource("4_nxuug")
 
-[node name="Button2" type="Button" parent="."]
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("3_2r7yl")
+theme_override_font_sizes/font_size = 24
+text = "BACK TO MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="TextureButton" parent="."]
 offset_left = 392.0
 offset_top = 200.0
 offset_right = 632.0
 offset_bottom = 264.0
-text = "Try again"
+texture_normal = ExtResource("4_nxuug")
+texture_pressed = ExtResource("4_nxuug")
+
+[node name="Label" type="Label" parent="Button2"]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("3_2r7yl")
+theme_override_font_sizes/font_size = 24
+text = "NEW GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="back_to_menu"]
 [connection signal="pressed" from="Button2" to="." method="restart"]

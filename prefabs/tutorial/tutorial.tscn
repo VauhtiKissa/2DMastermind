@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnd7xkcgjcrcm"]
+[gd_scene load_steps=7 format=3 uid="uid://bnd7xkcgjcrcm"]
 
 [ext_resource type="Script" path="res://code/tutorial/tutorial.cs" id="1_h4gew"]
 [ext_resource type="PackedScene" uid="uid://cd0ucewskw06l" path="res://prefabs/tutorial/tutorial_guess_row.tscn" id="2_isms7"]
 [ext_resource type="PackedScene" uid="uid://bc0ml7noxam2a" path="res://prefabs/tutorial/tutorial_guess_cube.tscn" id="3_y3y48"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/menu_button_background.png" id="4_vh6qe"]
+[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/menu_button_hover.png" id="5_eqaxb"]
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="6_631le"]
 
 [node name="tutorial" type="Node2D"]
 texture_filter = 3
@@ -14,19 +17,50 @@ position = Vector2(320, 159)
 [node name="Node2D" parent="." instance=ExtResource("3_y3y48")]
 position = Vector2(-684, 128)
 
-[node name="Button" type="Button" parent="."]
-offset_left = 836.0
-offset_top = 320.0
-offset_right = 952.0
-offset_bottom = 372.0
-text = "Next page"
+[node name="Button" type="TextureButton" parent="."]
+offset_left = 936.0
+offset_top = 108.0
+offset_right = 1176.0
+offset_bottom = 172.0
+rotation = 1.5708
+texture_normal = ExtResource("4_vh6qe")
+texture_pressed = ExtResource("5_eqaxb")
+texture_hover = ExtResource("5_eqaxb")
 
-[node name="Button2" type="Button" parent="."]
-offset_left = 836.0
-offset_top = 376.0
-offset_right = 952.0
-offset_bottom = 428.0
-text = "Back to menu"
+[node name="Label4" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 60.0
+offset_right = 60.0
+offset_bottom = 292.0
+rotation = -1.5708
+theme_override_fonts/font = ExtResource("6_631le")
+theme_override_font_sizes/font_size = 14
+text = "NEXT PAGE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button2" type="TextureButton" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 248.0
+offset_bottom = 72.0
+texture_normal = ExtResource("4_vh6qe")
+texture_pressed = ExtResource("5_eqaxb")
+texture_hover = ExtResource("5_eqaxb")
+
+[node name="Label4" type="Label" parent="Button2"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 232.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("6_631le")
+text = "Back to Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="pressed" from="Button" to="." method="change_page"]
 [connection signal="pressed" from="Button2" to="." method="back_to_menu"]
