@@ -284,7 +284,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="wrong_place_numbers" type="Node2D" parent="."]
-modulate = Color(1, 0, 0.0470588, 1)
+modulate = Color(1, 0.223529, 0.352941, 1)
 texture_filter = 1
 
 [node name="Label" type="Label" parent="wrong_place_numbers"]

@@ -8,6 +8,9 @@ public partial class victory_screen : Node2D
 	{
         ((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(2), true);
         ((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(3), true);
+
+		((AnimationPlayer)GetChild(4)).Active = true;
+		((AnimationPlayer)GetChild(4)).Play("victory_animation");
 	}
 
 	public void back_to_menu(){

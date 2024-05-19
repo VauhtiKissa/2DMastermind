@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://drgfoluvb1m83"]
+[gd_scene load_steps=9 format=3 uid="uid://drgfoluvb1m83"]
 
 [ext_resource type="Script" path="res://code/loss_screen.cs" id="1_82uua"]
 [ext_resource type="Texture2D" uid="uid://c2fqy0ygoebwi" path="res://sprites/backs/loss_background.png" id="1_atf01"]
@@ -7,15 +7,38 @@
 [ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/backs/menu_button_hover.png" id="5_s2l87"]
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="6_6c4yl"]
 
+[sub_resource type="Animation" id="Animation_n70kd"]
+resource_name = "loss_pop_up"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.1),
+"transitions": PackedFloat32Array(2, 0.170755, 0.15932),
+"update": 0,
+"values": [Vector2(0, 500), Vector2(0, -50), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ywlv4"]
+_data = {
+"loss_pop_up": SubResource("Animation_n70kd")
+}
+
 [node name="loss_screen" type="Node2D"]
+
+[node name="node 2d" type="Node2D" parent="."]
 texture_filter = 1
 script = ExtResource("1_82uua")
 
-[node name="LossBackground" type="Sprite2D" parent="."]
+[node name="LossBackground" type="Sprite2D" parent="node 2d"]
 position = Vector2(512, 256)
 texture = ExtResource("1_atf01")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="node 2d"]
 texture_filter = 1
 offset_left = 360.0
 offset_top = 96.0
@@ -26,7 +49,7 @@ theme_override_font_sizes/font_size = 45
 text = "YOU LOST!"
 horizontal_alignment = 1
 
-[node name="Button" type="TextureButton" parent="."]
+[node name="Button" type="TextureButton" parent="node 2d"]
 offset_left = 392.0
 offset_top = 320.0
 offset_right = 632.0
@@ -35,7 +58,7 @@ texture_normal = ExtResource("4_nxuug")
 texture_pressed = ExtResource("5_s2l87")
 texture_hover = ExtResource("5_s2l87")
 
-[node name="Label" type="Label" parent="Button"]
+[node name="Label" type="Label" parent="node 2d/Button"]
 layout_mode = 0
 offset_right = 240.0
 offset_bottom = 64.0
@@ -44,7 +67,7 @@ text = "BACK TO MENU"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button2" type="TextureButton" parent="."]
+[node name="Button2" type="TextureButton" parent="node 2d"]
 offset_left = 392.0
 offset_top = 200.0
 offset_right = 632.0
@@ -53,7 +76,7 @@ texture_normal = ExtResource("4_nxuug")
 texture_pressed = ExtResource("5_s2l87")
 texture_hover = ExtResource("5_s2l87")
 
-[node name="Label" type="Label" parent="Button2"]
+[node name="Label" type="Label" parent="node 2d/Button2"]
 layout_mode = 0
 offset_right = 240.0
 offset_bottom = 64.0
@@ -62,5 +85,10 @@ text = "NEW GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="Button" to="." method="back_to_menu"]
-[connection signal="pressed" from="Button2" to="." method="restart"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="node 2d"]
+libraries = {
+"": SubResource("AnimationLibrary_ywlv4")
+}
+
+[connection signal="pressed" from="node 2d/Button" to="node 2d" method="back_to_menu"]
+[connection signal="pressed" from="node 2d/Button2" to="node 2d" method="restart"]

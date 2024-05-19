@@ -7,6 +7,7 @@ public partial class Game_coordinator : Node2D
 	private int round_number = 0;
 	public static GameColors[] correct_answer;
 	public static GameColors[] guessed_colors;
+
 	private Guess_cube[] cubes;
 
 	public override void _Ready()

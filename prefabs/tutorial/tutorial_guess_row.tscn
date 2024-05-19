@@ -67,7 +67,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="wrong_place" type="Label" parent="."]
-modulate = Color(1, 0, 0.0470588, 1)
+modulate = Color(1, 0.223529, 0.34902, 1)
 offset_left = 295.0
 offset_top = 14.0
 offset_right = 339.0
