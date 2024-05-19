@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://code/Guess_cube.cs" id="1_0jmdb"]
 [ext_resource type="PackedScene" uid="uid://bfliice1hm1nj" path="res://prefabs/game/color_picker.tscn" id="2_qwtfa"]
-[ext_resource type="Texture2D" uid="uid://bs3a8hp3pkalb" path="res://sprites/cube_background.png" id="3_36wu3"]
-[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/button_sprites/Button.png" id="4_djmtw"]
-[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/button_sprites/ButtonPressed.png" id="5_vfyh0"]
-[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://prefabs/game/fonts/ka1.ttf" id="6_skewm"]
+[ext_resource type="Texture2D" uid="uid://bs3a8hp3pkalb" path="res://sprites/backs/cube_background.png" id="3_36wu3"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="4_djmtw"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="5_vfyh0"]
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="6_skewm"]
 
 [node name="Node2D" type="Node2D"]
 texture_filter = 1

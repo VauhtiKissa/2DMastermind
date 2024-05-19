@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://drgfoluvb1m83"]
 
 [ext_resource type="Script" path="res://code/loss_screen.cs" id="1_82uua"]
-[ext_resource type="Texture2D" uid="uid://c2fqy0ygoebwi" path="res://sprites/loss_background.png" id="1_atf01"]
-[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://prefabs/game/fonts/ka1.ttf" id="3_2r7yl"]
-[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/menu_button_background.png" id="4_nxuug"]
-[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/menu_button_hover.png" id="5_s2l87"]
+[ext_resource type="Texture2D" uid="uid://c2fqy0ygoebwi" path="res://sprites/backs/loss_background.png" id="1_atf01"]
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="3_2r7yl"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/backs/menu_button_background.png" id="4_nxuug"]
+[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/backs/menu_button_hover.png" id="5_s2l87"]
 
 [node name="loss_screen" type="Node2D"]
 texture_filter = 1

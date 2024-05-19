@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://prvg6lawgu2y" path="res://prefabs/tutorial/tutorial_row_color_picker.tscn" id="1_kjfwh"]
 [ext_resource type="Script" path="res://code/tutorial/tutorial_guess_row.cs" id="1_ur3ac"]
-[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/button_sprites/Button.png" id="2_ey6sc"]
-[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/button_sprites/ButtonPressed.png" id="3_3hseg"]
-[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://prefabs/game/fonts/ka1.ttf" id="5_rwps4"]
-[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/menu_button_background.png" id="6_50fy0"]
-[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/menu_button_hover.png" id="7_4strr"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="2_ey6sc"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="3_3hseg"]
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="5_rwps4"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/backs/menu_button_background.png" id="6_50fy0"]
+[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/backs/menu_button_hover.png" id="7_4strr"]
 
 [node name="tutorial_guess_row" type="Node2D"]
 position = Vector2(320, 150)

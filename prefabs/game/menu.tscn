@@ -2,16 +2,18 @@
 
 [ext_resource type="Script" path="res://code/menu.cs" id="1_nam66"]
 [ext_resource type="Script" path="res://code/grid_maker.cs" id="1_u2cvu"]
-[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://prefabs/game/fonts/ka1.ttf" id="2_gaijx"]
-[ext_resource type="TileSet" uid="uid://dc1ma156jhwoa" path="res://sprites/button_sprites/new_tile_set.tres" id="2_o7nnx"]
-[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/menu_button_background.png" id="3_qibdv"]
-[ext_resource type="Texture2D" uid="uid://c0hm22dwo3jha" path="res://sprites/title_backgorund.png" id="4_5v42k"]
-[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/menu_button_hover.png" id="4_g7rpg"]
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="2_gaijx"]
+[ext_resource type="TileSet" uid="uid://dc1ma156jhwoa" path="res://sprites/color_button_sprites/new_tile_set.tres" id="2_o7nnx"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/backs/menu_button_background.png" id="3_qibdv"]
+[ext_resource type="Texture2D" uid="uid://c0hm22dwo3jha" path="res://sprites/backs/title_backgorund.png" id="4_5v42k"]
+[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/backs/menu_button_hover.png" id="4_g7rpg"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_u2cvu")
 
 [node name="TileMap" type="TileMap" parent="."]
+z_index = -1
+z_as_relative = false
 tile_set = ExtResource("2_o7nnx")
 format = 2
 

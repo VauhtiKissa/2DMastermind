@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bxm8ue4tipotl"]
+[gd_scene load_steps=11 format=3 uid="uid://bxm8ue4tipotl"]
 
 [ext_resource type="AudioStream" uid="uid://cptikro853bl8" path="res://sounds/bitchin 1.wav" id="1_fpfri"]
 [ext_resource type="Script" path="res://code/music_player.cs" id="1_nqfbh"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://j5tpbqo0nafi" path="res://sounds/bitchin 6.wav" id="7_2ovou"]
 [ext_resource type="AudioStream" uid="uid://cbloawnmucdhf" path="res://sounds/bitchin 7.wav" id="8_66br6"]
 [ext_resource type="AudioStream" uid="uid://db83qyspwir3y" path="res://sounds/bitchin 8.wav" id="9_xvdbj"]
+[ext_resource type="Texture2D" uid="uid://ctjuxrkecw03y" path="res://sprites/other_buttons/music_button_on.png" id="10_8k1qa"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_nqfbh")
@@ -51,3 +52,14 @@ autoplay = true
 stream = ExtResource("9_xvdbj")
 volume_db = -80.0
 autoplay = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+z_index = 1
+z_as_relative = false
+offset_left = 896.0
+offset_top = 504.0
+offset_right = 920.0
+offset_bottom = 528.0
+texture_normal = ExtResource("10_8k1qa")
+
+[connection signal="pressed" from="TextureButton" to="." method="mute_pressed"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://de3pa55pwsysx"]
+[gd_scene load_steps=5 format=3 uid="uid://de3pa55pwsysx"]
 
 [ext_resource type="Script" path="res://code/button_sound.cs" id="1_xp5qe"]
 [ext_resource type="AudioStream" uid="uid://cadcd4q50cbq1" path="res://sounds/button_sounds/hover-sound-effect.mp3" id="2_hiye3"]
 [ext_resource type="AudioStream" uid="uid://batk5ydkuhf70" path="res://sounds/button_sounds/totally_just_a_button_press_lol.wav" id="3_opcbp"]
+[ext_resource type="Texture2D" uid="uid://2c1uis7xbvk3" path="res://sprites/other_buttons/mute_button_on.png" id="4_esh7y"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_xp5qe")
@@ -14,3 +15,14 @@ volume_db = -4.0
 [node name="click_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_opcbp")
 volume_db = -6.0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+z_index = 1
+z_as_relative = false
+offset_left = 928.0
+offset_top = 504.0
+offset_right = 952.0
+offset_bottom = 528.0
+texture_normal = ExtResource("4_esh7y")
+
+[connection signal="pressed" from="TextureButton" to="." method="mute_pressed"]

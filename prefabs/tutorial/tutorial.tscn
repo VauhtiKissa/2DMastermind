@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cd0ucewskw06l" path="res://prefabs/tutorial/tutorial_guess_row.tscn" id="2_isms7"]
 [ext_resource type="Texture2D" uid="uid://cr62evgaywidk" path="res://sprites/backs/backgorund.png" id="2_ltm8y"]
 [ext_resource type="PackedScene" uid="uid://bc0ml7noxam2a" path="res://prefabs/tutorial/tutorial_guess_cube.tscn" id="3_y3y48"]
-[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/menu_button_background.png" id="4_vh6qe"]
-[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/menu_button_hover.png" id="5_eqaxb"]
-[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://prefabs/game/fonts/ka1.ttf" id="6_631le"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/backs/menu_button_background.png" id="4_vh6qe"]
+[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/backs/menu_button_hover.png" id="5_eqaxb"]
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="6_631le"]
 
 [node name="tutorial" type="Node2D"]
 texture_filter = 3

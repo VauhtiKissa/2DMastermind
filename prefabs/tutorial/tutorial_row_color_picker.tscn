@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://prvg6lawgu2y"]
 
 [ext_resource type="Script" path="res://code/tutorial/tutorial_row_color_picker.cs" id="1_58c2y"]
-[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/button_sprites/Button.png" id="1_ro2j3"]
-[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/button_sprites/ButtonPressed.png" id="2_e74pj"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="1_ro2j3"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="2_e74pj"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_fuikl"]
 
