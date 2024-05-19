@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://bfibqxbbt1dfr" path="res://sounds/bitchin 2.wav" id="2_vefa7"]
 [ext_resource type="AudioStream" uid="uid://cpxni0sl4wvak" path="res://sounds/bitchin 3.wav" id="3_gkpm3"]
 [ext_resource type="AudioStream" uid="uid://g4rck2580hbw" path="res://sounds/bitchin 4.wav" id="4_3ys82"]
-[ext_resource type="AudioStream" uid="uid://b477fj82shft" path="res://sounds/bitchin 5.wav" id="6_47e7e"]
+[ext_resource type="AudioStream" uid="uid://c041nbswn5rea" path="res://sounds/bitchin 5 .wav" id="6_ui3y1"]
 [ext_resource type="AudioStream" uid="uid://j5tpbqo0nafi" path="res://sounds/bitchin 6.wav" id="7_2ovou"]
 [ext_resource type="AudioStream" uid="uid://cbloawnmucdhf" path="res://sounds/bitchin 7.wav" id="8_66br6"]
 [ext_resource type="AudioStream" uid="uid://db83qyspwir3y" path="res://sounds/bitchin 8.wav" id="9_xvdbj"]
@@ -34,7 +34,7 @@ volume_db = -80.0
 autoplay = true
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_47e7e")
+stream = ExtResource("6_ui3y1")
 volume_db = -80.0
 autoplay = true
 
