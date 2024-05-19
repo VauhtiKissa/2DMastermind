@@ -1,4 +1,4 @@
-public enum GameColors {white, black, red, green, blue, yellow, turquoise, purple}
+public enum GameColors {white, black, red, green, blue, yellow, turquoise, purple,blank}
 
 public static class Color_values{
     // paths to button sprites
@@ -11,7 +11,9 @@ public static class Color_values{
         "res://sprites/color_button_sprites/4blue.png",
         "res://sprites/color_button_sprites/5yellow.png",
         "res://sprites/color_button_sprites/6turquoise.png",
-        "res://sprites/color_button_sprites/7purple.png"
+        "res://sprites/color_button_sprites/7purple.png",
+        "res://sprites/color_button_sprites/blank.png"
+
     } ;
 
     // paths to pressed button sprites
@@ -23,6 +25,7 @@ public static class Color_values{
         "res://sprites/color_button_sprites/4blue_pressed.png",
         "res://sprites/color_button_sprites/5yellow_pressed.png",
         "res://sprites/color_button_sprites/6turquoise_pressed.png",
-        "res://sprites/color_button_sprites/7purple_pressed.png"
+        "res://sprites/color_button_sprites/7purple_pressed.png",
+        "res://sprites/color_button_sprites/blank_pressed.png"
     } ;
 }

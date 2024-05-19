@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bc0ml7noxam2a"]
+[gd_scene load_steps=9 format=3 uid="uid://bc0ml7noxam2a"]
 
 [ext_resource type="Script" path="res://code/tutorial/tutorial_guess_cube.cs" id="1_33wmh"]
 [ext_resource type="PackedScene" uid="uid://d1n08im7pbraq" path="res://prefabs/tutorial/tutorial_color_picker.tscn" id="2_6k0wl"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="5_hors1"]
 [ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="6_c81b2"]
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="7_jh75x"]
+[ext_resource type="Texture2D" uid="uid://dayrjy5g8oopy" path="res://sprites/color_button_sprites/blank.png" id="8_afe82"]
 
 [node name="tutorial_guess_cube" type="Node2D"]
 texture_filter = 1
@@ -29,6 +30,7 @@ position = Vector2(64, 64)
 offset_right = 96.0
 offset_bottom = 96.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -37,6 +39,7 @@ offset_left = 96.0
 offset_right = 192.0
 offset_bottom = 96.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 metadata/_edit_use_anchors_ = true
@@ -46,6 +49,7 @@ offset_left = 192.0
 offset_right = 288.0
 offset_bottom = 96.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -54,6 +58,7 @@ offset_left = 288.0
 offset_right = 384.0
 offset_bottom = 96.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -62,6 +67,7 @@ offset_top = 96.0
 offset_right = 96.0
 offset_bottom = 192.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -71,6 +77,7 @@ offset_top = 96.0
 offset_right = 192.0
 offset_bottom = 192.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -80,6 +87,7 @@ offset_top = 96.0
 offset_right = 288.0
 offset_bottom = 192.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -89,6 +97,7 @@ offset_top = 96.0
 offset_right = 384.0
 offset_bottom = 192.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -97,6 +106,7 @@ offset_top = 192.0
 offset_right = 96.0
 offset_bottom = 288.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -106,6 +116,7 @@ offset_top = 192.0
 offset_right = 192.0
 offset_bottom = 288.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -115,6 +126,7 @@ offset_top = 192.0
 offset_right = 288.0
 offset_bottom = 288.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -124,6 +136,7 @@ offset_top = 192.0
 offset_right = 384.0
 offset_bottom = 288.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -132,6 +145,7 @@ offset_top = 288.0
 offset_right = 96.0
 offset_bottom = 384.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -141,6 +155,7 @@ offset_top = 288.0
 offset_right = 192.0
 offset_bottom = 384.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -150,6 +165,7 @@ offset_top = 288.0
 offset_right = 288.0
 offset_bottom = 384.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -159,6 +175,7 @@ offset_top = 288.0
 offset_right = 384.0
 offset_bottom = 384.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
@@ -379,6 +396,31 @@ text = "Press here to check your answer"
 horizontal_alignment = 2
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="Label7" type="Label" parent="texts"]
+offset_left = -165.0
+offset_top = 303.0
+offset_right = 99.0
+offset_bottom = 366.0
+theme = ExtResource("7_jh75x")
+text = "RIght Click to make them blanks"
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label8" type="Label" parent="texts"]
+offset_left = 159.0
+offset_top = 304.0
+offset_right = 408.0
+offset_bottom = 367.0
+theme = ExtResource("7_jh75x")
+text = "THe Code never contains a blank"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Blank" type="Sprite2D" parent="."]
+position = Vector2(260, 674)
+texture = ExtResource("8_afe82")
 
 [connection signal="pressed" from="buttons/TextureButton" to="." method="button_pressed" binds= [0]]
 [connection signal="pressed" from="buttons/TextureButton2" to="." method="button_pressed" binds= [1]]

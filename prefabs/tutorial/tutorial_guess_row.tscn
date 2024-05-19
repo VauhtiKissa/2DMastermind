@@ -23,6 +23,7 @@ position = Vector2(-96, 14)
 offset_right = 96.0
 offset_bottom = 96.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("2_ey6sc")
 texture_pressed = ExtResource("3_3hseg")
 
@@ -31,6 +32,7 @@ offset_left = 96.0
 offset_right = 192.0
 offset_bottom = 96.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("2_ey6sc")
 texture_pressed = ExtResource("3_3hseg")
 metadata/_edit_use_anchors_ = true
@@ -40,6 +42,7 @@ offset_left = 192.0
 offset_right = 288.0
 offset_bottom = 96.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("2_ey6sc")
 texture_pressed = ExtResource("3_3hseg")
 
@@ -48,6 +51,7 @@ offset_left = 288.0
 offset_right = 384.0
 offset_bottom = 96.0
 action_mode = 0
+button_mask = 3
 texture_normal = ExtResource("2_ey6sc")
 texture_pressed = ExtResource("3_3hseg")
 
