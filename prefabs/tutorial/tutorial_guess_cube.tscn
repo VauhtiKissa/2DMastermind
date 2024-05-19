@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc0ml7noxam2a"]
+[gd_scene load_steps=8 format=3 uid="uid://bc0ml7noxam2a"]
 
 [ext_resource type="Script" path="res://code/tutorial/tutorial_guess_cube.cs" id="1_33wmh"]
 [ext_resource type="PackedScene" uid="uid://d1n08im7pbraq" path="res://prefabs/tutorial/tutorial_color_picker.tscn" id="2_6k0wl"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="4_5o0oy"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="5_hors1"]
 [ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="6_c81b2"]
+[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="7_jh75x"]
 
 [node name="tutorial_guess_cube" type="Node2D"]
 texture_filter = 1
@@ -352,7 +353,7 @@ offset_left = -60.0
 offset_top = -62.0
 offset_right = 351.0
 offset_bottom = 10.0
-theme_override_fonts/font = ExtResource("6_c81b2")
+theme = ExtResource("7_jh75x")
 text = "You have 8 crossing color codes"
 vertical_alignment = 1
 autowrap_mode = 2
@@ -362,18 +363,18 @@ offset_left = -232.0
 offset_top = 66.0
 offset_right = -16.0
 offset_bottom = 195.0
-theme_override_fonts/font = ExtResource("6_c81b2")
+theme = ExtResource("7_jh75x")
 text = "4 of the lines are vertical and 4 are horizontal"
 horizontal_alignment = 2
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Label6" type="Label" parent="texts"]
-offset_left = 293.0
-offset_top = 219.0
-offset_right = 521.0
-offset_bottom = 282.0
-theme_override_fonts/font = ExtResource("6_c81b2")
+offset_left = 263.0
+offset_top = 210.0
+offset_right = 550.0
+offset_bottom = 273.0
+theme = ExtResource("7_jh75x")
 text = "Press here to check your answer"
 horizontal_alignment = 2
 vertical_alignment = 1

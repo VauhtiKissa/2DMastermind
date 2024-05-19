@@ -9,7 +9,7 @@ public partial class music_player : Node
 
 	private Node[] sources;
 
-	private int music_level;
+	private int music_level = 1;
 
 	public override void _Ready()
 	{
@@ -33,18 +33,24 @@ public partial class music_player : Node
 		{
 			((AudioStreamPlayer)sources[i]).VolumeDb = -80;
 		}
+		music_level = 0;
 	}
 
 	public void mute_pressed(){
 		muted = !muted;
+
 		if(muted == true){
+
 			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/music_button_off.png");
+
 			for (int i = 0; i < music_level; i++)
 			{
 				((AudioStreamPlayer)sources[i]).VolumeDb = -80;
 			}
 		}else{
+
 			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/music_button_on.png");
+			
 			for (int i = 0; i < music_level; i++)
 			{
 				((AudioStreamPlayer)sources[i]).VolumeDb = 0;

@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c6ryupqswrbrf"]
+
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="1_7lv2i"]
+
+[resource]
+default_font = ExtResource("1_7lv2i")
+default_font_size = 20

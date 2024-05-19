@@ -12,7 +12,7 @@ config_version=5
 
 config/name="2DMastermind"
 run/main_scene="res://prefabs/game/menu.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://sprites/icon.svg"
 
 [audio]
@@ -43,6 +43,6 @@ folder_colors={
 "res://sounds/": "purple",
 "res://sprites/": "red",
 "res://sprites/backs/": "gray",
-"res://sprites/color_button_sprites/": "orange",
+"res://sprites/button_sprites/": "orange",
 "res://sprites/confetti/": "pink"
 }

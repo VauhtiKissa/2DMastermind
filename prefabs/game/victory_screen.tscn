@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://hisj55gj1gkd"]
+[gd_scene load_steps=7 format=3 uid="uid://hisj55gj1gkd"]
 
 [ext_resource type="Script" path="res://code/victory_screen.cs" id="1_vc4vs"]
 [ext_resource type="Texture2D" uid="uid://c2fqy0ygoebwi" path="res://sprites/backs/loss_background.png" id="2_rmp2x"]
 [ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="3_inckh"]
 [ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/backs/menu_button_background.png" id="4_lksm3"]
 [ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/backs/menu_button_hover.png" id="5_h25p7"]
+[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="6_jbrqk"]
 
 [node name="victory_screen" type="Node2D"]
 texture_filter = 1
@@ -39,8 +40,7 @@ texture_hover = ExtResource("5_h25p7")
 layout_mode = 0
 offset_right = 240.0
 offset_bottom = 64.0
-theme_override_fonts/font = ExtResource("3_inckh")
-theme_override_font_sizes/font_size = 24
+theme = ExtResource("6_jbrqk")
 text = "BACK TO MENU"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -58,8 +58,7 @@ texture_hover = ExtResource("5_h25p7")
 layout_mode = 0
 offset_right = 240.0
 offset_bottom = 64.0
-theme_override_fonts/font = ExtResource("3_inckh")
-theme_override_font_sizes/font_size = 24
+theme = ExtResource("6_jbrqk")
 text = "NEW GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
