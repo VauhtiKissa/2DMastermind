@@ -15,7 +15,7 @@ public partial class Color_picker : Node2D
 			((TextureButton)buttons.GetChild(i)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[i]);
 		}
 
-        ((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)buttons.GetChild(8), false);
+        ((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)buttons.GetChild(8), true);
 
 		parent = (Guess_cube)GetParent();
 	}
