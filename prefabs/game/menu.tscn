@@ -23,22 +23,6 @@ format = 2
 [node name="menu" type="Node2D" parent="."]
 script = ExtResource("1_nam66")
 
-[node name="MenuButtonBackground" type="Sprite2D" parent="menu"]
-position = Vector2(480, 80)
-texture = ExtResource("4_5v42k")
-
-[node name="Label" type="Label" parent="menu"]
-texture_filter = 1
-offset_left = 256.0
-offset_top = 24.0
-offset_right = 704.0
-offset_bottom = 136.0
-theme_override_fonts/font = ExtResource("2_gaijx")
-theme_override_font_sizes/font_size = 43
-text = "2D Mastermind"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="start" type="TextureButton" parent="menu"]
 offset_left = 360.0
 offset_top = 160.0
@@ -99,6 +83,22 @@ offset_right = 232.0
 offset_bottom = 56.0
 theme = ExtResource("8_r821p")
 text = "QUIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtonBackground" type="Sprite2D" parent="menu"]
+position = Vector2(480, 80)
+texture = ExtResource("4_5v42k")
+
+[node name="Label" type="Label" parent="menu"]
+texture_filter = 1
+offset_left = 256.0
+offset_top = 24.0
+offset_right = 704.0
+offset_bottom = 136.0
+theme_override_fonts/font = ExtResource("2_gaijx")
+theme_override_font_sizes/font_size = 43
+text = "2D Mastermind"
 horizontal_alignment = 1
 vertical_alignment = 1
 

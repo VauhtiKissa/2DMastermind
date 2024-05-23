@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dtbsds82xs85o"]
+[gd_scene load_steps=10 format=3 uid="uid://dtbsds82xs85o"]
 
 [ext_resource type="Script" path="res://code/tutorial/tutorial.cs" id="1_h4gew"]
 [ext_resource type="PackedScene" uid="uid://82b6ui050fvi" path="res://prefabs/tutorial/2d_mastermind_explination.tscn" id="2_m10n0"]
+[ext_resource type="Texture2D" uid="uid://cr62evgaywidk" path="res://sprites/backs/backgorund.png" id="2_vq8sq"]
 [ext_resource type="PackedScene" uid="uid://dhc0k2wkd4qvc" path="res://prefabs/tutorial/game_progression_explination.tscn" id="3_551kd"]
 [ext_resource type="PackedScene" uid="uid://c8e825l0wv3ss" path="res://prefabs/tutorial/mastermind_explination.tscn" id="4_ougmf"]
 [ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/backs/menu_button_background.png" id="4_vh6qe"]
@@ -13,6 +14,10 @@
 texture_filter = 3
 script = ExtResource("1_h4gew")
 Pages = [NodePath("mastermind_explination"), NodePath("2d_mastermind_explination"), NodePath("game_progression_explination"), NodePath("blank_spaces")]
+
+[node name="Backgorund" type="Sprite2D" parent="."]
+position = Vector2(480, 270)
+texture = ExtResource("2_vq8sq")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 44.0
