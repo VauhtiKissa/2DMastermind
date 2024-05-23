@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhc0k2wkd4qvc"]
+
+[ext_resource type="Texture2D" uid="uid://bs5x1atjckpxa" path="res://sprites/thegame.PNG" id="1_mo2wf"]
+[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="2_v2rrn"]
+
+[node name="game_progression_explination" type="Node2D"]
+
+[node name="Thegame" type="Sprite2D" parent="."]
+position = Vector2(448, 256)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_mo2wf")
+
+[node name="texts" type="Node2D" parent="."]
+position = Vector2(64, 0)
+
+[node name="Label5" type="Label" parent="texts"]
+offset_left = 192.0
+offset_top = 24.0
+offset_right = 576.0
+offset_bottom = 102.0
+theme = ExtResource("2_v2rrn")
+text = "You have 8 guesses to get the correct combination"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

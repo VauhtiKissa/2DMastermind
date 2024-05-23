@@ -1,69 +1,69 @@
-[gd_scene load_steps=8 format=3 uid="uid://dtbsds82xs85o"]
+[gd_scene load_steps=9 format=3 uid="uid://dtbsds82xs85o"]
 
 [ext_resource type="Script" path="res://code/tutorial/tutorial.cs" id="1_h4gew"]
-[ext_resource type="PackedScene" uid="uid://cd0ucewskw06l" path="res://prefabs/tutorial/tutorial_guess_row.tscn" id="2_isms7"]
-[ext_resource type="Texture2D" uid="uid://cr62evgaywidk" path="res://sprites/backs/backgorund.png" id="2_ltm8y"]
-[ext_resource type="PackedScene" uid="uid://bc0ml7noxam2a" path="res://prefabs/tutorial/tutorial_guess_cube.tscn" id="3_y3y48"]
+[ext_resource type="PackedScene" uid="uid://82b6ui050fvi" path="res://prefabs/tutorial/2d_mastermind_explination.tscn" id="2_m10n0"]
+[ext_resource type="PackedScene" uid="uid://dhc0k2wkd4qvc" path="res://prefabs/tutorial/game_progression_explination.tscn" id="3_551kd"]
+[ext_resource type="PackedScene" uid="uid://c8e825l0wv3ss" path="res://prefabs/tutorial/mastermind_explination.tscn" id="4_ougmf"]
 [ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/backs/menu_button_background.png" id="4_vh6qe"]
 [ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/backs/menu_button_hover.png" id="5_eqaxb"]
-[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="7_7oumn"]
+[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="7_ysk8h"]
+[ext_resource type="PackedScene" uid="uid://cbcbj8r4rsyr5" path="res://prefabs/tutorial/blank_spaces.tscn" id="8_k87n1"]
 
-[node name="tutorial" type="Node2D"]
+[node name="tutorial" type="Node2D" node_paths=PackedStringArray("Pages")]
 texture_filter = 3
 script = ExtResource("1_h4gew")
+Pages = [NodePath("mastermind_explination"), NodePath("2d_mastermind_explination"), NodePath("game_progression_explination"), NodePath("blank_spaces")]
 
-[node name="Backgorund" type="Sprite2D" parent="."]
-position = Vector2(480, 270)
-texture = ExtResource("2_ltm8y")
-
-[node name="guess_row" parent="." instance=ExtResource("2_isms7")]
-position = Vector2(320, 159)
-
-[node name="Node2D" parent="." instance=ExtResource("3_y3y48")]
-position = Vector2(-684, 128)
-
-[node name="Button" type="TextureButton" parent="."]
-offset_left = 936.0
-offset_top = 108.0
-offset_right = 1176.0
-offset_bottom = 172.0
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 44.0
+offset_top = 129.0
+offset_right = 299.0
+offset_bottom = 222.0
 rotation = 1.5708
 texture_normal = ExtResource("4_vh6qe")
 texture_pressed = ExtResource("5_eqaxb")
 texture_hover = ExtResource("5_eqaxb")
+stretch_mode = 0
 
-[node name="Label4" type="Label" parent="Button"]
+[node name="Label" type="Label" parent="TextureButton"]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 8.0
-offset_right = 228.0
-offset_bottom = 56.0
-theme = ExtResource("7_7oumn")
-text = "NEXT PAGE"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
+offset_left = 55.0
+offset_top = 11.9998
+offset_right = 198.0
+offset_bottom = 35.9998
+theme = ExtResource("7_ysk8h")
+text = "LAST APGE"
 
-[node name="Button2" type="TextureButton" parent="."]
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 248.0
-offset_bottom = 72.0
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = 912.0
+offset_top = 384.0
+offset_right = 1168.0
+offset_bottom = 474.0
+rotation = -1.5708
 texture_normal = ExtResource("4_vh6qe")
 texture_pressed = ExtResource("5_eqaxb")
 texture_hover = ExtResource("5_eqaxb")
+stretch_mode = 0
 
-[node name="Label4" type="Label" parent="Button2"]
+[node name="Label" type="Label" parent="TextureButton2"]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 232.0
-offset_bottom = 56.0
-theme = ExtResource("7_7oumn")
-text = "Back to Menu"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
+offset_left = 56.0
+offset_top = 16.0
+offset_right = 201.0
+offset_bottom = 40.0
+theme = ExtResource("7_ysk8h")
+text = "NEXT PAGE"
 
-[connection signal="pressed" from="Button" to="." method="change_page"]
-[connection signal="pressed" from="Button2" to="." method="back_to_menu"]
+[node name="mastermind_explination" parent="." instance=ExtResource("4_ougmf")]
+
+[node name="2d_mastermind_explination" parent="." instance=ExtResource("2_m10n0")]
+position = Vector2(1000, 1000)
+
+[node name="game_progression_explination" parent="." instance=ExtResource("3_551kd")]
+position = Vector2(952, -544)
+
+[node name="blank_spaces" parent="." instance=ExtResource("8_k87n1")]
+position = Vector2(864, -72)
+
+[connection signal="pressed" from="TextureButton" to="." method="change_page_backward"]
+[connection signal="pressed" from="TextureButton2" to="." method="change_page_forward"]

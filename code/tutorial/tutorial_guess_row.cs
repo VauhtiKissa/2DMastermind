@@ -31,7 +31,7 @@ public partial class tutorial_guess_row : Node2D
 			((TextureButton)buttons.GetChild(i)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[0]);
 		}
 
-        ((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(5), true);
+        ((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(4), true);
 
 		correct_values = new GameColors[4];
 		for (int i = 0 ; i < correct_values.Length ; i++){

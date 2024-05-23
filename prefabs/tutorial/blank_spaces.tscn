@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbcbj8r4rsyr5"]
+
+[ext_resource type="Texture2D" uid="uid://dayrjy5g8oopy" path="res://sprites/color_button_sprites/blank.png" id="1_dw68j"]
+[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="2_ty5fl"]
+
+[node name="blank_spaces" type="Node2D"]
+
+[node name="Blank" type="Sprite2D" parent="."]
+position = Vector2(512, 256)
+texture = ExtResource("1_dw68j")
+
+[node name="texts" type="Node2D" parent="."]
+position = Vector2(64, 0)
+
+[node name="Label5" type="Label" parent="texts"]
+offset_left = 256.0
+offset_top = 120.0
+offset_right = 640.0
+offset_bottom = 198.0
+theme = ExtResource("2_ty5fl")
+text = "You can right click to make blocks blanks"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label6" type="Label" parent="texts"]
+offset_left = 256.0
+offset_top = 312.0
+offset_right = 640.0
+offset_bottom = 390.0
+theme = ExtResource("2_ty5fl")
+text = "THe code never contains blanks"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

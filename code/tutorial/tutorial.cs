@@ -1,38 +1,47 @@
 using Godot;
 using System;
+using System.Linq;
 
 public partial class tutorial : Node2D
 {
-	private bool page = false;
-	private Vector2 hidden_position = new Vector2(-1000,0);
-	private Vector2 visible_position = new Vector2(320,150);
-
-	private tutorial_guess_row page1;
-	private tutorial_guess_cube page2;
-
-	private TextureButton[] buttons;
+	[Export]
+	private Node2D[] Pages;
+	private int current_page = 0;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(3), true);
-		((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(4), true);
 
-		page1 = (tutorial_guess_row)GetChild(1);
-		page2 = (tutorial_guess_cube)GetChild(2);
+		((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(0), true);
+		((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(1), true);
+
+
 	}
 
-
-	public void change_page(){
-		if(page == true){
-			page1.Position = visible_position;
-			page2.Position = hidden_position;
+	public void change_page_forward(){
+		current_page += 1;
+		if(current_page <= Pages.Length-1){
+			Pages[current_page].Position = new Vector2(0,0);
+			Pages[current_page-1].Position = new Vector2(0,1000);
 		}else{
-			page1.Position = hidden_position;
-			page2.Position = visible_position;
+			current_page = 0;
+			Pages[current_page].Position = new Vector2(0,0);
+			Pages[Pages.Length-1].Position = new Vector2(0,1000);
 		}
-		page = !page;
 	}
+
+	public void change_page_backward(){
+		current_page -= 1;
+		if(current_page >= 0){
+			Pages[current_page].Position = new Vector2(0,0);
+			Pages[current_page+1].Position = new Vector2(0,1000);
+		}else{
+			current_page = Pages.Length-1;
+			Pages[current_page].Position = new Vector2(0,0);
+			Pages[0].Position = new Vector2(0,1000);
+		}
+	}
+
 
 	public void back_to_menu(){
 		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/menu.tscn").Instantiate());
