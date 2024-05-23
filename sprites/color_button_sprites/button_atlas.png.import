@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyonttylc2clu"
-path="res://.godot/imported/colored_buttons_pressed.png-da150893bba2e6b9398db23e4182c664.ctex"
+uid="uid://dq275mcdgu0ai"
+path="res://.godot/imported/button_atlas.png-462c712176db35399349a82b25333ab4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/color_button_sprites/colored_buttons_pressed.png"
-dest_files=["res://.godot/imported/colored_buttons_pressed.png-da150893bba2e6b9398db23e4182c664.ctex"]
+source_file="res://sprites/color_button_sprites/button_atlas.png"
+dest_files=["res://.godot/imported/button_atlas.png-462c712176db35399349a82b25333ab4.ctex"]
 
 [params]
 
