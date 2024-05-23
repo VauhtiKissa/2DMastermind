@@ -24,12 +24,13 @@ public partial class config_manager : Node
 		}else{
 			config = new Config();
 		}
-
 	}
 
 	public static void save(){
+		DirAccess.RemoveAbsolute("user://2DMastermind.json");
 		Godot.FileAccess file = Godot.FileAccess.Open("user://2DMastermind.json", Godot.FileAccess.ModeFlags.Write);
 		file.StoreString(JsonSerializer.Serialize(config));
+		file.Close();
 	}
 	public static Config config;
 }
