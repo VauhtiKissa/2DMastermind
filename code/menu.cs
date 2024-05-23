@@ -13,10 +13,15 @@ public partial class menu : Node2D
 		normal_game = ResourceLoader.Load<PackedScene>("res://prefabs/game/game.tscn").Instantiate();
 		tutorial_game = ResourceLoader.Load<PackedScene>("res://prefabs/tutorial/tutorial.tscn").Instantiate();
 
-
+		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(0), true);
+		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(1), true);
 		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(2), true);
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(3), true);
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(4), true);
+
+		if(config_manager.config.did_tutorial == false){
+			((TextureButton)GetNode(GetPath()+"/start")).Position = new Vector2(0,1000);
+			((TextureButton)GetNode(GetPath()+"/tutorial")).Position = new Vector2(360,160);
+			((TextureButton)GetNode(GetPath()+"/quit")).Position = new Vector2(360,248);
+		}
 
 	}
 
