@@ -19,6 +19,9 @@ public partial class music_player : Node
 			sources[i] = GetChild(i);	
 		}
 		mute_button = (TextureButton)GetChild(8);
+		if(config_manager.config.music_mute){
+			mute_pressed();
+		}
 	}
 
 	public void round_up(int number){
@@ -41,6 +44,9 @@ public partial class music_player : Node
 
 		if(muted == true){
 
+			config_manager.config.music_mute = true;
+			config_manager.save();
+
 			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/music_button_off.png");
 
 			for (int i = 0; i < music_level; i++)
@@ -48,6 +54,9 @@ public partial class music_player : Node
 				((AudioStreamPlayer)sources[i]).VolumeDb = -80;
 			}
 		}else{
+
+			config_manager.config.music_mute = false;
+			config_manager.save();
 
 			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/music_button_on.png");
 			

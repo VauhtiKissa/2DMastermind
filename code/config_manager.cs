@@ -5,6 +5,10 @@ using System.Text.Json;
 
 public class Config{
 	public bool did_tutorial { get; set;} = false;
+
+	public bool music_mute { get; set;} = false;
+
+	public bool button_mute { get; set;} = false;
 }
 
 public partial class config_manager : Node
