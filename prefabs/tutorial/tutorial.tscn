@@ -54,6 +54,26 @@ offset_bottom = 40.0
 theme = ExtResource("7_ysk8h")
 text = "NEXT PAGE"
 
+[node name="TextureButton3" type="TextureButton" parent="."]
+offset_left = -24.0
+offset_right = 231.0
+offset_bottom = 64.0
+texture_normal = ExtResource("4_vh6qe")
+texture_pressed = ExtResource("5_eqaxb")
+texture_hover = ExtResource("5_eqaxb")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureButton3"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 256.0
+offset_bottom = 56.0
+theme = ExtResource("7_ysk8h")
+text = "BACK TO MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="mastermind_explination" parent="." instance=ExtResource("4_ougmf")]
 
 [node name="2d_mastermind_explination" parent="." instance=ExtResource("2_m10n0")]
@@ -67,3 +87,4 @@ position = Vector2(864, -72)
 
 [connection signal="pressed" from="TextureButton" to="." method="change_page_backward"]
 [connection signal="pressed" from="TextureButton2" to="." method="change_page_forward"]
+[connection signal="pressed" from="TextureButton3" to="." method="change_page_backward"]

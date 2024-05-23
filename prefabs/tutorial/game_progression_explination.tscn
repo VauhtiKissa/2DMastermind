@@ -12,6 +12,7 @@ texture = ExtResource("1_mo2wf")
 
 [node name="texts" type="Node2D" parent="."]
 position = Vector2(64, 0)
+metadata/_edit_group_ = true
 
 [node name="Label5" type="Label" parent="texts"]
 offset_left = 192.0
