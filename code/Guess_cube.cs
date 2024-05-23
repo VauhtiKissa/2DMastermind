@@ -40,7 +40,7 @@ public partial class Guess_cube : Node2D
 	 	}else{
 			current_values[number] = GameColors.blank;
 			((TextureButton)buttons.GetChild(number)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[8]);
-			((TextureButton)buttons.GetChild(number)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[8]);
+			((TextureButton)buttons.GetChild(number)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites[8]);
 			((TextureButton)buttons.GetChild(number)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[8]);
 		}
 	}
