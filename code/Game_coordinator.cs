@@ -19,6 +19,8 @@ public partial class Game_coordinator : Node2D
 		}
 		generate_answer();
 		start_round();
+
+        ((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(1), true);
     }
 
 	private void generate_answer(){
@@ -47,7 +49,8 @@ public partial class Game_coordinator : Node2D
 	}
 
 	public void back_to_menu(){
+		((music_player)GetNode("/root/MusicPlayer")).restart_sound_level();
 		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/menu.tscn").Instantiate());
-		QueueFree();
+		GetParent().QueueFree();
 	}
 }
