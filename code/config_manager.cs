@@ -26,7 +26,6 @@ public partial class config_manager : Node
 	public static void save(){
 		Godot.FileAccess file = Godot.FileAccess.Open("user://2DMastermind.json", Godot.FileAccess.ModeFlags.Write);
 		file.StoreString(JsonSerializer.Serialize(config));
-		GD.Print(JsonSerializer.Serialize(config));
 	}
 	public static Config config;
 }

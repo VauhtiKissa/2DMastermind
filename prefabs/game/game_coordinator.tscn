@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0bfuitfo4vlu"]
+[gd_scene load_steps=6 format=3 uid="uid://d0bfuitfo4vlu"]
 
 [ext_resource type="Script" path="res://code/Game_coordinator.cs" id="1_m2ipn"]
 [ext_resource type="PackedScene" uid="uid://dmp7lrp2l6qjy" path="res://prefabs/game/guess_cube.tscn" id="2_6jxxe"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/backs/menu_button_background.png" id="3_aevmv"]
+[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/backs/menu_button_hover.png" id="4_lcetm"]
+[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="5_chc5p"]
 
 [node name="game_coordinator" type="Node2D"]
 script = ExtResource("1_m2ipn")
@@ -39,3 +42,26 @@ scale = Vector2(0.3, 0.3)
 [node name="Node2D8" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
 position = Vector2(704, 288)
 scale = Vector2(0.3, 0.3)
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+offset_left = -24.0
+offset_right = 231.0
+offset_bottom = 64.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_aevmv")
+texture_pressed = ExtResource("4_lcetm")
+texture_hover = ExtResource("4_lcetm")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 97.0
+offset_bottom = 26.0
+theme = ExtResource("5_chc5p")
+theme_override_font_sizes/font_size = 10
+text = "BACK TO MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton3" to="." method="back_to_menu"]
