@@ -118,6 +118,7 @@ public partial class Guess_cube : Node2D
 	public void activate(){
 		for (int i = 0; i < 16; i++)
 		{
+			current_values[i] = GameColors.blank;
 			((TextureButton)buttons.GetChild(i)).Disabled = false;
 			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[8]);
 			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[8]);

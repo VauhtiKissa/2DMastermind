@@ -24,9 +24,9 @@ public partial class tutorial_guess_cube : Node2D
 
 		for (int i = 0 ; i < buttons.GetChildCount(); i++){
 			((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)buttons.GetChild(i), false);
-			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[0]);
-			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[0]);
-			((TextureButton)buttons.GetChild(i)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[0]);
+			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[8]);
+			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites[8]);
+			((TextureButton)buttons.GetChild(i)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[8]);
 		}
 
 	
@@ -34,6 +34,7 @@ public partial class tutorial_guess_cube : Node2D
 		correct_values = new GameColors[16];
 		for (int i = 0 ; i < correct_values.Length ; i++){
 			correct_values[i] = (GameColors)GD.RandRange(0,7);
+			current_values[i] = GameColors.blank;
 		}
 	}
 
@@ -46,7 +47,7 @@ public partial class tutorial_guess_cube : Node2D
 	 	}else{
 			current_values[number] = GameColors.blank;
 			((TextureButton)buttons.GetChild(number)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[8]);
-			((TextureButton)buttons.GetChild(number)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[8]);
+			((TextureButton)buttons.GetChild(number)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites[8]);
 			((TextureButton)buttons.GetChild(number)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[8]);
 		}
 	}
