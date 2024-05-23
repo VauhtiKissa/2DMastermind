@@ -55,7 +55,7 @@ texture_normal = ExtResource("2_ey6sc")
 texture_pressed = ExtResource("3_3hseg")
 
 [node name="correct" type="Label" parent="."]
-modulate = Color(0.34902, 0.764706, 0.0313726, 1)
+modulate = Color(0, 0.909804, 0.0313726, 1)
 offset_left = -252.0
 offset_right = -208.0
 offset_bottom = 96.0
@@ -66,7 +66,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="wrong_place" type="Label" parent="."]
-modulate = Color(0.94902, 0.670588, 0.227451, 1)
+modulate = Color(0.933333, 0.717647, 0, 1)
 offset_left = 204.0
 offset_right = 248.0
 offset_bottom = 96.0

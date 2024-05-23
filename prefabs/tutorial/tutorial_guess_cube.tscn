@@ -178,7 +178,7 @@ texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="correct_answer_numbers" type="Node2D" parent="."]
-modulate = Color(0.34902, 0.764706, 0.0313726, 1)
+modulate = Color(0, 0.909804, 0.0313726, 1)
 texture_filter = 1
 
 [node name="Label" type="Label" parent="correct_answer_numbers"]
@@ -270,7 +270,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="wrong_place_numbers" type="Node2D" parent="."]
-modulate = Color(0.94902, 0.670588, 0.227451, 1)
+modulate = Color(0.933333, 0.717647, 0, 1)
 texture_filter = 1
 
 [node name="Label" type="Label" parent="wrong_place_numbers"]
