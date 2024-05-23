@@ -9,13 +9,13 @@ public partial class Color_picker : Node2D
 	{
 		buttons = GetChild(0).GetChild(1);
 		for (int i = 0 ; i < buttons.GetChildCount()-1; i++){
-        	((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)buttons.GetChild(i), false);
+        	((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)buttons.GetChild(i), false);
 			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[i]);
 			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[i]);
 			((TextureButton)buttons.GetChild(i)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[i]);
 		}
 
-        ((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)buttons.GetChild(8), true);
+        ((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)buttons.GetChild(8), true);
 
 		parent = (Guess_cube)GetParent();
 	}

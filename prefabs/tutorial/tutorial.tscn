@@ -77,14 +77,14 @@ vertical_alignment = 1
 [node name="mastermind_explination" parent="." instance=ExtResource("4_ougmf")]
 
 [node name="2d_mastermind_explination" parent="." instance=ExtResource("2_m10n0")]
-position = Vector2(1000, 1000)
+position = Vector2(-560, -528)
 
 [node name="game_progression_explination" parent="." instance=ExtResource("3_551kd")]
-position = Vector2(952, -544)
+position = Vector2(240, -496)
 
 [node name="blank_spaces" parent="." instance=ExtResource("8_k87n1")]
-position = Vector2(864, -72)
+position = Vector2(808, -496)
 
 [connection signal="pressed" from="TextureButton" to="." method="change_page_backward"]
 [connection signal="pressed" from="TextureButton2" to="." method="change_page_forward"]
-[connection signal="pressed" from="TextureButton3" to="." method="change_page_backward"]
+[connection signal="pressed" from="TextureButton3" to="." method="back_to_menu"]

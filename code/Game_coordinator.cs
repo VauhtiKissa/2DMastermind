@@ -31,7 +31,7 @@ public partial class Game_coordinator : Node2D
 	public void start_round(){
 		if(round_number < 8){
 
-        	music_player music_box = (music_player)GetTree().Root.GetChild(0);
+        	music_player music_box = (music_player)GetNode("/root/MusicPlayer");
 			music_box.round_up(round_number);
 
 			cubes[round_number].activate();

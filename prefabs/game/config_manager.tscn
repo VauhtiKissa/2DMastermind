@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://6ejlykaabwov"]
+
+[ext_resource type="Script" path="res://code/config_manager.cs" id="1_ajdey"]
+
+[node name="config_manager" type="Node"]
+script = ExtResource("1_ajdey")

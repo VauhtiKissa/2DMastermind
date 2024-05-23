@@ -1,4 +1,4 @@
-using Godot;
+ using Godot;
 using System;
 using System.Linq;
 
@@ -12,10 +12,10 @@ public partial class tutorial : Node2D
 	public override void _Ready()
 	{
 
-		((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(0), true);
-		((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(1), true);
-
-
+		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(0), true);
+		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(1), true);
+		config_manager.config.did_tutorial = true;
+		config_manager.save();
 	}
 
 	public void change_page_forward(){

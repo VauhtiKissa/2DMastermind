@@ -13,9 +13,10 @@ public partial class menu : Node2D
 		normal_game = ResourceLoader.Load<PackedScene>("res://prefabs/game/game.tscn").Instantiate();
 		tutorial_game = ResourceLoader.Load<PackedScene>("res://prefabs/tutorial/tutorial.tscn").Instantiate();
 
-		((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(2), true);
-		((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(3), true);
-		((button_sound)GetTree().Root.GetChild(1)).connect_button((TextureButton)GetChild(4), true);
+
+		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(2), true);
+		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(3), true);
+		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(4), true);
 
 	}
 
