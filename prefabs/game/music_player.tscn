@@ -56,10 +56,10 @@ autoplay = true
 [node name="TextureButton" type="TextureButton" parent="."]
 z_index = 1
 z_as_relative = false
-offset_left = 896.0
-offset_top = 504.0
-offset_right = 920.0
-offset_bottom = 528.0
+offset_left = 872.0
+offset_top = 512.0
+offset_right = 896.0
+offset_bottom = 536.0
 texture_normal = ExtResource("10_8k1qa")
 
 [connection signal="pressed" from="TextureButton" to="." method="mute_pressed"]
