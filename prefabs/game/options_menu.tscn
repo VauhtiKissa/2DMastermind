@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bgscpkfwf42lb"]
+[gd_scene load_steps=9 format=3 uid="uid://bgscpkfwf42lb"]
 
 [ext_resource type="Script" path="res://code/options_menu.cs" id="1_fpc5l"]
 [ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/backs/menu_button_background.png" id="1_tcksv"]
@@ -8,7 +8,6 @@
 [ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="3_w4d64"]
 [ext_resource type="Texture2D" uid="uid://2c1uis7xbvk3" path="res://sprites/other_buttons/mute_button_on.png" id="5_6ewob"]
 [ext_resource type="Texture2D" uid="uid://ctjuxrkecw03y" path="res://sprites/other_buttons/music_button_on.png" id="6_tx5y6"]
-[ext_resource type="Texture2D" uid="uid://bn03yyhgucgx7" path="res://sprites/other_buttons/timer_button_off.png" id="7_qyas4"]
 
 [node name="Options_menu" type="Node2D"]
 position = Vector2(0, 64)
@@ -73,30 +72,11 @@ text = "Music"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="timer_button" type="TextureButton" parent="."]
+[node name="save_button" type="TextureButton" parent="."]
 offset_left = 360.0
 offset_top = 240.0
 offset_right = 600.0
 offset_bottom = 304.0
-texture_normal = ExtResource("1_tcksv")
-texture_pressed = ExtResource("2_yn3ee")
-texture_hover = ExtResource("2_yn3ee")
-
-[node name="Label" type="Label" parent="timer_button"]
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 232.0
-offset_bottom = 56.0
-theme = ExtResource("3_inbjn")
-text = "Visible timer"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="save_button" type="TextureButton" parent="."]
-offset_left = 360.0
-offset_top = 312.0
-offset_right = 600.0
-offset_bottom = 376.0
 texture_normal = ExtResource("1_tcksv")
 texture_pressed = ExtResource("2_yn3ee")
 texture_hover = ExtResource("2_yn3ee")
@@ -124,11 +104,6 @@ texture = ExtResource("5_6ewob")
 position = Vector2(32, 176)
 scale = Vector2(2.66667, 2.66667)
 texture = ExtResource("6_tx5y6")
-
-[node name="TimerButtonOff" type="Sprite2D" parent="Sprites"]
-position = Vector2(32, 248)
-scale = Vector2(2.66667, 2.66667)
-texture = ExtResource("7_qyas4")
 
 [connection signal="value_changed" from="Sound_effect_slider_background/Sound_effect_slider" to="." method="SFX_slider_moved"]
 [connection signal="value_changed" from="Music_slider_background/Music_slider" to="." method="Music_slider_moved"]

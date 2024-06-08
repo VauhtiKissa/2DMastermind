@@ -4,7 +4,6 @@ using System;
 public partial class options_menu : Node2D
 {
 	private Node2D Sprites;
-
 	private music_player music_box;
 	private button_sound button_Sound;
 
@@ -15,7 +14,6 @@ public partial class options_menu : Node2D
 		Sprites = GetNode<Node2D>("Sprites");
 
 		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(3), true);
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(4), true);
 
 	}
 
@@ -27,10 +25,6 @@ public partial class options_menu : Node2D
 	public void Music_slider_moved(int new_number){
 		config_manager.config.music_volume = new_number;
 		music_box.sources[0].VolumeDb = config_manager.config.music_volume;
-	}
-
-	public void Timer_button_pressed(){
-
 	}
 
 	public void Exit_and_save_pressed(){
