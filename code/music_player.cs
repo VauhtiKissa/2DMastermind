@@ -5,8 +5,6 @@ public partial class music_player : Node
 {
 	private TextureButton mute_button;
 
-	private bool muted = false;
-
 	private Node[] sources;
 
 	private int music_level = 1;
@@ -25,7 +23,7 @@ public partial class music_player : Node
 	}
 
 	public void round_up(int number){
-		if(muted == false){
+		if(config_manager.config.music_mute == false){
 		((AudioStreamPlayer)sources[number]).VolumeDb = 0;
 		}
 		music_level += 1;
@@ -40,12 +38,9 @@ public partial class music_player : Node
 	}
 
 	public void mute_pressed(){
-		muted = !muted;
+		config_manager.config.music_mute = !config_manager.config.music_mute;
 
-		if(muted == true){
-
-			config_manager.config.music_mute = true;
-			config_manager.save();
+		if(config_manager.config.music_mute == true){
 
 			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/music_button_off.png");
 
@@ -55,9 +50,6 @@ public partial class music_player : Node
 			}
 		}else{
 
-			config_manager.config.music_mute = false;
-			config_manager.save();
-
 			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/music_button_on.png");
 			
 			for (int i = 0; i < music_level; i++)
@@ -65,5 +57,6 @@ public partial class music_player : Node
 				((AudioStreamPlayer)sources[i]).VolumeDb = 0;
 			}
 		}
+		config_manager.save();
 	}
 }
