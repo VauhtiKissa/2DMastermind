@@ -65,11 +65,32 @@ text = "TUTORIAL"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="quit" type="TextureButton" parent="menu"]
+[node name="options" type="TextureButton" parent="menu"]
 offset_left = 360.0
 offset_top = 336.0
 offset_right = 600.0
 offset_bottom = 400.0
+texture_normal = ExtResource("3_qibdv")
+texture_pressed = ExtResource("4_g7rpg")
+texture_hover = ExtResource("4_g7rpg")
+
+[node name="Label" type="Label" parent="menu/options"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 232.0
+offset_bottom = 56.0
+theme = ExtResource("8_r821p")
+text = "OPTIONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="quit" type="TextureButton" parent="menu"]
+offset_left = 360.0
+offset_top = 424.0
+offset_right = 600.0
+offset_bottom = 488.0
 texture_normal = ExtResource("3_qibdv")
 texture_pressed = ExtResource("4_g7rpg")
 texture_hover = ExtResource("4_g7rpg")
@@ -107,4 +128,5 @@ position = Vector2(480, 270)
 
 [connection signal="pressed" from="menu/start" to="menu" method="play_pressed"]
 [connection signal="pressed" from="menu/tutorial" to="menu" method="tutorial_pressed"]
+[connection signal="pressed" from="menu/options" to="menu" method="options_pressed"]
 [connection signal="pressed" from="menu/quit" to="menu" method="quit_pressed"]

@@ -5,26 +5,27 @@ public partial class music_player : Node
 {
 	private TextureButton mute_button;
 
-	private Node[] sources;
+	public AudioStreamPlayer[] sources;
 
 	private int music_level = 1;
 
 	public override void _Ready()
 	{
-		sources = new Node[8];
+		sources = new AudioStreamPlayer[8];
 		for (int i = 0; i < GetChildCount()-1; i++)
 		{
-			sources[i] = GetChild(i);	
+			sources[i] = GetChild<AudioStreamPlayer>(i);	
 		}
 		mute_button = (TextureButton)GetChild(8);
 		if(config_manager.config.music_mute){
 			mute_pressed();
 		}
+	sources[0].VolumeDb = config_manager.config.music_volume;
 	}
 
 	public void round_up(int number){
 		if(config_manager.config.music_mute == false){
-		((AudioStreamPlayer)sources[number]).VolumeDb = 0;
+		sources[number].VolumeDb = config_manager.config.music_volume;
 		}
 		music_level += 1;
 	}
@@ -32,7 +33,7 @@ public partial class music_player : Node
 	public void restart_sound_level(){
 		for (int i = 1; i < sources.Length; i++)
 		{
-			((AudioStreamPlayer)sources[i]).VolumeDb = -80;
+			sources[i].VolumeDb = -80;
 		}
 		music_level = 0;
 	}
@@ -46,7 +47,7 @@ public partial class music_player : Node
 
 			for (int i = 0; i < music_level; i++)
 			{
-				((AudioStreamPlayer)sources[i]).VolumeDb = -80;
+				sources[i].VolumeDb = -80;
 			}
 		}else{
 
@@ -54,7 +55,7 @@ public partial class music_player : Node
 			
 			for (int i = 0; i < music_level; i++)
 			{
-				((AudioStreamPlayer)sources[i]).VolumeDb = 0;
+				sources[i].VolumeDb = config_manager.config.music_volume;
 			}
 		}
 		config_manager.save();

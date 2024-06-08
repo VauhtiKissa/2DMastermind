@@ -4,8 +4,8 @@ using System;
 public partial class button_sound : Node
 {
 
-	private AudioStreamPlayer hover_sound_maker;
-	private AudioStreamPlayer click_sound_maker;
+	public AudioStreamPlayer hover_sound_maker;
+	public AudioStreamPlayer click_sound_maker;
 
 	private TextureButton mute_button;
 

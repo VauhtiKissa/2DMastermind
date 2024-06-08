@@ -7,8 +7,10 @@ public class Config{
 	public bool did_tutorial { get; set;} = false;
 
 	public bool music_mute { get; set;} = false;
+	public int music_volume { get; set;} = 0;
 
 	public bool button_mute { get; set;} = false;
+	public int button_volume { get; set;} = 0;
 	public bool Fullscreen { get; set;} = false;
 }
 
