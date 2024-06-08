@@ -18,11 +18,13 @@ public partial class menu : Node2D
 		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(0), true);
 		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(1), true);
 		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(2), true);
+		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(3), true);
 
 		if(config_manager.config.did_tutorial == false){
 			((TextureButton)GetNode(GetPath()+"/start")).Position = new Vector2(0,1000);
 			((TextureButton)GetNode(GetPath()+"/tutorial")).Position = new Vector2(360,160);
-			((TextureButton)GetNode(GetPath()+"/quit")).Position = new Vector2(360,248);
+			((TextureButton)GetNode(GetPath()+"/options")).Position = new Vector2(360,248);
+			((TextureButton)GetNode(GetPath()+"/quit")).Position = new Vector2(360,336);
 		}
 
 	}
@@ -37,7 +39,7 @@ public partial class menu : Node2D
 		GetParent().QueueFree();
 	}
 
-		public void options_pressed(){
+	public void options_pressed(){
 		GetTree().Root.AddChild(options);
 		GetParent().QueueFree();
 	}
