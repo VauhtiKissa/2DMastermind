@@ -9,8 +9,6 @@ public partial class button_sound : Node
 
 	private TextureButton mute_button;
 
-	private bool muted = false;
-
 	public override void _Ready()
 	{
 		hover_sound_maker = (AudioStreamPlayer)GetChild(0);
@@ -31,27 +29,24 @@ public partial class button_sound : Node
 	}
 
 	public void play_hover_noise(){
-		if(muted == false){
+		if(config_manager.config.button_mute == false){
 		hover_sound_maker.Play();
 		}
 	}
 
 	public void play_click_noise(){
-		if (muted == false)
+		if (config_manager.config.button_mute == false)
 		{
 		click_sound_maker.Play();
 		}
 	}
 	public void mute_pressed(){
-		muted = !muted;
-		if(muted == true){
-			config_manager.config.button_mute = true;
-			config_manager.save();
+		config_manager.config.button_mute = !config_manager.config.button_mute;
+		if(config_manager.config.button_mute == true){
 			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/mute_button_off.png");
 		}else{
-			config_manager.config.button_mute = false;
-			config_manager.save();
 			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/mute_button_on.png");
 		}
+	config_manager.save();
 	}
 }

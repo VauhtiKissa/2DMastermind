@@ -15,18 +15,19 @@ public class Config{
 public partial class config_manager : Node
 {
 
-	private TextureButton mute_button;
+	private TextureButton fullscreen_button;
 
 	public override void _Ready()
 	{
 		if(Godot.FileAccess.FileExists("user://2DMastermind.json")){
-    	Godot.FileAccess file = Godot.FileAccess.Open("user://2DMastermind.json", Godot.FileAccess.ModeFlags.Read);
-		config = JsonSerializer.Deserialize<Config>(file.GetAsText());
-    	file.Close();
-		mute_button = (TextureButton)GetChild(0);
+
+    		Godot.FileAccess file = Godot.FileAccess.Open("user://2DMastermind.json", Godot.FileAccess.ModeFlags.Read);
+			config = JsonSerializer.Deserialize<Config>(file.GetAsText());
+    		file.Close();
 		}else{
 			config = new Config();
 		}
+	fullscreen_button = (TextureButton)GetChild(0);
 	}
 
 	public static void save(){
@@ -41,11 +42,12 @@ public partial class config_manager : Node
 		config.Fullscreen = !config.Fullscreen;
 		if(config.Fullscreen){
 			GetWindow().Mode = Window.ModeEnum.Fullscreen;
-			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/fullscreen_off.png");
+			fullscreen_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/fullscreen_off.png");
+		
 		}else{
 			GetWindow().Mode = Window.ModeEnum.Maximized;
-			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/fullscreen_on.png");
+			fullscreen_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/fullscreen_on.png");
 		}
-
+	save();
 	}
 }
