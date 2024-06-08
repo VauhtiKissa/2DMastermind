@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Linq;
+using System.Reflection.Emit;
 
 public partial class Game_coordinator : Node2D
 {
@@ -9,6 +10,8 @@ public partial class Game_coordinator : Node2D
 	public static GameColors[] guessed_colors;
 
 	private Guess_cube[] cubes;
+
+	private double time = 0;
 
 	public override void _Ready()
 	{
@@ -19,11 +22,15 @@ public partial class Game_coordinator : Node2D
 		}
 		generate_answer();
 		start_round();
-
         ((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(1), true);
     }
 
-	private void generate_answer(){
+    public override void _Process(double delta)
+    {
+        time += delta;
+    }
+
+    private void generate_answer(){
 		correct_answer = new GameColors[16];
 		for (int i = 0 ; i < 16 ; i++){
 			correct_answer[i] = (GameColors)GD.RandRange(0,7);
@@ -46,6 +53,14 @@ public partial class Game_coordinator : Node2D
 	public void victory(){
 		AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/confetti_cannon.tscn").Instantiate());
 		AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/victory_screen.tscn").Instantiate());
+		int milliseconds = (int)(time*1000);
+		int minutes = milliseconds / 60000;
+		milliseconds -= minutes * 60000;
+		int seconds = milliseconds / 1000;
+		milliseconds -= seconds * 1000;
+
+		GetNode("victory_screen_holder").GetNode("victory_screen").GetNode("Timer_back").GetNode<Godot.Label>("Label").Text = "Time: " + minutes + "." + seconds + "."+ milliseconds;
+
 	}
 
 	public void back_to_menu(){

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b1fwuq7d3mnlt" path="res://sprites/confetti/red.png" id="6_8330x"]
 [ext_resource type="Texture2D" uid="uid://bq341vibr8o1c" path="res://sprites/confetti/lightblue.png" id="7_fuvuw"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Confetti_source" type="Node2D"]
 position = Vector2(480, 0)
 
 [node name="confetti_cannon" type="CPUParticles2D" parent="."]

@@ -28,7 +28,7 @@ _data = {
 "victory_animation": SubResource("Animation_x56o3")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="victory_screen_holder" type="Node2D"]
 
 [node name="victory_screen" type="Node2D" parent="."]
 texture_filter = 1
@@ -38,6 +38,21 @@ script = ExtResource("1_vc4vs")
 position = Vector2(512, 240)
 scale = Vector2(0.75, 0.833333)
 texture = ExtResource("2_rmp2x")
+
+[node name="Timer_back" type="Sprite2D" parent="victory_screen"]
+position = Vector2(512, 192)
+texture = ExtResource("4_lksm3")
+
+[node name="Label" type="Label" parent="victory_screen/Timer_back"]
+offset_left = -104.0
+offset_top = -32.0
+offset_right = 104.0
+offset_bottom = 32.0
+scale = Vector2(1.00485, 1.04072)
+theme = ExtResource("6_jbrqk")
+text = "TIme: XX XX"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label" type="Label" parent="victory_screen"]
 texture_filter = 1
@@ -61,7 +76,8 @@ texture_hover = ExtResource("5_h25p7")
 
 [node name="Label" type="Label" parent="victory_screen/Button"]
 layout_mode = 0
-offset_right = 240.0
+offset_left = 16.0
+offset_right = 224.0
 offset_bottom = 64.0
 theme = ExtResource("6_jbrqk")
 text = "BACK TO MENU"
@@ -70,16 +86,17 @@ vertical_alignment = 1
 
 [node name="Button2" type="TextureButton" parent="victory_screen"]
 offset_left = 392.0
-offset_top = 200.0
+offset_top = 240.0
 offset_right = 632.0
-offset_bottom = 264.0
+offset_bottom = 304.0
 texture_normal = ExtResource("4_lksm3")
 texture_pressed = ExtResource("5_h25p7")
 texture_hover = ExtResource("5_h25p7")
 
 [node name="Label" type="Label" parent="victory_screen/Button2"]
 layout_mode = 0
-offset_right = 240.0
+offset_left = 16.0
+offset_right = 224.0
 offset_bottom = 64.0
 theme = ExtResource("6_jbrqk")
 text = "NEW GAME"
