@@ -22,15 +22,15 @@ public partial class Game_coordinator : Node2D
 		}
 		generate_answer();
 		start_round();
-        ((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(1), true);
-    }
+		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(1), true);
+	}
 
-    public override void _Process(double delta)
-    {
-        time += delta;
-    }
+	public override void _Process(double delta)
+	{
+		time += delta;
+	}
 
-    private void generate_answer(){
+	private void generate_answer(){
 		correct_answer = new GameColors[16];
 		for (int i = 0 ; i < 16 ; i++){
 			correct_answer[i] = (GameColors)GD.RandRange(0,7);
@@ -40,7 +40,7 @@ public partial class Game_coordinator : Node2D
 	public void start_round(){
 		if(round_number < 8){
 
-        	music_player music_box = (music_player)GetNode("/root/MusicPlayer");
+			music_player music_box = (music_player)GetNode("/root/MusicPlayer");
 			music_box.round_up(round_number);
 
 			cubes[round_number].activate();
@@ -59,8 +59,10 @@ public partial class Game_coordinator : Node2D
 		int seconds = milliseconds / 1000;
 		milliseconds -= seconds * 1000;
 
-		GetNode("victory_screen_holder").GetNode("victory_screen").GetNode("Timer_back").GetNode<Godot.Label>("Label").Text = "Time: " + minutes + "." + seconds + "."+ milliseconds;
-
+		GetNode("victory_screen_holder").GetNode("victory_screen").GetNode("Timer_back").GetNode<Godot.Label>("Label").Text = 
+		"Time: " + (minutes < 10 ? "0" : "" ) + minutes
+		+ "." + (seconds < 10 ? "0" : "" ) + seconds
+		+ "." + (milliseconds < 100 ? "0" : "" ) + (milliseconds < 10 ? "0" : "" ) + milliseconds;
 	}
 
 	public void back_to_menu(){
