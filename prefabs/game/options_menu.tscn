@@ -82,6 +82,7 @@ texture_pressed = ExtResource("2_yn3ee")
 texture_hover = ExtResource("2_yn3ee")
 
 [node name="Label" type="Label" parent="save_button"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 232.0

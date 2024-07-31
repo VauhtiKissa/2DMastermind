@@ -61,7 +61,7 @@ public partial class Game_coordinator : Node2D
 
 		GetNode("victory_screen_holder").GetNode("victory_screen").GetNode("Timer_back").GetNode<Godot.Label>("Label").Text = 
 		"Time: " + (minutes < 10 ? "0" : "" ) + minutes
-		+ "." + (seconds < 10 ? "0" : "" ) + seconds
+		+ ":" + (seconds < 10 ? "0" : "" ) + seconds
 		+ "." + (milliseconds < 100 ? "0" : "" ) + (milliseconds < 10 ? "0" : "" ) + milliseconds;
 	}
 
