@@ -37,7 +37,7 @@ offset_top = 11.9998
 offset_right = 198.0
 offset_bottom = 35.9998
 theme = ExtResource("7_ysk8h")
-text = "LAST APGE"
+text = "LAST PAGE"
 
 [node name="TextureButton2" type="TextureButton" parent="."]
 offset_left = 912.0
