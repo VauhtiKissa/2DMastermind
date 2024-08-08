@@ -26,8 +26,10 @@ public partial class music_player : Node
 	}
 
 	public void round_up(int number){
-		sources[number].VolumeDb = config_manager.config.music_volume / 10 - 80;
-		GD.Print(config_manager.config.music_volume);
+		if(config_manager.config.music_volume > 0){
+			sources[number].VolumeDb = config_manager.config.music_volume /10 -5;
+		}
+		GD.Print(config_manager.config.music_volume / 10);
 		music_level += 1;
 	}
 
@@ -36,7 +38,7 @@ public partial class music_player : Node
 		{
 			sources[i].VolumeDb = -80;
 		}
-		music_level = 0;
+		music_level = 1;
 	}
 
 	public void mute_pressed(){
@@ -58,7 +60,7 @@ public partial class music_player : Node
 			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/music_button_on.png");
 			for (int i = 0; i < music_level; i++)
 			{
-				sources[i].VolumeDb = config_manager.config.music_volume / 10;
+				sources[i].VolumeDb = config_manager.config.music_volume /10 -5;
 			}
 		}
 	}
