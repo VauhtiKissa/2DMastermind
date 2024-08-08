@@ -7,7 +7,7 @@ public class Config{
 	public bool did_tutorial { get; set;} = false;
 	public float music_volume { get; set;} = 25;
 
-	public float button_volume { get; set;} = 25;
+	public float button_volume { get; set;} = 5;
 	public bool Fullscreen { get; set;} = true;
 }
 
