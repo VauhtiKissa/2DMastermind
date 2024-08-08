@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="2_nxkdc"]
 [ext_resource type="Texture2D" uid="uid://rrl7wea34xrw" path="res://sprites/backs/color_picker_background.png" id="2_x5bi3"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="3_81fic"]
-[ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/end_button_background.png" id="5_1rdme"]
-[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/end_button_hover_background.png" id="6_r2pes"]
+[ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/end_button.png" id="5_1rdme"]
+[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/end_button_hover.png" id="6_r2pes"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_d2wfw"]
 allow_unpress = true

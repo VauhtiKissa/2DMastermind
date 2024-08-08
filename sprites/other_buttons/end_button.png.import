@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://govdynpc4hru"
-path="res://.godot/imported/end_button_hover_background.png-7f1a18cad385f0e6d74016338e75eab6.ctex"
+uid="uid://u1tr6iauomxr"
+path="res://.godot/imported/end_button.png-e98e788ed6923c77abf32979b1915212.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/other_buttons/end_button_hover_background.png"
-dest_files=["res://.godot/imported/end_button_hover_background.png-7f1a18cad385f0e6d74016338e75eab6.ctex"]
+source_file="res://sprites/other_buttons/end_button.png"
+dest_files=["res://.godot/imported/end_button.png-e98e788ed6923c77abf32979b1915212.ctex"]
 
 [params]
 

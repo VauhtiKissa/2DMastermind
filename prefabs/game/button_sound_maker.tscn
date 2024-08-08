@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://code/button_sound.cs" id="1_xp5qe"]
 [ext_resource type="AudioStream" uid="uid://cadcd4q50cbq1" path="res://sounds/button_sounds/hover-sound-effect.mp3" id="2_hiye3"]
-[ext_resource type="AudioStream" uid="uid://batk5ydkuhf70" path="res://sounds/button_sounds/totally_just_a_button_press_lol.wav" id="3_opcbp"]
+[ext_resource type="AudioStream" uid="uid://batk5ydkuhf70" path="res://sounds/button_sounds/click_sound.wav" id="3_opcbp"]
 [ext_resource type="Texture2D" uid="uid://2c1uis7xbvk3" path="res://sprites/other_buttons/mute_button_on.png" id="4_esh7y"]
 
 [node name="Node" type="Node"]

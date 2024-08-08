@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="2_ey6sc"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="3_3hseg"]
 [ext_resource type="Theme" uid="uid://6jqlv17sxrpw" path="res://fonts/guess_cube_text.tres" id="5_684fu"]
-[ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/end_button_background.png" id="6_ndukh"]
+[ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/end_button.png" id="6_ndukh"]
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="6_t2pwi"]
-[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/end_button_hover_background.png" id="7_rl0dx"]
+[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/end_button_hover.png" id="7_rl0dx"]
 
 [node name="tutorial_guess_row" type="Node2D"]
 texture_filter = 1
