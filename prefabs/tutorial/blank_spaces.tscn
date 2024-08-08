@@ -6,17 +6,18 @@
 [node name="blank_spaces" type="Node2D"]
 
 [node name="Blank" type="Sprite2D" parent="."]
-position = Vector2(512, 256)
+position = Vector2(480, 216)
+scale = Vector2(3, 3)
 texture = ExtResource("1_dw68j")
 
 [node name="texts" type="Node2D" parent="."]
 position = Vector2(64, 0)
 
 [node name="Label5" type="Label" parent="texts"]
-offset_left = 256.0
-offset_top = 120.0
-offset_right = 640.0
-offset_bottom = 198.0
+offset_left = 224.0
+offset_top = 80.0
+offset_right = 608.0
+offset_bottom = 158.0
 theme = ExtResource("2_ty5fl")
 text = "You can right click to make a block blank"
 horizontal_alignment = 1
@@ -24,12 +25,23 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Label6" type="Label" parent="texts"]
-offset_left = 256.0
-offset_top = 312.0
-offset_right = 640.0
-offset_bottom = 390.0
+offset_left = 224.0
+offset_top = 272.0
+offset_right = 608.0
+offset_bottom = 350.0
 theme = ExtResource("2_ty5fl")
 text = "The code never contains blank blocks"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label7" type="Label" parent="texts"]
+offset_left = 640.0
+offset_top = 424.0
+offset_right = 792.0
+offset_bottom = 536.0
+theme = ExtResource("2_ty5fl")
+text = "The settings are in the corner"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

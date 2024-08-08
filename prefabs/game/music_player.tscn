@@ -16,6 +16,7 @@ script = ExtResource("1_nqfbh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_fpfri")
+volume_db = -1.0
 autoplay = true
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
@@ -62,4 +63,11 @@ offset_right = 896.0
 offset_bottom = 536.0
 texture_normal = ExtResource("10_8k1qa")
 
+[node name="VSlider" type="VSlider" parent="TextureButton"]
+layout_mode = 0
+offset_top = -68.0
+offset_right = 24.0
+offset_bottom = -8.0
+
 [connection signal="pressed" from="TextureButton" to="." method="mute_pressed"]
+[connection signal="value_changed" from="TextureButton/VSlider" to="." method="Music_slider_moved"]

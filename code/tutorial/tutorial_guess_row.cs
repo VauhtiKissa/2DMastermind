@@ -1,8 +1,6 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
 
 public partial class tutorial_guess_row : Node2D
 {

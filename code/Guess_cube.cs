@@ -11,21 +11,25 @@ public partial class Guess_cube : Node2D
 	// Ordered rows then colums
 	private Node correct_answer_numbers;
 	private Node wrong_place_numbers;
- 
+	[Export]
+	public bool slider = false;
+ 	private AnimationPlayer animator;
+
 	public override void _Ready()
 	{
 		current_values = new GameColors[16];
 
-		color_picker = GetChild(0);
-		buttons = GetChild(2);
-		correct_answer_numbers = GetChild(3);
-		wrong_place_numbers = GetChild(4);
+		animator = GetNode<AnimationPlayer>("./AnimationPlayer");
+		color_picker = GetNode("./Animation_positioner/color_picker");
+		buttons = GetNode("./Animation_positioner/buttons");
+		correct_answer_numbers = GetNode("./Animation_positioner/correct_answer_numbers");
+		wrong_place_numbers = GetNode("./Animation_positioner/wrong_place_numbers");
 
 		for (int i = 0 ; i < buttons.GetChildCount(); i++){
 			
+			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[0]);
         	((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)buttons.GetChild(i), false);
 
-			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[0]);
 			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[0]);
 			((TextureButton)buttons.GetChild(i)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[0]);
 		}
@@ -105,6 +109,11 @@ public partial class Guess_cube : Node2D
 		if(corrects != 32){
 			((Game_coordinator)GetNode("../..")).start_round();
 		}
+
+		if(slider == true){
+			animator.PlayBackwards("guess_cube_slide");
+		}
+
 	}
 
 	private int correct_answer_indexer(int index, int internal_index){
@@ -116,6 +125,11 @@ public partial class Guess_cube : Node2D
 	}
 
 	public void activate(){
+
+		if(slider == true){
+			animator.Play("guess_cube_slide");
+		}
+
 		for (int i = 0; i < 16; i++)
 		{
 			current_values[i] = GameColors.blank;

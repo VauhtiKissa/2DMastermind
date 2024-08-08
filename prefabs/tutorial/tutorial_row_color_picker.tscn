@@ -11,13 +11,12 @@ texture_filter = 1
 script = ExtResource("1_58c2y")
 
 [node name="buttons" type="Node2D" parent="."]
-position = Vector2(24, 24)
+position = Vector2(-4, 0)
 
 [node name="TextureButton" type="TextureButton" parent="buttons"]
-offset_left = -24.0
-offset_top = -24.0
-offset_right = 56.0
-offset_bottom = 56.0
+offset_left = 4.0
+offset_right = 34.0
+offset_bottom = 30.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_fuikl")
@@ -27,10 +26,9 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton2" type="TextureButton" parent="buttons"]
-offset_left = 64.0
-offset_top = -24.0
-offset_right = 144.0
-offset_bottom = 56.0
+offset_left = 34.0
+offset_right = 64.0
+offset_bottom = 30.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_fuikl")
@@ -40,10 +38,9 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton3" type="TextureButton" parent="buttons"]
-offset_left = 152.0
-offset_top = -24.0
-offset_right = 232.0
-offset_bottom = 56.0
+offset_left = 64.0
+offset_right = 94.0
+offset_bottom = 30.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_fuikl")
@@ -53,10 +50,9 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton4" type="TextureButton" parent="buttons"]
-offset_left = 240.0
-offset_top = -24.0
-offset_right = 320.0
-offset_bottom = 56.0
+offset_left = 94.0
+offset_right = 124.0
+offset_bottom = 30.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_fuikl")
@@ -66,10 +62,10 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton5" type="TextureButton" parent="buttons"]
-offset_left = -24.0
-offset_top = 64.0
-offset_right = 56.0
-offset_bottom = 144.0
+offset_left = 4.0
+offset_top = 30.0
+offset_right = 34.0
+offset_bottom = 60.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_fuikl")
@@ -79,10 +75,10 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton6" type="TextureButton" parent="buttons"]
-offset_left = 64.0
-offset_top = 64.0
-offset_right = 144.0
-offset_bottom = 144.0
+offset_left = 34.0
+offset_top = 30.0
+offset_right = 64.0
+offset_bottom = 60.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_fuikl")
@@ -92,10 +88,10 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton7" type="TextureButton" parent="buttons"]
-offset_left = 152.0
-offset_top = 64.0
-offset_right = 232.0
-offset_bottom = 144.0
+offset_left = 64.0
+offset_top = 30.0
+offset_right = 94.0
+offset_bottom = 60.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_fuikl")
@@ -105,10 +101,10 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton8" type="TextureButton" parent="buttons"]
-offset_left = 240.0
-offset_top = 64.0
-offset_right = 320.0
-offset_bottom = 144.0
+offset_left = 94.0
+offset_top = 30.0
+offset_right = 124.0
+offset_bottom = 60.0
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_fuikl")

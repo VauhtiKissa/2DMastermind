@@ -13,7 +13,7 @@ config_version=5
 config/name="2DMastermind"
 run/main_scene="res://prefabs/game/menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
-config/icon="res://sprites/color_button_sprites/0white.png"
+config/icon="res://sprites/color_button_sprites/white.png"
 
 [audio]
 
@@ -42,11 +42,14 @@ folder_colors={
 "res://prefabs/": "green",
 "res://prefabs/tutorial/": "yellow",
 "res://sounds/": "purple",
-"res://sprites/": "red",
 "res://sprites/backs/": "gray",
 "res://sprites/button_sprites/": "orange",
 "res://sprites/confetti/": "pink"
 }
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 
@@ -55,3 +58,10 @@ right_click={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]
 }
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

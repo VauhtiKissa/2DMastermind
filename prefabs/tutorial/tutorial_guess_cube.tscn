@@ -5,37 +5,39 @@
 [ext_resource type="Texture2D" uid="uid://bs3a8hp3pkalb" path="res://sprites/backs/cube_background.png" id="3_6s8d1"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="4_5o0oy"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="5_hors1"]
-[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="6_c81b2"]
+[ext_resource type="Theme" uid="uid://6jqlv17sxrpw" path="res://fonts/guess_cube_text.tres" id="6_j82y0"]
 
 [node name="tutorial_guess_cube" type="Node2D"]
 texture_filter = 1
-position = Vector2(320, 150)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_33wmh")
 
 [node name="tutorial_cube_color_picker" parent="." instance=ExtResource("2_6k0wl")]
-position = Vector2(508, 32)
+position = Vector2(180, 26)
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(256, 256)
+position = Vector2(90, 90)
 texture = ExtResource("3_6s8d1")
 
 [node name="buttons" type="Node2D" parent="."]
-position = Vector2(64, 64)
+position = Vector2(76, 68)
 
 [node name="TextureButton" type="TextureButton" parent="buttons"]
-offset_right = 96.0
-offset_bottom = 96.0
+offset_left = -46.0
+offset_top = -38.0
+offset_right = -16.0
+offset_bottom = -8.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton2" type="TextureButton" parent="buttons"]
-offset_left = 96.0
-offset_right = 192.0
-offset_bottom = 96.0
+offset_left = -16.0
+offset_top = -38.0
+offset_right = 14.0
+offset_bottom = -8.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
@@ -43,135 +45,140 @@ texture_pressed = ExtResource("5_hors1")
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureButton3" type="TextureButton" parent="buttons"]
-offset_left = 192.0
-offset_right = 288.0
-offset_bottom = 96.0
+offset_left = 14.0
+offset_top = -38.0
+offset_right = 44.0
+offset_bottom = -8.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton4" type="TextureButton" parent="buttons"]
-offset_left = 288.0
-offset_right = 384.0
-offset_bottom = 96.0
+offset_left = 44.0
+offset_top = -38.0
+offset_right = 74.0
+offset_bottom = -8.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton5" type="TextureButton" parent="buttons"]
-offset_top = 96.0
-offset_right = 96.0
-offset_bottom = 192.0
+offset_left = -46.0
+offset_top = -8.0
+offset_right = -16.0
+offset_bottom = 22.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton6" type="TextureButton" parent="buttons"]
-offset_left = 96.0
-offset_top = 96.0
-offset_right = 192.0
-offset_bottom = 192.0
+offset_left = -16.0
+offset_top = -8.0
+offset_right = 14.0
+offset_bottom = 22.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton7" type="TextureButton" parent="buttons"]
-offset_left = 192.0
-offset_top = 96.0
-offset_right = 288.0
-offset_bottom = 192.0
+offset_left = 14.0
+offset_top = -8.0
+offset_right = 44.0
+offset_bottom = 22.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton8" type="TextureButton" parent="buttons"]
-offset_left = 288.0
-offset_top = 96.0
-offset_right = 384.0
-offset_bottom = 192.0
+offset_left = 44.0
+offset_top = -8.0
+offset_right = 74.0
+offset_bottom = 22.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton9" type="TextureButton" parent="buttons"]
-offset_top = 192.0
-offset_right = 96.0
-offset_bottom = 288.0
+offset_left = -46.0
+offset_top = 22.0
+offset_right = -16.0
+offset_bottom = 52.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton10" type="TextureButton" parent="buttons"]
-offset_left = 96.0
-offset_top = 192.0
-offset_right = 192.0
-offset_bottom = 288.0
+offset_left = -16.0
+offset_top = 22.0
+offset_right = 14.0
+offset_bottom = 52.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton11" type="TextureButton" parent="buttons"]
-offset_left = 192.0
-offset_top = 192.0
-offset_right = 288.0
-offset_bottom = 288.0
+offset_left = 14.0
+offset_top = 22.0
+offset_right = 44.0
+offset_bottom = 52.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton12" type="TextureButton" parent="buttons"]
-offset_left = 288.0
-offset_top = 192.0
-offset_right = 384.0
-offset_bottom = 288.0
+offset_left = 44.0
+offset_top = 22.0
+offset_right = 74.0
+offset_bottom = 52.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton13" type="TextureButton" parent="buttons"]
-offset_top = 288.0
-offset_right = 96.0
-offset_bottom = 384.0
+offset_left = -46.0
+offset_top = 52.0
+offset_right = -16.0
+offset_bottom = 82.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton14" type="TextureButton" parent="buttons"]
-offset_left = 96.0
-offset_top = 288.0
-offset_right = 192.0
-offset_bottom = 384.0
+offset_left = -16.0
+offset_top = 52.0
+offset_right = 14.0
+offset_bottom = 82.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton15" type="TextureButton" parent="buttons"]
-offset_left = 192.0
-offset_top = 288.0
-offset_right = 288.0
-offset_bottom = 384.0
+offset_left = 14.0
+offset_top = 52.0
+offset_right = 44.0
+offset_bottom = 82.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
 [node name="TextureButton16" type="TextureButton" parent="buttons"]
-offset_left = 288.0
-offset_top = 288.0
-offset_right = 384.0
-offset_bottom = 384.0
+offset_left = 44.0
+offset_top = 52.0
+offset_right = 74.0
+offset_bottom = 82.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
@@ -182,89 +189,81 @@ modulate = Color(0, 0.909804, 0.0313726, 1)
 texture_filter = 1
 
 [node name="Label" type="Label" parent="correct_answer_numbers"]
-offset_left = 12.0
-offset_top = 66.0
-offset_right = 56.0
-offset_bottom = 162.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 4.0
+offset_top = 30.0
+offset_right = 30.0
+offset_bottom = 60.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="correct_answer_numbers"]
-offset_left = 12.0
-offset_top = 163.0
-offset_right = 56.0
-offset_bottom = 259.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 4.0
+offset_top = 60.0
+offset_right = 30.0
+offset_bottom = 90.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="correct_answer_numbers"]
-offset_left = 12.0
-offset_top = 259.0
-offset_right = 56.0
-offset_bottom = 355.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 4.0
+offset_top = 90.0
+offset_right = 30.0
+offset_bottom = 120.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="correct_answer_numbers"]
-offset_left = 12.0
-offset_top = 355.0
-offset_right = 56.0
-offset_bottom = 451.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 4.0
+offset_top = 120.0
+offset_right = 30.0
+offset_bottom = 150.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label5" type="Label" parent="correct_answer_numbers"]
-offset_left = 90.0
-offset_top = 424.0
-offset_right = 134.0
-offset_bottom = 520.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 30.0
+offset_top = 150.0
+offset_right = 60.0
+offset_bottom = 176.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label6" type="Label" parent="correct_answer_numbers"]
-offset_left = 186.0
-offset_top = 424.0
-offset_right = 230.0
-offset_bottom = 520.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 60.0
+offset_top = 150.0
+offset_right = 90.0
+offset_bottom = 176.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label7" type="Label" parent="correct_answer_numbers"]
-offset_left = 282.0
-offset_top = 424.0
-offset_right = 326.0
-offset_bottom = 520.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 90.0
+offset_top = 150.0
+offset_right = 120.0
+offset_bottom = 176.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label8" type="Label" parent="correct_answer_numbers"]
-offset_left = 378.0
-offset_top = 424.0
-offset_right = 422.0
-offset_bottom = 520.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 120.0
+offset_top = 150.0
+offset_right = 150.0
+offset_bottom = 176.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -274,89 +273,81 @@ modulate = Color(0.933333, 0.717647, 0, 1)
 texture_filter = 1
 
 [node name="Label" type="Label" parent="wrong_place_numbers"]
-offset_left = 452.0
-offset_top = 64.0
-offset_right = 496.0
-offset_bottom = 160.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 150.0
+offset_top = 30.0
+offset_right = 176.0
+offset_bottom = 60.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="wrong_place_numbers"]
-offset_left = 452.0
-offset_top = 160.0
-offset_right = 496.0
-offset_bottom = 256.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 150.0
+offset_top = 60.0
+offset_right = 176.0
+offset_bottom = 90.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="wrong_place_numbers"]
-offset_left = 452.0
-offset_top = 256.0
-offset_right = 496.0
-offset_bottom = 352.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 150.0
+offset_top = 90.0
+offset_right = 176.0
+offset_bottom = 120.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="wrong_place_numbers"]
-offset_left = 452.0
-offset_top = 352.0
-offset_right = 496.0
-offset_bottom = 448.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 150.0
+offset_top = 120.0
+offset_right = 176.0
+offset_bottom = 150.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label5" type="Label" parent="wrong_place_numbers"]
-offset_left = 84.0
-offset_top = -16.0
-offset_right = 128.0
-offset_bottom = 80.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 30.0
+offset_top = 4.0
+offset_right = 60.0
+offset_bottom = 30.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label6" type="Label" parent="wrong_place_numbers"]
-offset_left = 180.0
-offset_top = -16.0
-offset_right = 224.0
-offset_bottom = 80.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 60.0
+offset_top = 4.0
+offset_right = 90.0
+offset_bottom = 30.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label7" type="Label" parent="wrong_place_numbers"]
-offset_left = 276.0
-offset_top = -16.0
-offset_right = 320.0
-offset_bottom = 80.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 90.0
+offset_top = 4.0
+offset_right = 120.0
+offset_bottom = 30.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label8" type="Label" parent="wrong_place_numbers"]
-offset_left = 372.0
-offset_top = -16.0
-offset_right = 416.0
-offset_bottom = 80.0
-theme_override_fonts/font = ExtResource("6_c81b2")
-theme_override_font_sizes/font_size = 50
+offset_left = 120.0
+offset_top = 4.0
+offset_right = 150.0
+offset_bottom = 30.0
+theme = ExtResource("6_j82y0")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1

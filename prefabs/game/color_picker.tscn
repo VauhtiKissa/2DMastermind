@@ -4,14 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="2_nxkdc"]
 [ext_resource type="Texture2D" uid="uid://rrl7wea34xrw" path="res://sprites/backs/color_picker_background.png" id="2_x5bi3"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="3_81fic"]
-[ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/end_button_background.png" id="5_xajew"]
-[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/end_button_hover_background.png" id="6_4uhh1"]
+[ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/end_button_background.png" id="5_1rdme"]
+[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/end_button_hover_background.png" id="6_r2pes"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_8jl0n"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_d2wfw"]
+allow_unpress = true
 
 [sub_resource type="Animation" id="Animation_ub12q"]
 resource_name = "color_picker"
-length = 0.5
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -19,10 +20,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.5, 0.5001, 0.5002),
-"transitions": PackedFloat32Array(0.267943, 1, 0.267943, 1, 1),
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(2.92817, 0.5),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(210, 0), Vector2(200, 0), Vector2(0, 0), Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(68, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5yosu"]
@@ -37,133 +38,129 @@ script = ExtResource("1_oggl2")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="ColorPickerBackground" type="Sprite2D" parent="Node2D"]
-position = Vector2(114, 190)
+position = Vector2(34, 77)
 texture = ExtResource("2_x5bi3")
 
 [node name="buttons" type="Node2D" parent="Node2D"]
+position = Vector2(2, 7)
 
 [node name="TextureButton" type="TextureButton" parent="Node2D/buttons"]
-offset_left = 24.0
-offset_top = 16.0
-offset_right = 112.0
-offset_bottom = 104.0
+offset_right = 30.0
+offset_bottom = 30.0
 disabled = true
 toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_8jl0n")
+button_group = SubResource("ButtonGroup_d2wfw")
 texture_normal = ExtResource("2_nxkdc")
 texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton2" type="TextureButton" parent="Node2D/buttons"]
-offset_left = 112.0
-offset_top = 16.0
-offset_right = 200.0
-offset_bottom = 104.0
+offset_left = 30.0
+offset_right = 60.0
+offset_bottom = 30.0
 disabled = true
 toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_8jl0n")
+button_group = SubResource("ButtonGroup_d2wfw")
 texture_normal = ExtResource("2_nxkdc")
 texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton3" type="TextureButton" parent="Node2D/buttons"]
-offset_left = 24.0
-offset_top = 104.0
-offset_right = 112.0
-offset_bottom = 192.0
+offset_top = 30.0
+offset_right = 30.0
+offset_bottom = 60.0
 disabled = true
 toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_8jl0n")
+button_group = SubResource("ButtonGroup_d2wfw")
 texture_normal = ExtResource("2_nxkdc")
 texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton4" type="TextureButton" parent="Node2D/buttons"]
-offset_left = 112.0
-offset_top = 104.0
-offset_right = 200.0
-offset_bottom = 192.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 60.0
+offset_bottom = 60.0
 disabled = true
 toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_8jl0n")
+button_group = SubResource("ButtonGroup_d2wfw")
 texture_normal = ExtResource("2_nxkdc")
 texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton5" type="TextureButton" parent="Node2D/buttons"]
-offset_left = 24.0
-offset_top = 192.0
-offset_right = 112.0
-offset_bottom = 280.0
+offset_top = 60.0
+offset_right = 30.0
+offset_bottom = 90.0
 disabled = true
 toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_8jl0n")
+button_group = SubResource("ButtonGroup_d2wfw")
 texture_normal = ExtResource("2_nxkdc")
 texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton6" type="TextureButton" parent="Node2D/buttons"]
-offset_left = 112.0
-offset_top = 192.0
-offset_right = 200.0
-offset_bottom = 280.0
+offset_left = 30.0
+offset_top = 60.0
+offset_right = 60.0
+offset_bottom = 90.0
 disabled = true
 toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_8jl0n")
+button_group = SubResource("ButtonGroup_d2wfw")
 texture_normal = ExtResource("2_nxkdc")
 texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton7" type="TextureButton" parent="Node2D/buttons"]
-offset_left = 24.0
-offset_top = 280.0
-offset_right = 112.0
-offset_bottom = 368.0
+offset_top = 90.0
+offset_right = 30.0
+offset_bottom = 120.0
 disabled = true
 toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_8jl0n")
+button_group = SubResource("ButtonGroup_d2wfw")
 texture_normal = ExtResource("2_nxkdc")
 texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton8" type="TextureButton" parent="Node2D/buttons"]
-offset_left = 112.0
-offset_top = 280.0
-offset_right = 200.0
-offset_bottom = 368.0
+offset_left = 30.0
+offset_top = 90.0
+offset_right = 60.0
+offset_bottom = 120.0
 disabled = true
 toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_8jl0n")
+button_group = SubResource("ButtonGroup_d2wfw")
 texture_normal = ExtResource("2_nxkdc")
 texture_pressed = ExtResource("3_81fic")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton9" type="TextureButton" parent="Node2D/buttons"]
-offset_top = 388.0
-offset_right = 180.0
-offset_bottom = 452.0
-texture_normal = ExtResource("5_xajew")
-texture_pressed = ExtResource("6_4uhh1")
-texture_hover = ExtResource("6_4uhh1")
+offset_top = 120.0
+offset_right = 60.0
+offset_bottom = 140.0
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_d2wfw")
+texture_normal = ExtResource("5_1rdme")
+texture_hover = ExtResource("6_r2pes")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-reset_on_save = false
 root_node = NodePath("../Node2D")
 libraries = {
 "": SubResource("AnimationLibrary_5yosu")

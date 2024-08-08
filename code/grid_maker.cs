@@ -13,17 +13,23 @@ public partial class grid_maker : Node2D
 	[Export]
 	private float circle_speed = 1;
 
-
+	private Vector2I[] tile_positions = 
+	{ 
+		new Vector2I(0,0), new Vector2I(1,0), new Vector2I(2,0),
+		new Vector2I(0,1), new Vector2I(1,1), new Vector2I(2,1),
+		new Vector2I(0,2), new Vector2I(1,2)
+	};
+	
 	private TileMap tile_map;
 	public override void _Ready()
 	{
-		tile_map = (TileMap)GetChild(0);
+		tile_map = GetNode<TileMap>("./TileMap");
 
-		for (int i = 0; i < 40; i++)
+		for (int i = 0; i < 50; i++)
 		{
-			for (int e = 0; e < 30; e++)
+			for (int e = 0; e < 50; e++)
 			{
-				tile_map.SetCell(0,new Vector2I(i-15,e-11),0,new Vector2I(GD.RandRange(0,1),GD.RandRange(0,3)),0);
+				tile_map.SetCell(0,new Vector2I(i-20,e-20),0,tile_positions[GD.RandRange(0,7)]);
 			}
 		}
 	}

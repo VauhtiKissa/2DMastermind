@@ -1,6 +1,5 @@
 using Godot;
 using System;
-using System.Runtime.CompilerServices;
 
 public partial class menu : Node2D
 {
@@ -13,18 +12,15 @@ public partial class menu : Node2D
 	{
 		normal_game = ResourceLoader.Load<PackedScene>("res://prefabs/game/game.tscn").Instantiate();
 		tutorial_game = ResourceLoader.Load<PackedScene>("res://prefabs/tutorial/tutorial.tscn").Instantiate();
-		options = ResourceLoader.Load<PackedScene>("res://prefabs/game/options_menu.tscn").Instantiate();
 
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(0), true);
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(1), true);
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(2), true);
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(3), true);
+		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button(GetNode<TextureButton>("./start"), true);
+		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button(GetNode<TextureButton>("./tutorial"), true);
+		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button(GetNode<TextureButton>("./quit"), true);
 
 		if(config_manager.config.did_tutorial == false){
-			((TextureButton)GetNode(GetPath()+"/start")).Position = new Vector2(0,1000);
-			((TextureButton)GetNode(GetPath()+"/tutorial")).Position = new Vector2(360,160);
-			((TextureButton)GetNode(GetPath()+"/options")).Position = new Vector2(360,248);
-			((TextureButton)GetNode(GetPath()+"/quit")).Position = new Vector2(360,336);
+			((TextureButton)GetNode("./start")).Position = new Vector2(0,1000);
+			((TextureButton)GetNode("./tutorial")).Position = new Vector2(360,160);
+			((TextureButton)GetNode("./quit")).Position = new Vector2(360,248);
 		}
 
 	}
@@ -36,11 +32,6 @@ public partial class menu : Node2D
 
 	public void tutorial_pressed(){
 		GetTree().Root.AddChild(tutorial_game);
-		GetParent().QueueFree();
-	}
-
-	public void options_pressed(){
-		GetTree().Root.AddChild(options);
 		GetParent().QueueFree();
 	}
 

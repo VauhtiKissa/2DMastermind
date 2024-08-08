@@ -7,15 +7,15 @@ public partial class tutorial_row_color_picker : Node2D
 	private Node buttons;
 	public override void _Ready()
 	{
-		buttons = GetChild(0);
+		buttons = GetNode<Node2D>("./buttons");
 		for (int i = 0 ; i < buttons.GetChildCount(); i++){
-        	((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)buttons.GetChild(i), false);
-			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[i]);
-			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[i]);
-			((TextureButton)buttons.GetChild(i)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[i]);
+        	GetNode<button_sound>("/root/ButtonSoundMaker").connect_button((TextureButton)buttons.GetChild(i), false);
+			buttons.GetChild<TextureButton>(i).TextureNormal = GD.Load<Texture2D>(Color_values.Color_sprites[i]);
+			buttons.GetChild<TextureButton>(i).TexturePressed = GD.Load<Texture2D>(Color_values.Color_sprites_pressed[i]);
+			buttons.GetChild<TextureButton>(i).TextureHover = GD.Load<Texture2D>(Color_values.Color_sprites_pressed[i]);
 		}
 		
-		parent = (tutorial_guess_row)GetParent();
+		parent = GetParent<tutorial_guess_row>();
 	}
 
 	public void pick_color(int given_color){

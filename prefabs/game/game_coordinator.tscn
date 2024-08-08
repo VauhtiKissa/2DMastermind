@@ -2,66 +2,60 @@
 
 [ext_resource type="Script" path="res://code/Game_coordinator.cs" id="1_m2ipn"]
 [ext_resource type="PackedScene" uid="uid://dmp7lrp2l6qjy" path="res://prefabs/game/guess_cube.tscn" id="2_6jxxe"]
-[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/backs/menu_button_background.png" id="3_aevmv"]
-[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/backs/menu_button_hover.png" id="4_lcetm"]
+[ext_resource type="Texture2D" uid="uid://dvvww02dshi1" path="res://sprites/other_buttons/Corner_button.png" id="3_0eqmb"]
+[ext_resource type="Texture2D" uid="uid://bn1328xhcyggn" path="res://sprites/other_buttons/corner_button_pressed.png" id="4_22dik"]
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="5_chc5p"]
 
 [node name="game_coordinator" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_m2ipn")
 
 [node name="guess_cubes" type="Node2D" parent="."]
+position = Vector2(-8, -8)
 
 [node name="Node2D" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
-position = Vector2(32, 96)
-scale = Vector2(0.3, 0.3)
+position = Vector2(-1, 88)
 
 [node name="Node2D2" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
-position = Vector2(256, 96)
-scale = Vector2(0.3, 0.3)
+position = Vector2(255, 88)
 
 [node name="Node2D3" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
-position = Vector2(480, 100)
-scale = Vector2(0.3, 0.3)
+position = Vector2(511, 88)
 
 [node name="Node2D4" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
-position = Vector2(704, 96)
-scale = Vector2(0.3, 0.3)
+position = Vector2(767, 88)
+slider = true
 
 [node name="Node2D5" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
-position = Vector2(32, 288)
-scale = Vector2(0.3, 0.3)
+position = Vector2(-1, 280)
 
 [node name="Node2D6" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
-position = Vector2(256, 288)
-scale = Vector2(0.3, 0.3)
+position = Vector2(255, 280)
 
 [node name="Node2D7" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
-position = Vector2(480, 288)
-scale = Vector2(0.3, 0.3)
+position = Vector2(511, 280)
 
 [node name="Node2D8" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
-position = Vector2(704, 288)
-scale = Vector2(0.3, 0.3)
+position = Vector2(767, 280)
+slider = true
 
-[node name="TextureButton3" type="TextureButton" parent="."]
-offset_left = -24.0
-offset_right = 231.0
-offset_bottom = 64.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("3_aevmv")
-texture_pressed = ExtResource("4_lcetm")
-texture_hover = ExtResource("4_lcetm")
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -16.0
+offset_right = 84.0
+offset_bottom = 30.0
+texture_normal = ExtResource("3_0eqmb")
+texture_hover = ExtResource("4_22dik")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
 offset_left = 4.0
-offset_top = 6.0
-offset_right = 97.0
-offset_bottom = 26.0
+offset_right = 96.0
+offset_bottom = 28.0
 theme = ExtResource("5_chc5p")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 9
 text = "BACK TO MENU"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="TextureButton3" to="." method="back_to_menu"]
+[connection signal="pressed" from="TextureButton" to="." method="back_to_menu"]

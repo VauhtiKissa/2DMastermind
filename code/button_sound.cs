@@ -3,20 +3,21 @@ using System;
 
 public partial class button_sound : Node
 {
-
 	public AudioStreamPlayer hover_sound_maker;
 	public AudioStreamPlayer click_sound_maker;
-
 	private TextureButton mute_button;
+	private Slider slider;
 
 	public override void _Ready()
 	{
-		hover_sound_maker = (AudioStreamPlayer)GetChild(0);
-		click_sound_maker = (AudioStreamPlayer)GetChild(1);
-		mute_button = (TextureButton)GetChild(2);
-		if(config_manager.config.button_mute){
-			mute_pressed();
-		}
+		hover_sound_maker = GetNode<AudioStreamPlayer>("./hover_sound");
+		click_sound_maker = GetNode<AudioStreamPlayer>("./click_sound");
+		mute_button = GetNode<TextureButton>("./TextureButton");
+
+		slider = GetNode<Slider>("TextureButton/VSlider");
+		slider.Value = config_manager.config.button_volume;
+		slider.Visible = false;
+		Noise_slider_moved(config_manager.config.button_volume);
 	}
 
 	public void connect_button(TextureButton button, bool make_hover_noise ){
@@ -29,24 +30,29 @@ public partial class button_sound : Node
 	}
 
 	public void play_hover_noise(){
-		if(config_manager.config.button_mute == false){
 		hover_sound_maker.Play();
-		}
 	}
 
 	public void play_click_noise(){
-		if (config_manager.config.button_mute == false)
-		{
 		click_sound_maker.Play();
-		}
 	}
 	public void mute_pressed(){
-		config_manager.config.button_mute = !config_manager.config.button_mute;
-		if(config_manager.config.button_mute == true){
+		slider.Visible = !slider.Visible;
+	}
+
+	public void Noise_slider_moved(float new_number){
+	
+		config_manager.config.button_volume = new_number;
+		config_manager.save();
+
+		if(new_number == 0 ){
 			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/mute_button_off.png");
+			hover_sound_maker.VolumeDb = -80;
+			click_sound_maker.VolumeDb = -80;
 		}else{
 			mute_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/mute_button_on.png");
+			hover_sound_maker.VolumeDb = config_manager.config.button_volume / 10 -5;
+			click_sound_maker.VolumeDb = config_manager.config.button_volume / 10 -5;
 		}
-	config_manager.save();
 	}
 }

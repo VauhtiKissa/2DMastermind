@@ -5,12 +5,10 @@ using System.Text.Json;
 
 public class Config{
 	public bool did_tutorial { get; set;} = false;
-	public bool music_mute { get; set;} = false;
-	public int music_volume { get; set;} = 0;
+	public float music_volume { get; set;} = 25;
 
-	public bool button_mute { get; set;} = false;
-	public int button_volume { get; set;} = 0;
-	public bool Fullscreen { get; set;} = false;
+	public float button_volume { get; set;} = 25;
+	public bool Fullscreen { get; set;} = true;
 }
 
 public partial class config_manager : Node
@@ -28,7 +26,11 @@ public partial class config_manager : Node
 		}else{
 			config = new Config();
 		}
-	fullscreen_button = (TextureButton)GetChild(0);
+		fullscreen_button = GetNode<TextureButton>("./TextureButton");
+		if(config.Fullscreen){
+			GetWindow().Mode = Window.ModeEnum.Fullscreen;
+			fullscreen_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/fullscreen_off.png");
+		}
 	}
 
 	public static void save(){

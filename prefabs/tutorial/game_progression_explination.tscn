@@ -1,123 +1,22 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhc0k2wkd4qvc"]
 
-[ext_resource type="Texture2D" uid="uid://bs5x1atjckpxa" path="res://sprites/thegame.PNG" id="1_mo2wf"]
+[ext_resource type="Texture2D" uid="uid://bbr5uh4icnv22" path="res://sprites/GameScreenshot.png" id="1_el7x1"]
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="2_v2rrn"]
 
 [node name="game_progression_explination" type="Node2D"]
 
-[node name="Thegame" type="Sprite2D" parent="."]
-position = Vector2(512, 256)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("1_mo2wf")
+[node name="GameScreenshot" type="Sprite2D" parent="."]
+position = Vector2(504, 280)
+scale = Vector2(0.330021, 0.35239)
+texture = ExtResource("1_el7x1")
 
-[node name="texts" type="Node2D" parent="."]
-position = Vector2(127, -1)
-
-[node name="Label" type="Label" parent="texts"]
-offset_left = 192.0
-offset_top = 8.0
-offset_right = 576.0
-offset_bottom = 86.0
+[node name="Label" type="Label" parent="."]
+offset_left = 289.0
+offset_top = 78.0
+offset_right = 681.0
+offset_bottom = 156.0
 theme = ExtResource("2_v2rrn")
 text = "You have 8 guesses to get the correct combination"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="Label1" type="Label" parent="texts"]
-offset_left = 72.0
-offset_top = 90.0
-offset_right = 192.0
-offset_bottom = 130.0
-theme = ExtResource("2_v2rrn")
-text = "1
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="texts"]
-offset_left = 240.0
-offset_top = 90.0
-offset_right = 360.0
-offset_bottom = 130.0
-theme = ExtResource("2_v2rrn")
-text = "2"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="texts"]
-offset_left = 408.0
-offset_top = 90.0
-offset_right = 528.0
-offset_bottom = 130.0
-theme = ExtResource("2_v2rrn")
-text = "3
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Label4" type="Label" parent="texts"]
-offset_left = 576.0
-offset_top = 90.0
-offset_right = 696.0
-offset_bottom = 130.0
-theme = ExtResource("2_v2rrn")
-text = "4
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Label5" type="Label" parent="texts"]
-offset_left = 72.0
-offset_top = 237.0
-offset_right = 192.0
-offset_bottom = 277.0
-theme = ExtResource("2_v2rrn")
-text = "5"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Label6" type="Label" parent="texts"]
-offset_left = 240.0
-offset_top = 237.0
-offset_right = 360.0
-offset_bottom = 277.0
-theme = ExtResource("2_v2rrn")
-text = "6"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Label7" type="Label" parent="texts"]
-offset_left = 408.0
-offset_top = 237.0
-offset_right = 528.0
-offset_bottom = 277.0
-theme = ExtResource("2_v2rrn")
-text = "7"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Label8" type="Label" parent="texts"]
-offset_left = 576.0
-offset_top = 237.0
-offset_right = 696.0
-offset_bottom = 277.0
-theme = ExtResource("2_v2rrn")
-text = "8"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

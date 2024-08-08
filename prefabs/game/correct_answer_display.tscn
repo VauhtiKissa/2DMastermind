@@ -1,0 +1,111 @@
+[gd_scene load_steps=6 format=3 uid="uid://lycdrrph1w68"]
+
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="1_vn1w7"]
+[ext_resource type="Texture2D" uid="uid://b3xgabk48f7rm" path="res://sprites/backs/correct_answer_display_background.png" id="2_0drm5"]
+
+[sub_resource type="Animation" id="Animation_f4rct"]
+resource_name = "new_animation"
+
+[sub_resource type="Animation" id="Animation_thdyq"]
+resource_name = "correct_answer_display_slide"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.6, 2),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Vector2(-144, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ahqwu"]
+_data = {
+"correct_answer_display_slide": SubResource("Animation_thdyq"),
+"new_animation": SubResource("Animation_f4rct")
+}
+
+[node name="Node2D" type="Node2D"]
+z_index = 5
+texture_filter = 1
+
+[node name="Sprites" type="Node2D" parent="."]
+position = Vector2(-144, 0)
+
+[node name="Button" type="Sprite2D" parent="Sprites"]
+position = Vector2(15, 15)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button2" type="Sprite2D" parent="Sprites"]
+position = Vector2(45, 15)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button3" type="Sprite2D" parent="Sprites"]
+position = Vector2(75, 15)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button4" type="Sprite2D" parent="Sprites"]
+position = Vector2(105, 15)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button5" type="Sprite2D" parent="Sprites"]
+position = Vector2(15, 45)
+scale = Vector2(1, 1.02087)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button6" type="Sprite2D" parent="Sprites"]
+position = Vector2(45, 45)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button7" type="Sprite2D" parent="Sprites"]
+position = Vector2(75, 45)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button8" type="Sprite2D" parent="Sprites"]
+position = Vector2(105, 45)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button9" type="Sprite2D" parent="Sprites"]
+position = Vector2(15, 75)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button10" type="Sprite2D" parent="Sprites"]
+position = Vector2(45, 75)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button11" type="Sprite2D" parent="Sprites"]
+position = Vector2(75, 75)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button12" type="Sprite2D" parent="Sprites"]
+position = Vector2(105, 75)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button13" type="Sprite2D" parent="Sprites"]
+position = Vector2(15, 105)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button14" type="Sprite2D" parent="Sprites"]
+position = Vector2(45, 105)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button15" type="Sprite2D" parent="Sprites"]
+position = Vector2(75, 105)
+texture = ExtResource("1_vn1w7")
+
+[node name="Button16" type="Sprite2D" parent="Sprites"]
+position = Vector2(105, 105)
+texture = ExtResource("1_vn1w7")
+
+[node name="CorrectAnswerDisplayBackground" type="Sprite2D" parent="Sprites"]
+z_index = -1
+position = Vector2(60, 60)
+texture = ExtResource("2_0drm5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ahqwu")
+}

@@ -9,19 +9,20 @@
 position = Vector2(128, 16)
 
 [node name="Label5" type="Label" parent="texts"]
-offset_left = 56.0
-offset_top = 32.0
-offset_right = 536.0
-offset_bottom = 104.0
+offset_left = 144.0
+offset_top = 96.0
+offset_right = 624.0
+offset_bottom = 116.0
 theme = ExtResource("1_hda1k")
 text = "You have 8 crossing color codes"
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="texts"]
-offset_top = 208.0
-offset_right = 152.0
-offset_bottom = 288.0
+offset_left = 32.0
+offset_top = 232.0
+offset_right = 184.0
+offset_bottom = 312.0
 theme = ExtResource("1_hda1k")
 text = "The are
 4 columns
@@ -29,10 +30,10 @@ and 4 rows"
 vertical_alignment = 1
 
 [node name="Label6" type="Label" parent="texts"]
-offset_left = 432.0
-offset_top = 328.0
-offset_right = 719.0
-offset_bottom = 391.0
+offset_left = 480.0
+offset_top = 376.0
+offset_right = 776.0
+offset_bottom = 439.0
 theme = ExtResource("1_hda1k")
 text = "Press here to check your answer"
 horizontal_alignment = 2
@@ -40,4 +41,5 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="tutorial_guess_cube" parent="." instance=ExtResource("2_b1lma")]
-position = Vector2(296, 128)
+position = Vector2(320, 152)
+scale = Vector2(1.5, 1.5)

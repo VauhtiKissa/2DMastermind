@@ -2,9 +2,9 @@
 
 importer="texture_atlas"
 type="Texture2D"
-uid="uid://d2qnnu67e4txk"
+uid="uid://bshiv3gpyxwb3"
 path="res://.godot/imported/green.png-1e38bd081f568993fb23945ee9ed5800.res"
-group_file="res://sprites/THE_atlas.png"
+group_file="res://sprites/confetti/confetti_atlas.png"
 valid=true
 [deps]
 
@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/green.png-1e38bd081f568993fb23945ee9ed5800.re
 
 [params]
 
-atlas_file="res://sprites/THE_atlas.png"
+atlas_file="res://sprites/confetti/confetti_atlas.png"
 import_mode=0
 crop_to_region=false
 trim_alpha_border_from_region=true

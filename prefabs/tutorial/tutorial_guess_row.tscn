@@ -4,32 +4,33 @@
 [ext_resource type="Script" path="res://code/tutorial/tutorial_guess_row.cs" id="1_ur3ac"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="2_ey6sc"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="3_3hseg"]
-[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="5_rwps4"]
-[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/backs/menu_button_background.png" id="6_50fy0"]
+[ext_resource type="Theme" uid="uid://6jqlv17sxrpw" path="res://fonts/guess_cube_text.tres" id="5_684fu"]
+[ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/end_button_background.png" id="6_ndukh"]
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="6_t2pwi"]
-[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/backs/menu_button_hover.png" id="7_4strr"]
+[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/end_button_hover_background.png" id="7_rl0dx"]
 
 [node name="tutorial_guess_row" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_ur3ac")
 
 [node name="color_picker" parent="." instance=ExtResource("1_kjfwh")]
-position = Vector2(-172, 112)
+position = Vector2(-192, 44)
 
 [node name="buttons" type="Node2D" parent="."]
 position = Vector2(-192, 0)
 
 [node name="TextureButton" type="TextureButton" parent="buttons"]
-offset_right = 96.0
-offset_bottom = 96.0
+offset_right = 30.0
+offset_bottom = 30.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("2_ey6sc")
 texture_pressed = ExtResource("3_3hseg")
 
 [node name="TextureButton2" type="TextureButton" parent="buttons"]
-offset_left = 96.0
-offset_right = 192.0
-offset_bottom = 96.0
+offset_left = 30.0
+offset_right = 60.0
+offset_bottom = 30.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("2_ey6sc")
@@ -37,18 +38,18 @@ texture_pressed = ExtResource("3_3hseg")
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureButton3" type="TextureButton" parent="buttons"]
-offset_left = 192.0
-offset_right = 288.0
-offset_bottom = 96.0
+offset_left = 60.0
+offset_right = 90.0
+offset_bottom = 30.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("2_ey6sc")
 texture_pressed = ExtResource("3_3hseg")
 
 [node name="TextureButton4" type="TextureButton" parent="buttons"]
-offset_left = 288.0
-offset_right = 384.0
-offset_bottom = 96.0
+offset_left = 90.0
+offset_right = 120.0
+offset_bottom = 30.0
 action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("2_ey6sc")
@@ -56,42 +57,42 @@ texture_pressed = ExtResource("3_3hseg")
 
 [node name="correct" type="Label" parent="."]
 modulate = Color(0, 0.909804, 0.0313726, 1)
-offset_left = -252.0
-offset_right = -208.0
-offset_bottom = 96.0
-theme_override_fonts/font = ExtResource("5_rwps4")
-theme_override_font_sizes/font_size = 50
+offset_left = -222.0
+offset_right = -192.0
+offset_bottom = 30.0
+theme = ExtResource("5_684fu")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="wrong_place" type="Label" parent="."]
 modulate = Color(0.933333, 0.717647, 0, 1)
-offset_left = 204.0
-offset_right = 248.0
-offset_bottom = 96.0
-theme_override_fonts/font = ExtResource("5_rwps4")
-theme_override_font_sizes/font_size = 50
+offset_left = -72.0
+offset_right = -42.0
+offset_bottom = 30.0
+theme = ExtResource("5_684fu")
 text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button2" type="TextureButton" parent="."]
-offset_left = 184.0
-offset_top = 168.0
-offset_right = 424.0
-offset_bottom = 232.0
-texture_normal = ExtResource("6_50fy0")
-texture_pressed = ExtResource("7_4strr")
-texture_hover = ExtResource("7_4strr")
+offset_left = -48.0
+offset_top = 44.0
+offset_right = 12.0
+offset_bottom = 64.0
+texture_normal = ExtResource("6_ndukh")
+texture_hover = ExtResource("7_rl0dx")
 
 [node name="Label1" type="Label" parent="Button2"]
+texture_filter = 1
 layout_mode = 0
-offset_left = 12.0
-offset_right = 228.0
-offset_bottom = 60.0
+offset_left = -8.0
+offset_top = 16.0
+offset_right = 156.0
+offset_bottom = 94.0
+scale = Vector2(0.5, 0.5)
 theme = ExtResource("6_t2pwi")
-text = "CHECK GUESS"
+text = "Press the checkmark"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

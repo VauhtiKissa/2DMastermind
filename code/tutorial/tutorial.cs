@@ -1,6 +1,5 @@
- using Godot;
+using Godot;
 using System;
-using System.Linq;
 
 public partial class tutorial : Node2D
 {

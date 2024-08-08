@@ -25,4 +25,11 @@ offset_right = 928.0
 offset_bottom = 536.0
 texture_normal = ExtResource("4_esh7y")
 
+[node name="VSlider" type="VSlider" parent="TextureButton"]
+layout_mode = 0
+offset_top = -68.0
+offset_right = 24.0
+offset_bottom = -8.0
+
 [connection signal="pressed" from="TextureButton" to="." method="mute_pressed"]
+[connection signal="value_changed" from="TextureButton/VSlider" to="." method="Noise_slider_moved"]
