@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bfibqxbbt1dfr"
-path="res://.godot/imported/bitchin 2.wav-0f22beb221b34a0c473e43a77c6740cb.sample"
+uid="uid://cptikro853bl8"
+path="res://.godot/imported/bitchin 1.wav-ee7cbc006dc5966c7aba953fc3a5270c.sample"
 
 [deps]
 
-source_file="res://sounds/bitchin 2.wav"
-dest_files=["res://.godot/imported/bitchin 2.wav-0f22beb221b34a0c473e43a77c6740cb.sample"]
+source_file="res://sounds/music/bitchin 1.wav"
+dest_files=["res://.godot/imported/bitchin 1.wav-ee7cbc006dc5966c7aba953fc3a5270c.sample"]
 
 [params]
 

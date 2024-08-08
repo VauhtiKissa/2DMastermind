@@ -3,9 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="1_vn1w7"]
 [ext_resource type="Texture2D" uid="uid://b3xgabk48f7rm" path="res://sprites/backs/correct_answer_display_background.png" id="2_0drm5"]
 
-[sub_resource type="Animation" id="Animation_f4rct"]
-resource_name = "new_animation"
-
 [sub_resource type="Animation" id="Animation_thdyq"]
 resource_name = "correct_answer_display_slide"
 length = 2.0
@@ -21,6 +18,9 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-144, 0), Vector2(0, 0)]
 }
+
+[sub_resource type="Animation" id="Animation_f4rct"]
+resource_name = "new_animation"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ahqwu"]
 _data = {
