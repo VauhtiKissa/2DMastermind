@@ -1,9 +1,9 @@
-public enum GameColors {white, black, red, green, blue, yellow, turquoise, purple,blank}
+public enum GameColors {white, black, red, green, blue, yellow, turquoise, purple, blank}
 
 public static class Color_values{
     // paths to button sprites
     
-    public static string[] Color_sprites = {
+    public static string[] color_sprites = {
         "res://sprites/color_button_sprites/white.png",
         "res://sprites/color_button_sprites/black.png",
         "res://sprites/color_button_sprites/red.png",
@@ -17,7 +17,7 @@ public static class Color_values{
     } ;
 
     // paths to pressed button sprites
-    public static string[] Color_sprites_pressed = {
+    public static string[] color_sprites_pressed = {
         "res://sprites/color_button_sprites/white_pressed.png",
         "res://sprites/color_button_sprites/black_pressed.png",
         "res://sprites/color_button_sprites/red_pressed.png",

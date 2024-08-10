@@ -1,29 +1,28 @@
 [gd_scene load_steps=7 format=3 uid="uid://bc0ml7noxam2a"]
 
-[ext_resource type="Script" path="res://code/tutorial/tutorial_guess_cube.cs" id="1_33wmh"]
+[ext_resource type="Script" path="res://code/game/GuessCube.cs" id="1_enab8"]
 [ext_resource type="PackedScene" uid="uid://d1n08im7pbraq" path="res://prefabs/tutorial/tutorial_color_picker.tscn" id="2_6k0wl"]
 [ext_resource type="Texture2D" uid="uid://bs3a8hp3pkalb" path="res://sprites/backs/cube_background.png" id="3_6s8d1"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="4_5o0oy"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="5_hors1"]
 [ext_resource type="Theme" uid="uid://6jqlv17sxrpw" path="res://fonts/guess_cube_text.tres" id="6_j82y0"]
 
-[node name="tutorial_guess_cube" type="Node2D"]
+[node name="TutorialGuessCube" type="Node2D"]
 texture_filter = 1
 scale = Vector2(0.5, 0.5)
-script = ExtResource("1_33wmh")
+script = ExtResource("1_enab8")
 
-[node name="tutorial_cube_color_picker" parent="." instance=ExtResource("2_6k0wl")]
-position = Vector2(180, 26)
+[node name="AnimationPositioner" type="Node2D" parent="."]
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="AnimationPositioner"]
 texture_filter = 1
 position = Vector2(90, 90)
 texture = ExtResource("3_6s8d1")
 
-[node name="buttons" type="Node2D" parent="."]
+[node name="Buttons" type="Node2D" parent="AnimationPositioner"]
 position = Vector2(76, 68)
 
-[node name="TextureButton" type="TextureButton" parent="buttons"]
+[node name="TextureButton" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = -46.0
 offset_top = -38.0
 offset_right = -16.0
@@ -33,7 +32,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton2" type="TextureButton" parent="buttons"]
+[node name="TextureButton2" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = -16.0
 offset_top = -38.0
 offset_right = 14.0
@@ -42,9 +41,8 @@ action_mode = 0
 button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
-metadata/_edit_use_anchors_ = true
 
-[node name="TextureButton3" type="TextureButton" parent="buttons"]
+[node name="TextureButton3" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 14.0
 offset_top = -38.0
 offset_right = 44.0
@@ -54,7 +52,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton4" type="TextureButton" parent="buttons"]
+[node name="TextureButton4" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 44.0
 offset_top = -38.0
 offset_right = 74.0
@@ -64,7 +62,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton5" type="TextureButton" parent="buttons"]
+[node name="TextureButton5" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = -46.0
 offset_top = -8.0
 offset_right = -16.0
@@ -74,7 +72,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton6" type="TextureButton" parent="buttons"]
+[node name="TextureButton6" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = -16.0
 offset_top = -8.0
 offset_right = 14.0
@@ -84,7 +82,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton7" type="TextureButton" parent="buttons"]
+[node name="TextureButton7" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 14.0
 offset_top = -8.0
 offset_right = 44.0
@@ -94,7 +92,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton8" type="TextureButton" parent="buttons"]
+[node name="TextureButton8" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 44.0
 offset_top = -8.0
 offset_right = 74.0
@@ -104,7 +102,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton9" type="TextureButton" parent="buttons"]
+[node name="TextureButton9" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = -46.0
 offset_top = 22.0
 offset_right = -16.0
@@ -114,7 +112,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton10" type="TextureButton" parent="buttons"]
+[node name="TextureButton10" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = -16.0
 offset_top = 22.0
 offset_right = 14.0
@@ -124,7 +122,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton11" type="TextureButton" parent="buttons"]
+[node name="TextureButton11" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 14.0
 offset_top = 22.0
 offset_right = 44.0
@@ -134,7 +132,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton12" type="TextureButton" parent="buttons"]
+[node name="TextureButton12" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 44.0
 offset_top = 22.0
 offset_right = 74.0
@@ -144,7 +142,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton13" type="TextureButton" parent="buttons"]
+[node name="TextureButton13" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = -46.0
 offset_top = 52.0
 offset_right = -16.0
@@ -154,7 +152,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton14" type="TextureButton" parent="buttons"]
+[node name="TextureButton14" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = -16.0
 offset_top = 52.0
 offset_right = 14.0
@@ -164,7 +162,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton15" type="TextureButton" parent="buttons"]
+[node name="TextureButton15" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 14.0
 offset_top = 52.0
 offset_right = 44.0
@@ -174,7 +172,7 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="TextureButton16" type="TextureButton" parent="buttons"]
+[node name="TextureButton16" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 44.0
 offset_top = 52.0
 offset_right = 74.0
@@ -184,11 +182,11 @@ button_mask = 3
 texture_normal = ExtResource("4_5o0oy")
 texture_pressed = ExtResource("5_hors1")
 
-[node name="correct_answer_numbers" type="Node2D" parent="."]
+[node name="CorrectAnswerNumbers" type="Node2D" parent="AnimationPositioner"]
 modulate = Color(0, 0.909804, 0.0313726, 1)
 texture_filter = 1
 
-[node name="Label" type="Label" parent="correct_answer_numbers"]
+[node name="Label" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
 offset_left = 4.0
 offset_top = 30.0
 offset_right = 30.0
@@ -198,7 +196,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="correct_answer_numbers"]
+[node name="Label2" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
 offset_left = 4.0
 offset_top = 60.0
 offset_right = 30.0
@@ -208,7 +206,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="correct_answer_numbers"]
+[node name="Label3" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
 offset_left = 4.0
 offset_top = 90.0
 offset_right = 30.0
@@ -218,7 +216,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label4" type="Label" parent="correct_answer_numbers"]
+[node name="Label4" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
 offset_left = 4.0
 offset_top = 120.0
 offset_right = 30.0
@@ -228,7 +226,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label5" type="Label" parent="correct_answer_numbers"]
+[node name="Label5" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
 offset_left = 30.0
 offset_top = 150.0
 offset_right = 60.0
@@ -238,7 +236,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label6" type="Label" parent="correct_answer_numbers"]
+[node name="Label6" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
 offset_left = 60.0
 offset_top = 150.0
 offset_right = 90.0
@@ -248,7 +246,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label7" type="Label" parent="correct_answer_numbers"]
+[node name="Label7" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
 offset_left = 90.0
 offset_top = 150.0
 offset_right = 120.0
@@ -258,7 +256,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label8" type="Label" parent="correct_answer_numbers"]
+[node name="Label8" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
 offset_left = 120.0
 offset_top = 150.0
 offset_right = 150.0
@@ -268,11 +266,11 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="wrong_place_numbers" type="Node2D" parent="."]
+[node name="WrongPlaceNumbers" type="Node2D" parent="AnimationPositioner"]
 modulate = Color(0.933333, 0.717647, 0, 1)
 texture_filter = 1
 
-[node name="Label" type="Label" parent="wrong_place_numbers"]
+[node name="Label" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
 offset_left = 150.0
 offset_top = 30.0
 offset_right = 176.0
@@ -282,7 +280,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="wrong_place_numbers"]
+[node name="Label2" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
 offset_left = 150.0
 offset_top = 60.0
 offset_right = 176.0
@@ -292,7 +290,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="wrong_place_numbers"]
+[node name="Label3" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
 offset_left = 150.0
 offset_top = 90.0
 offset_right = 176.0
@@ -302,7 +300,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label4" type="Label" parent="wrong_place_numbers"]
+[node name="Label4" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
 offset_left = 150.0
 offset_top = 120.0
 offset_right = 176.0
@@ -312,7 +310,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label5" type="Label" parent="wrong_place_numbers"]
+[node name="Label5" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
 offset_left = 30.0
 offset_top = 4.0
 offset_right = 60.0
@@ -322,7 +320,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label6" type="Label" parent="wrong_place_numbers"]
+[node name="Label6" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
 offset_left = 60.0
 offset_top = 4.0
 offset_right = 90.0
@@ -332,7 +330,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label7" type="Label" parent="wrong_place_numbers"]
+[node name="Label7" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
 offset_left = 90.0
 offset_top = 4.0
 offset_right = 120.0
@@ -342,7 +340,7 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label8" type="Label" parent="wrong_place_numbers"]
+[node name="Label8" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
 offset_left = 120.0
 offset_top = 4.0
 offset_right = 150.0
@@ -352,19 +350,22 @@ text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="buttons/TextureButton" to="." method="button_pressed" binds= [0]]
-[connection signal="pressed" from="buttons/TextureButton2" to="." method="button_pressed" binds= [1]]
-[connection signal="pressed" from="buttons/TextureButton3" to="." method="button_pressed" binds= [2]]
-[connection signal="pressed" from="buttons/TextureButton4" to="." method="button_pressed" binds= [3]]
-[connection signal="pressed" from="buttons/TextureButton5" to="." method="button_pressed" binds= [4]]
-[connection signal="pressed" from="buttons/TextureButton6" to="." method="button_pressed" binds= [5]]
-[connection signal="pressed" from="buttons/TextureButton7" to="." method="button_pressed" binds= [6]]
-[connection signal="pressed" from="buttons/TextureButton8" to="." method="button_pressed" binds= [7]]
-[connection signal="pressed" from="buttons/TextureButton9" to="." method="button_pressed" binds= [8]]
-[connection signal="pressed" from="buttons/TextureButton10" to="." method="button_pressed" binds= [9]]
-[connection signal="pressed" from="buttons/TextureButton11" to="." method="button_pressed" binds= [10]]
-[connection signal="pressed" from="buttons/TextureButton12" to="." method="button_pressed" binds= [11]]
-[connection signal="pressed" from="buttons/TextureButton13" to="." method="button_pressed" binds= [12]]
-[connection signal="pressed" from="buttons/TextureButton14" to="." method="button_pressed" binds= [13]]
-[connection signal="pressed" from="buttons/TextureButton15" to="." method="button_pressed" binds= [14]]
-[connection signal="pressed" from="buttons/TextureButton16" to="." method="button_pressed" binds= [15]]
+[node name="ColorChooser" parent="AnimationPositioner" instance=ExtResource("2_6k0wl")]
+position = Vector2(180, 26)
+
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton" to="." method="button_pressed" binds= [0]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton2" to="." method="button_pressed" binds= [1]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton3" to="." method="button_pressed" binds= [2]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton4" to="." method="button_pressed" binds= [3]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton5" to="." method="button_pressed" binds= [4]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton6" to="." method="button_pressed" binds= [5]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton7" to="." method="button_pressed" binds= [6]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton8" to="." method="button_pressed" binds= [7]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton9" to="." method="button_pressed" binds= [8]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton10" to="." method="button_pressed" binds= [9]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton11" to="." method="button_pressed" binds= [10]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton12" to="." method="button_pressed" binds= [11]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton13" to="." method="button_pressed" binds= [12]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton14" to="." method="button_pressed" binds= [13]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton15" to="." method="button_pressed" binds= [14]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton16" to="." method="button_pressed" binds= [15]]

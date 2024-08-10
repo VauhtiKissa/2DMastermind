@@ -2,13 +2,25 @@ using Godot;
 using System;
 using System.Linq;
 
-public partial class tutorial_color_picker : Node
+public partial class ColorChooser : Node2D
 {
-	private GuessCube guess_cube;
+	private GuessCube parent;
 	private TextureButton[] buttons;
+	private AnimationPlayer animator;
 	public override void _Ready()
 	{
-		guess_cube = GetNode<GuessCube>("../..");
+
+		parent = (GuessCube)GetParent().GetParent();
+
+		try
+		{
+			animator = GetNode<AnimationPlayer>("./AnimationPlayer");
+		}
+		catch (Exception)
+		{
+			
+		}
+
 		buttons = GetNode<Node2D>("./AnimationPositioner/Buttons").GetChildren().Cast<TextureButton>().ToArray();
 		
 		for (int i = 0 ; i < buttons.Length-1; i++){
@@ -23,10 +35,29 @@ public partial class tutorial_color_picker : Node
 	}
 
 	public void pick_color(int given_color){
-		guess_cube.chosen_color = (GameColors)given_color;
+
+		parent.chosen_color = (GameColors)given_color;
 	}
 	
-	public void check_button_pressed(){
-		guess_cube.round_end();
+	public void round_end_button_pressed(){
+
+		if(!parent.tutorial){
+			for (int i = 0; i < buttons.Length; i++)
+			{
+				buttons[i].Disabled = true;
+			}
+			animator?.PlayBackwards("ColorChooserSlide");
+		}
+		parent.round_end();
+	}
+	
+	public void activate(){
+
+		for (int i = 0; i < buttons.Length; i++)
+		{
+			buttons[i].Disabled = false;
+		}
+		animator?.Play("ColorChooserSlide");
+
 	}
 }

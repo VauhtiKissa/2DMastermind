@@ -5,7 +5,6 @@ public partial class Game_coordinator : Node2D
 {
 	private int round_number = 0;
 	public static GameColors[] correct_answer;
-	public static GameColors[] guessed_colors;
 
 	private Node[] cubes;
 
@@ -28,20 +27,27 @@ public partial class Game_coordinator : Node2D
 		time += delta;
 	}
 
-	private void generate_answer(){
+	public static void generate_answer(){
 		correct_answer = new GameColors[16];
 		for (int i = 0 ; i < 16 ; i++){
 			correct_answer[i] = (GameColors)GD.RandRange(0,7);
 		}
 	}
 
+	public void submitAnswer(bool correct){
+		if(correct){
+			victory();
+		}else{
+			start_round();
+		}
+	}
 	public void start_round(){
 		if(round_number < 8){
 
 			music_player music_box = GetNode<music_player>("/root/MusicPlayer");
 			music_box.round_up(round_number);
 
-			((Guess_cube)cubes[round_number]).activate();
+			((GuessCube)cubes[round_number]).activate();
 			round_number += 1;
 		}else{
 			AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/loss_screen.tscn").Instantiate());
@@ -60,7 +66,8 @@ public partial class Game_coordinator : Node2D
 		GetNode<Label>("./victory_screen_holder/victory_screen/Timer_back/Label").Text = 
 		"Time: " + (minutes < 10 ? "0" : "" ) + minutes
 		+ ":" + (seconds < 10 ? "0" : "" ) + seconds
-		+ "." + (milliseconds < 100 ? "0" : "" ) + (milliseconds < 10 ? "0" : "" ) + milliseconds;
+		+ "." + (milliseconds < 100 ? "0" : "" ) 
+		+ (milliseconds < 10 ? "0" : "" ) + milliseconds;
 	}
 
 	public void back_to_menu(){

@@ -24,9 +24,9 @@ public partial class tutorial_guess_cube : Node2D
 
 		for (int i = 0 ; i < buttons.GetChildCount(); i++){
 			((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)buttons.GetChild(i), false);
-			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[8]);
-			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites[8]);
-			((TextureButton)buttons.GetChild(i)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[8]);
+			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.color_sprites[8]);
+			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.color_sprites[8]);
+			((TextureButton)buttons.GetChild(i)).TextureHover = (Texture2D)GD.Load(Color_values.color_sprites_pressed[8]);
 		}
 
 	
@@ -41,14 +41,14 @@ public partial class tutorial_guess_cube : Node2D
 	public void button_pressed(int number){
    	 	if (!Input.IsActionPressed("right_click")){
 			current_values[number] = current_color;
-			((TextureButton)buttons.GetChild(number)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[(int)current_color]);
-			((TextureButton)buttons.GetChild(number)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[(int)current_color]);
-			((TextureButton)buttons.GetChild(number)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[(int)current_color]);
+			((TextureButton)buttons.GetChild(number)).TextureNormal = (Texture2D)GD.Load(Color_values.color_sprites[(int)current_color]);
+			((TextureButton)buttons.GetChild(number)).TexturePressed = (Texture2D)GD.Load(Color_values.color_sprites_pressed[(int)current_color]);
+			((TextureButton)buttons.GetChild(number)).TextureHover = (Texture2D)GD.Load(Color_values.color_sprites_pressed[(int)current_color]);
 	 	}else{
 			current_values[number] = GameColors.blank;
-			((TextureButton)buttons.GetChild(number)).TextureNormal = (Texture2D)GD.Load(Color_values.Color_sprites[8]);
-			((TextureButton)buttons.GetChild(number)).TexturePressed = (Texture2D)GD.Load(Color_values.Color_sprites[8]);
-			((TextureButton)buttons.GetChild(number)).TextureHover = (Texture2D)GD.Load(Color_values.Color_sprites_pressed[8]);
+			((TextureButton)buttons.GetChild(number)).TextureNormal = (Texture2D)GD.Load(Color_values.color_sprites[8]);
+			((TextureButton)buttons.GetChild(number)).TexturePressed = (Texture2D)GD.Load(Color_values.color_sprites[8]);
+			((TextureButton)buttons.GetChild(number)).TextureHover = (Texture2D)GD.Load(Color_values.color_sprites_pressed[8]);
 		}
 	}
 

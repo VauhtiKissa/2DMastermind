@@ -10,9 +10,9 @@ public partial class tutorial_row_color_picker : Node2D
 		buttons = GetNode<Node2D>("./buttons");
 		for (int i = 0 ; i < buttons.GetChildCount(); i++){
         	GetNode<button_sound>("/root/ButtonSoundMaker").connect_button((TextureButton)buttons.GetChild(i), false);
-			buttons.GetChild<TextureButton>(i).TextureNormal = GD.Load<Texture2D>(Color_values.Color_sprites[i]);
-			buttons.GetChild<TextureButton>(i).TexturePressed = GD.Load<Texture2D>(Color_values.Color_sprites_pressed[i]);
-			buttons.GetChild<TextureButton>(i).TextureHover = GD.Load<Texture2D>(Color_values.Color_sprites_pressed[i]);
+			buttons.GetChild<TextureButton>(i).TextureNormal = GD.Load<Texture2D>(Color_values.color_sprites[i]);
+			buttons.GetChild<TextureButton>(i).TexturePressed = GD.Load<Texture2D>(Color_values.color_sprites_pressed[i]);
+			buttons.GetChild<TextureButton>(i).TextureHover = GD.Load<Texture2D>(Color_values.color_sprites_pressed[i]);
 		}
 		
 		parent = GetParent<tutorial_guess_row>();

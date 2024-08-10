@@ -24,7 +24,7 @@ position = Vector2(511, 88)
 
 [node name="Node2D4" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
 position = Vector2(767, 88)
-slider = true
+sliding = true
 
 [node name="Node2D5" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
 position = Vector2(-1, 280)
@@ -37,7 +37,7 @@ position = Vector2(511, 280)
 
 [node name="Node2D8" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
 position = Vector2(767, 280)
-slider = true
+sliding = true
 
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = -16.0

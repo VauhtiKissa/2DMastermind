@@ -15,7 +15,7 @@ public partial class loss_screen : Node2D
 
 		for (int i = 0; i < correct_answer_sprites.GetChildCount()-1; i++)
 		{
-			correct_answer_sprites.GetChild<Sprite2D>(i).Texture = GD.Load<Texture2D>(Color_values.Color_sprites[(int)Game_coordinator.correct_answer[i]]);
+			correct_answer_sprites.GetChild<Sprite2D>(i).Texture = GD.Load<Texture2D>(Color_values.color_sprites[(int)Game_coordinator.correct_answer[i]]);
 		}
 	}
 

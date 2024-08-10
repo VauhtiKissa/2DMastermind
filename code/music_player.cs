@@ -29,7 +29,6 @@ public partial class music_player : Node
 		if(config_manager.config.music_volume > 0){
 			sources[number].VolumeDb = config_manager.config.music_volume /10 -5;
 		}
-		GD.Print(config_manager.config.music_volume / 10);
 		music_level += 1;
 	}
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://82b6ui050fvi"]
 
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="1_hda1k"]
-[ext_resource type="PackedScene" uid="uid://bc0ml7noxam2a" path="res://prefabs/tutorial/tutorial_guess_cube.tscn" id="2_b1lma"]
+[ext_resource type="PackedScene" uid="uid://dmp7lrp2l6qjy" path="res://prefabs/game/guess_cube.tscn" id="2_fs1bs"]
 
 [node name="2d_mastermind_explination" type="Node2D"]
 
@@ -40,6 +40,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="tutorial_guess_cube" parent="." instance=ExtResource("2_b1lma")]
-position = Vector2(320, 152)
+[node name="GuessCube" parent="." instance=ExtResource("2_fs1bs")]
+position = Vector2(335, 151)
 scale = Vector2(1.5, 1.5)
+tutorial = true

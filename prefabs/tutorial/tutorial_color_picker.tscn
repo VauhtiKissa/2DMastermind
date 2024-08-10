@@ -13,14 +13,16 @@
 texture_filter = 1
 script = ExtResource("1_j520n")
 
-[node name="ColorPickerBackground" type="Sprite2D" parent="."]
+[node name="AnimationPositioner" type="Node2D" parent="."]
+
+[node name="ColorPickerBackground" type="Sprite2D" parent="AnimationPositioner"]
 position = Vector2(34, 74)
 texture = ExtResource("2_2cntf")
 
-[node name="buttons" type="Node2D" parent="."]
+[node name="Buttons" type="Node2D" parent="AnimationPositioner"]
 position = Vector2(-22, -12)
 
-[node name="TextureButton" type="TextureButton" parent="buttons"]
+[node name="TextureButton" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 24.0
 offset_top = 16.0
 offset_right = 54.0
@@ -33,7 +35,7 @@ texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton2" type="TextureButton" parent="buttons"]
+[node name="TextureButton2" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 54.0
 offset_top = 16.0
 offset_right = 84.0
@@ -46,7 +48,7 @@ texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton3" type="TextureButton" parent="buttons"]
+[node name="TextureButton3" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 24.0
 offset_top = 46.0
 offset_right = 54.0
@@ -59,7 +61,7 @@ texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton4" type="TextureButton" parent="buttons"]
+[node name="TextureButton4" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 54.0
 offset_top = 46.0
 offset_right = 84.0
@@ -72,7 +74,7 @@ texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton5" type="TextureButton" parent="buttons"]
+[node name="TextureButton5" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 24.0
 offset_top = 76.0
 offset_right = 54.0
@@ -85,7 +87,7 @@ texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton6" type="TextureButton" parent="buttons"]
+[node name="TextureButton6" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 54.0
 offset_top = 76.0
 offset_right = 84.0
@@ -98,7 +100,7 @@ texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton7" type="TextureButton" parent="buttons"]
+[node name="TextureButton7" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 24.0
 offset_top = 106.0
 offset_right = 54.0
@@ -111,7 +113,7 @@ texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton8" type="TextureButton" parent="buttons"]
+[node name="TextureButton8" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 54.0
 offset_top = 106.0
 offset_right = 84.0
@@ -124,7 +126,7 @@ texture_pressed = ExtResource("4_qj5gb")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="done_button" type="TextureButton" parent="buttons"]
+[node name="DoneButton" type="TextureButton" parent="AnimationPositioner/Buttons"]
 offset_left = 24.0
 offset_top = 136.0
 offset_right = 84.0
@@ -134,12 +136,12 @@ texture_normal = ExtResource("5_oydq0")
 texture_pressed = ExtResource("6_fqr72")
 texture_hover = ExtResource("6_fqr72")
 
-[connection signal="pressed" from="buttons/TextureButton" to="." method="pick_color" binds= [0]]
-[connection signal="pressed" from="buttons/TextureButton2" to="." method="pick_color" binds= [1]]
-[connection signal="pressed" from="buttons/TextureButton3" to="." method="pick_color" binds= [2]]
-[connection signal="pressed" from="buttons/TextureButton4" to="." method="pick_color" binds= [3]]
-[connection signal="pressed" from="buttons/TextureButton5" to="." method="pick_color" binds= [4]]
-[connection signal="pressed" from="buttons/TextureButton6" to="." method="pick_color" binds= [5]]
-[connection signal="pressed" from="buttons/TextureButton7" to="." method="pick_color" binds= [6]]
-[connection signal="pressed" from="buttons/TextureButton8" to="." method="pick_color" binds= [7]]
-[connection signal="pressed" from="buttons/done_button" to="." method="chech_button_pressed"]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton" to="." method="pick_color" binds= [0]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton2" to="." method="pick_color" binds= [1]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton3" to="." method="pick_color" binds= [2]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton4" to="." method="pick_color" binds= [3]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton5" to="." method="pick_color" binds= [4]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton6" to="." method="pick_color" binds= [5]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton7" to="." method="pick_color" binds= [6]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton8" to="." method="pick_color" binds= [7]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/DoneButton" to="." method="check_button_pressed"]
