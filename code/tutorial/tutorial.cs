@@ -14,8 +14,8 @@ public partial class tutorial : Node2D
 		((SoundHandler)GetNode("/root/ButtonSoundMaker")).connectButton((TextureButton)GetChild(1), true);
 		((SoundHandler)GetNode("/root/ButtonSoundMaker")).connectButton((TextureButton)GetChild(2), true);
 		((SoundHandler)GetNode("/root/ButtonSoundMaker")).connectButton((TextureButton)GetChild(3), true);
-		config_manager.config.did_tutorial = true;
-		config_manager.save();
+		ConfigManager.config.did_tutorial = true;
+		ConfigManager.save();
 	}
 
 	public void change_page_forward(){

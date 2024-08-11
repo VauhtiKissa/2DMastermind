@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://drgfoluvb1m83"]
 
-[ext_resource type="Script" path="res://code/loss_screen.cs" id="1_82uua"]
+[ext_resource type="Script" path="res://code/game/EndScreen.cs" id="1_82uua"]
 [ext_resource type="Texture2D" uid="uid://cofi53la4ffjm" path="res://sprites/backs/loss_back.png" id="2_0xmii"]
 [ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="3_2r7yl"]
 [ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/other_buttons/menu_button_background.png" id="4_nxuug"]
@@ -29,13 +29,13 @@ _data = {
 "loss_pop_up": SubResource("Animation_n70kd")
 }
 
-[node name="loss_screen" type="Node2D"]
+[node name="LossScreen" type="Node2D"]
+script = ExtResource("1_82uua")
 
 [node name="AnimationPositioner" type="Node2D" parent="."]
 z_index = 10
 texture_filter = 1
 position = Vector2(0, 500)
-script = ExtResource("1_82uua")
 
 [node name="CorrectAnswerDisplay" parent="AnimationPositioner" instance=ExtResource("7_uhcg1")]
 z_as_relative = false
@@ -99,5 +99,5 @@ libraries = {
 "": SubResource("AnimationLibrary_ywlv4")
 }
 
-[connection signal="pressed" from="AnimationPositioner/Restart" to="AnimationPositioner" method="restart"]
-[connection signal="pressed" from="AnimationPositioner/Menu" to="AnimationPositioner" method="back_to_menu"]
+[connection signal="pressed" from="AnimationPositioner/Restart" to="." method="restart"]
+[connection signal="pressed" from="AnimationPositioner/Menu" to="." method="backToMenu"]

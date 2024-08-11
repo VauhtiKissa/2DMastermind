@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://hisj55gj1gkd"]
 
-[ext_resource type="Script" path="res://code/victory_screen.cs" id="1_vc4vs"]
+[ext_resource type="Script" path="res://code/game/EndScreen.cs" id="1_7d6l6"]
 [ext_resource type="Texture2D" uid="uid://c2fqy0ygoebwi" path="res://sprites/backs/Victory_back.png" id="2_rmp2x"]
 [ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/other_buttons/menu_button_background.png" id="4_lksm3"]
 [ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/other_buttons/menu_button_hover.png" id="5_h25p7"]
@@ -29,11 +29,12 @@ _data = {
 
 [node name="VictoryScreen" type="Node2D"]
 scale = Vector2(0.995039, 0.911584)
+script = ExtResource("1_7d6l6")
+victory = true
 
 [node name="AnimationPositioner" type="Node2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -500)
-script = ExtResource("1_vc4vs")
 
 [node name="LossBackground" type="Sprite2D" parent="AnimationPositioner"]
 position = Vector2(512, 240)
@@ -109,5 +110,5 @@ libraries = {
 "": SubResource("AnimationLibrary_uhg7e")
 }
 
-[connection signal="pressed" from="AnimationPositioner/Restart" to="AnimationPositioner" method="restart"]
-[connection signal="pressed" from="AnimationPositioner/Menu" to="AnimationPositioner" method="back_to_menu"]
+[connection signal="pressed" from="AnimationPositioner/Restart" to="." method="restart"]
+[connection signal="pressed" from="AnimationPositioner/Menu" to="." method="backToMenu"]

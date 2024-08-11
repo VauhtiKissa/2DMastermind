@@ -21,9 +21,9 @@ public partial class SoundHandler : Node
 		sources = GetNode<Node>("./Music").GetChildren().Cast<AudioStreamPlayer>().ToArray();
 
 		music_slider = GetNode<Slider>("./Buttons/MusicButton/VSlider");
-		music_slider.Value = config_manager.config.music_volume;
+		music_slider.Value = ConfigManager.config.music_volume;
 		music_slider.Visible = false;
-		musicSliderMoved(config_manager.config.music_volume);
+		musicSliderMoved(ConfigManager.config.music_volume);
 
 		// sound
 		sound_button = GetNode<TextureButton>("./Buttons/SoundButton");
@@ -31,9 +31,9 @@ public partial class SoundHandler : Node
 		click_sound_maker = GetNode<AudioStreamPlayer>("./ButtonSounds/ClickSound");
 
 		sound_slider = GetNode<Slider>("./Buttons/SoundButton/VSlider");
-		sound_slider.Value = config_manager.config.button_volume;
+		sound_slider.Value = ConfigManager.config.button_volume;
 		sound_slider.Visible = false;
-		noiseSliderMoved(config_manager.config.button_volume);
+		noiseSliderMoved(ConfigManager.config.button_volume);
 	}
 
 	public void connectButton(TextureButton button, bool make_hover_noise ){
@@ -58,8 +58,8 @@ public partial class SoundHandler : Node
 
 	public void noiseSliderMoved(float new_number){
 	
-		config_manager.config.button_volume = new_number;
-		config_manager.save();
+		ConfigManager.config.button_volume = new_number;
+		ConfigManager.save();
 
 		if(new_number == 0 ){
 			sound_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/mute_button_off.png");
@@ -67,21 +67,14 @@ public partial class SoundHandler : Node
 			click_sound_maker.VolumeDb = -80;
 		}else{
 			sound_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/mute_button_on.png");
-			hover_sound_maker.VolumeDb = config_manager.config.button_volume / 10 -5;
-			click_sound_maker.VolumeDb = config_manager.config.button_volume / 10 -5;
+			hover_sound_maker.VolumeDb = ConfigManager.config.button_volume / 10 -5;
+			click_sound_maker.VolumeDb = ConfigManager.config.button_volume / 10 -5;
 		}
 	}
 
-/*
-
-
-
-
-*/
-	// Music handling ----------------------------------------------------
 	public void roundUp(int number){
-		if(config_manager.config.music_volume > 0){
-			sources[number].VolumeDb = config_manager.config.music_volume /10 -5;
+		if(ConfigManager.config.music_volume > 0){
+			sources[number].VolumeDb = ConfigManager.config.music_volume /10 -5;
 		}
 		music_level += 1;
 	}
@@ -100,8 +93,8 @@ public partial class SoundHandler : Node
 
 	public void musicSliderMoved(float new_number){
 	
-		config_manager.config.music_volume = new_number;
-		config_manager.save();
+		ConfigManager.config.music_volume = new_number;
+		ConfigManager.save();
 
 		if(new_number == 0 ){
 			music_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/music_button_off.png");
@@ -113,7 +106,7 @@ public partial class SoundHandler : Node
 			music_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/music_button_on.png");
 			for (int i = 0; i < music_level; i++)
 			{
-				sources[i].VolumeDb = config_manager.config.music_volume /10 -5;
+				sources[i].VolumeDb = ConfigManager.config.music_volume /10 -5;
 			}
 		}
 	}

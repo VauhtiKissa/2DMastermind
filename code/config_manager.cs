@@ -1,6 +1,5 @@
 using Godot;
 using System;
-using System.IO;
 using System.Text.Json;
 
 public class Config{
@@ -11,16 +10,15 @@ public class Config{
 	public bool Fullscreen { get; set;} = true;
 }
 
-public partial class config_manager : Node
+public partial class ConfigManager : Node
 {
-
 	private TextureButton fullscreen_button;
 
 	public override void _Ready()
 	{
-		if(Godot.FileAccess.FileExists("user://2DMastermind.json")){
+		if(FileAccess.FileExists("user://2DMastermind.json")){
 
-    		Godot.FileAccess file = Godot.FileAccess.Open("user://2DMastermind.json", Godot.FileAccess.ModeFlags.Read);
+    		FileAccess file = FileAccess.Open("user://2DMastermind.json", FileAccess.ModeFlags.Read);
 			config = JsonSerializer.Deserialize<Config>(file.GetAsText());
     		file.Close();
 		}else{
@@ -29,13 +27,13 @@ public partial class config_manager : Node
 		fullscreen_button = GetNode<TextureButton>("./TextureButton");
 		if(config.Fullscreen){
 			GetWindow().Mode = Window.ModeEnum.Fullscreen;
-			fullscreen_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/fullscreen_off.png");
+			fullscreen_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/fullscreen_off.png");
 		}
 	}
 
 	public static void save(){
 		DirAccess.RemoveAbsolute("user://2DMastermind.json");
-		Godot.FileAccess file = Godot.FileAccess.Open("user://2DMastermind.json", Godot.FileAccess.ModeFlags.Write);
+		FileAccess file = FileAccess.Open("user://2DMastermind.json", FileAccess.ModeFlags.Write);
 		file.StoreString(JsonSerializer.Serialize(config));
 		file.Close();
 	}
@@ -45,11 +43,11 @@ public partial class config_manager : Node
 		config.Fullscreen = !config.Fullscreen;
 		if(config.Fullscreen){
 			GetWindow().Mode = Window.ModeEnum.Fullscreen;
-			fullscreen_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/fullscreen_off.png");
+			fullscreen_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/fullscreen_off.png");
 		
 		}else{
 			GetWindow().Mode = Window.ModeEnum.Maximized;
-			fullscreen_button.TextureNormal = (Texture2D)GD.Load("res://sprites/other_buttons/fullscreen_on.png");
+			fullscreen_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/fullscreen_on.png");
 		}
 	save();
 	}

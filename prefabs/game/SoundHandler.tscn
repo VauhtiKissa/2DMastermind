@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://de3pa55pwsysx"]
 
-[ext_resource type="Script" path="res://code/SoundHandler.cs" id="1_21qoi"]
+[ext_resource type="Script" path="res://code/game/SoundHandler.cs" id="1_21qoi"]
 [ext_resource type="AudioStream" uid="uid://cptikro853bl8" path="res://sounds/music/bitchin 1.wav" id="2_0c0p7"]
 [ext_resource type="AudioStream" uid="uid://cadcd4q50cbq1" path="res://sounds/button_sounds/hover-sound-effect.mp3" id="2_8ughu"]
 [ext_resource type="AudioStream" uid="uid://batk5ydkuhf70" path="res://sounds/button_sounds/click_sound.wav" id="3_6hqhq"]
