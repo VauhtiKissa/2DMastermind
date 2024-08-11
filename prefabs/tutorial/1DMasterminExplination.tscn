@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8e825l0wv3ss"]
 
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="1_dmluq"]
-[ext_resource type="PackedScene" uid="uid://cd0ucewskw06l" path="res://prefabs/tutorial/tutorial_guess_row.tscn" id="3_k1ik7"]
+[ext_resource type="PackedScene" uid="uid://cd0ucewskw06l" path="res://prefabs/tutorial/TutorialGuessRow.tscn" id="3_k1ik7"]
 
 [node name="mastermind_explination" type="Node2D"]
 texture_filter = 1

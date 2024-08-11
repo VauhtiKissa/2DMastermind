@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bfliice1hm1nj"]
 
-[ext_resource type="Script" path="res://code/ColorChooser.cs" id="1_7jupv"]
+[ext_resource type="Script" path="res://code/game/ColorChooser.cs" id="1_7jupv"]
 [ext_resource type="Texture2D" uid="uid://rrl7wea34xrw" path="res://sprites/backs/color_picker_background.png" id="2_gx7wh"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="3_xg4ih"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="4_x1mt0"]
@@ -48,7 +48,7 @@ _data = {
 "color_picker": SubResource("Animation_ub12q")
 }
 
-[node name="ColorPicker" type="Node2D"]
+[node name="ColorChooser" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_7jupv")
 
@@ -183,12 +183,12 @@ libraries = {
 "": SubResource("AnimationLibrary_5yosu")
 }
 
-[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton" to="." method="pick_color" binds= [0]]
-[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton2" to="." method="pick_color" binds= [1]]
-[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton3" to="." method="pick_color" binds= [2]]
-[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton4" to="." method="pick_color" binds= [3]]
-[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton5" to="." method="pick_color" binds= [4]]
-[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton6" to="." method="pick_color" binds= [5]]
-[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton7" to="." method="pick_color" binds= [6]]
-[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton8" to="." method="pick_color" binds= [7]]
-[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton9" to="." method="round_end_button_pressed"]
+[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton" to="." method="pickColor" binds= [0]]
+[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton2" to="." method="pickColor" binds= [1]]
+[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton3" to="." method="pickColor" binds= [2]]
+[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton4" to="." method="pickColor" binds= [3]]
+[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton5" to="." method="pickColor" binds= [4]]
+[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton6" to="." method="pickColor" binds= [5]]
+[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton7" to="." method="pickColor" binds= [6]]
+[connection signal="button_down" from="AnimationPositioner/Buttons/TextureButton8" to="." method="pickColor" binds= [7]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton9" to="." method="roundEndButtonPressed"]

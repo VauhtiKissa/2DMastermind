@@ -28,7 +28,7 @@ _data = {
 "new_animation": SubResource("Animation_f4rct")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="CorrectAnswerDisplay" type="Node2D"]
 z_index = 5
 texture_filter = 1
 

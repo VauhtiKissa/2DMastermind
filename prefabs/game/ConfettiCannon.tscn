@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6m08v103wgcg"]
 
-[ext_resource type="Texture2D" uid="uid://crb2fxqyiev3j" path="res://sprites/confetti/confetti_atlas.png" id="1_56bpo"]
+[ext_resource type="Texture2D" uid="uid://crb2fxqyiev3j" path="res://sprites/confetti/confetti_atlas.png" id="1_6xnls"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_u4xvf"]
 particles_animation = true
@@ -8,14 +8,14 @@ particles_anim_h_frames = 2
 particles_anim_v_frames = 4
 particles_anim_loop = false
 
-[node name="confetti_cannon" type="CPUParticles2D"]
+[node name="ConfettiCannon" type="CPUParticles2D"]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_u4xvf")
 position = Vector2(480, -24)
 amount = 500
 lifetime = 2.5
 fixed_fps = 60
-texture = ExtResource("1_56bpo")
+texture = ExtResource("1_6xnls")
 emission_shape = 3
 emission_rect_extents = Vector2(600, 1)
 gravity = Vector2(0, 245)

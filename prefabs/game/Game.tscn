@@ -15,5 +15,5 @@ texture = ExtResource("1_7oe5l")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(480, 270)
 
-[node name="game_coordinator" parent="." instance=ExtResource("2_lavqd")]
+[node name="GameCoordinator" parent="." instance=ExtResource("2_lavqd")]
 position = Vector2(16, 0)

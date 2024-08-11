@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2DMastermind"
-run/main_scene="res://prefabs/game/menu.tscn"
+run/main_scene="res://prefabs/game/Menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://sprites/color_button_sprites/white.png"
 
@@ -21,7 +21,7 @@ buses/default_bus_layout=""
 
 [autoload]
 
-ConfigManager="*res://prefabs/game/config_manager.tscn"
+ConfigManager="*res://prefabs/game/ConfigManager.tscn"
 SoundHandler="*res://prefabs/game/SoundHandler.tscn"
 
 [display]

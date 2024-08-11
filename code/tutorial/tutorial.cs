@@ -11,9 +11,9 @@ public partial class tutorial : Node2D
 	public override void _Ready()
 	{
 
-		((SoundHandler)GetNode("/root/ButtonSoundMaker")).connectButton((TextureButton)GetChild(1), true);
-		((SoundHandler)GetNode("/root/ButtonSoundMaker")).connectButton((TextureButton)GetChild(2), true);
-		((SoundHandler)GetNode("/root/ButtonSoundMaker")).connectButton((TextureButton)GetChild(3), true);
+		((SoundHandler)GetNode("/root/SoundHandler")).connectButton((TextureButton)GetChild(1), true);
+		((SoundHandler)GetNode("/root/SoundHandler")).connectButton((TextureButton)GetChild(2), true);
+		((SoundHandler)GetNode("/root/SoundHandler")).connectButton((TextureButton)GetChild(3), true);
 		ConfigManager.config.did_tutorial = true;
 		ConfigManager.save();
 	}
@@ -44,7 +44,7 @@ public partial class tutorial : Node2D
 
 
 	public void back_to_menu(){
-		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/menu.tscn").Instantiate());
+		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/Menu.tscn").Instantiate());
 		QueueFree();
 	}
 }

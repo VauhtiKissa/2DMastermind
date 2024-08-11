@@ -37,7 +37,7 @@ public partial class GuessCube : Node
 		}
 
 		if(tutorial){
-			Game_coordinator.generate_answer();
+			GameCoordinator.generate_answer();
 			activate();
 		}
 
@@ -56,7 +56,7 @@ public partial class GuessCube : Node
 
 	public void round_end(){
 		if(!tutorial){
-			GetNode<Game_coordinator>("../../").submitAnswer(check_answer());
+			GetNode<GameCoordinator>("../../").submitAnswer(check_answer());
 			disable();
 		}else{
 			check_answer();
@@ -83,18 +83,18 @@ public partial class GuessCube : Node
 			for (int e = 0; e < 4; e++)
 			{
 				// check row
-				if(current_colors[i*4+e] == Game_coordinator.correct_answer[i*4+e]){
+				if(current_colors[i*4+e] == GameCoordinator.correct_answer[i*4+e]){
 					correct_answers += 1;
 					row_correct_answers += 1;
 				}else{
-					row_incorrectly_guessed_correct_colors.Add(Game_coordinator.correct_answer[i*4+e]);
+					row_incorrectly_guessed_correct_colors.Add(GameCoordinator.correct_answer[i*4+e]);
 					row_incorrectly_guessed_colors.Add(current_colors[i*4+e]);
 				}
 				// check column
-				if(current_colors[i+e*4] == Game_coordinator.correct_answer[i+e*4]){
+				if(current_colors[i+e*4] == GameCoordinator.correct_answer[i+e*4]){
 					column_correct_answers += 1;
 				}else{
-					column_incorrectly_guessed_correct_colors.Add(Game_coordinator.correct_answer[i+e*4]);
+					column_incorrectly_guessed_correct_colors.Add(GameCoordinator.correct_answer[i+e*4]);
 					column_incorrectly_guessed_colors.Add(current_colors[i+e*4]);
 				}
 			}

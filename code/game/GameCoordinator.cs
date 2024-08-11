@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Linq;
 
-public partial class Game_coordinator : Node2D
+public partial class GameCoordinator : Node2D
 {
 	private int round_number = 0;
 	public static GameColors[] correct_answer;
@@ -46,12 +46,12 @@ public partial class Game_coordinator : Node2D
 			guess_cubes[round_number].activate();
 			round_number += 1;
 		}else{
-			AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/loss_screen.tscn").Instantiate());
+			AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/LossScreen.tscn").Instantiate());
 		}
 	}
 
 	public void victory(){
-		AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/confetti_cannon.tscn").Instantiate());
+		AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/ConfettiCannon.tscn").Instantiate());
 		AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/victory_screen.tscn").Instantiate());
 		int milliseconds = (int)(time*1000);
 		int minutes = milliseconds / 60000;
@@ -68,7 +68,7 @@ public partial class Game_coordinator : Node2D
 
 	public void back_to_menu(){
 		sound_handler.restartSoundLevel();
-		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/menu.tscn").Instantiate());
+		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/Menu.tscn").Instantiate());
 		GetParent().QueueFree();
 	}
 }

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://82b6ui050fvi"]
 
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="1_hda1k"]
-[ext_resource type="PackedScene" uid="uid://dmp7lrp2l6qjy" path="res://prefabs/game/guess_cube.tscn" id="2_fs1bs"]
+[ext_resource type="PackedScene" uid="uid://dmp7lrp2l6qjy" path="res://prefabs/game/GuessCube.tscn" id="2_fs1bs"]
 
 [node name="2d_mastermind_explination" type="Node2D"]
 

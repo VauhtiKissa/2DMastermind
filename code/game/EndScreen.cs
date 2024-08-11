@@ -20,14 +20,14 @@ public partial class EndScreen : Node2D
 			Node2D correct_answer_sprites = GetNode<Node2D>("./AnimationPositioner/CorrectAnswerDisplay/Sprites");
 			for (int i = 0; i < correct_answer_sprites.GetChildCount()-1; i++)
 			{
-				correct_answer_sprites.GetChild<Sprite2D>(i).Texture = GD.Load<Texture2D>(Color_values.color_sprites[(int)Game_coordinator.correct_answer[i]]);
+				correct_answer_sprites.GetChild<Sprite2D>(i).Texture = GD.Load<Texture2D>(Color_values.color_sprites[(int)GameCoordinator.correct_answer[i]]);
 			}
 		}
 	}
 
 	public void backToMenu(){
 		GetNode<SoundHandler>("/root/SoundHandler").restartSoundLevel();
-		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/menu.tscn").Instantiate());
+		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/Menu.tscn").Instantiate());
 		GetParent().GetParent().QueueFree();
 	}
 

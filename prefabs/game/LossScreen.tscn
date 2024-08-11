@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://drgfoluvb1m83"]
 
-[ext_resource type="Script" path="res://code/game/EndScreen.cs" id="1_82uua"]
-[ext_resource type="Texture2D" uid="uid://cofi53la4ffjm" path="res://sprites/backs/loss_back.png" id="2_0xmii"]
-[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="3_2r7yl"]
-[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/other_buttons/menu_button_background.png" id="4_nxuug"]
-[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/other_buttons/menu_button_hover.png" id="5_s2l87"]
-[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="6_6c4yl"]
-[ext_resource type="PackedScene" uid="uid://lycdrrph1w68" path="res://prefabs/game/correct_answer_display.tscn" id="7_uhcg1"]
+[ext_resource type="Script" path="res://code/game/EndScreen.cs" id="1_ux3e3"]
+[ext_resource type="PackedScene" uid="uid://lycdrrph1w68" path="res://prefabs/game/CorrectAnswerDisplay.tscn" id="2_g88as"]
+[ext_resource type="Texture2D" uid="uid://cofi53la4ffjm" path="res://sprites/backs/loss_back.png" id="3_1c5mu"]
+[ext_resource type="FontFile" uid="uid://r4ylgkpc4y5g" path="res://fonts/ka1.ttf" id="4_a5xc5"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/other_buttons/menu_button_background.png" id="5_orrpo"]
+[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/other_buttons/menu_button_hover.png" id="6_cbpdq"]
+[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="7_wrrjb"]
 
 [sub_resource type="Animation" id="Animation_n70kd"]
 resource_name = "loss_pop_up"
@@ -30,20 +30,20 @@ _data = {
 }
 
 [node name="LossScreen" type="Node2D"]
-script = ExtResource("1_82uua")
+script = ExtResource("1_ux3e3")
 
 [node name="AnimationPositioner" type="Node2D" parent="."]
 z_index = 10
 texture_filter = 1
 position = Vector2(0, 500)
 
-[node name="CorrectAnswerDisplay" parent="AnimationPositioner" instance=ExtResource("7_uhcg1")]
+[node name="CorrectAnswerDisplay" parent="AnimationPositioner" instance=ExtResource("2_g88as")]
 z_as_relative = false
 position = Vector2(676, 144)
 
 [node name="LossBackground" type="Sprite2D" parent="AnimationPositioner"]
 position = Vector2(512, 206)
-texture = ExtResource("2_0xmii")
+texture = ExtResource("3_1c5mu")
 
 [node name="Label" type="Label" parent="AnimationPositioner"]
 texture_filter = 1
@@ -51,7 +51,7 @@ offset_left = 360.0
 offset_top = 104.0
 offset_right = 664.0
 offset_bottom = 155.0
-theme_override_fonts/font = ExtResource("3_2r7yl")
+theme_override_fonts/font = ExtResource("4_a5xc5")
 theme_override_font_sizes/font_size = 45
 text = "YOU LOST"
 horizontal_alignment = 1
@@ -61,16 +61,16 @@ offset_left = 392.0
 offset_top = 160.0
 offset_right = 632.0
 offset_bottom = 224.0
-texture_normal = ExtResource("4_nxuug")
-texture_pressed = ExtResource("5_s2l87")
-texture_hover = ExtResource("5_s2l87")
+texture_normal = ExtResource("5_orrpo")
+texture_pressed = ExtResource("6_cbpdq")
+texture_hover = ExtResource("6_cbpdq")
 
 [node name="Label" type="Label" parent="AnimationPositioner/Restart"]
 layout_mode = 0
 offset_left = 8.0
 offset_right = 232.0
 offset_bottom = 64.0
-theme = ExtResource("6_6c4yl")
+theme = ExtResource("7_wrrjb")
 text = "NEW GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -80,16 +80,16 @@ offset_left = 388.0
 offset_top = 240.0
 offset_right = 628.0
 offset_bottom = 304.0
-texture_normal = ExtResource("4_nxuug")
-texture_pressed = ExtResource("5_s2l87")
-texture_hover = ExtResource("5_s2l87")
+texture_normal = ExtResource("5_orrpo")
+texture_pressed = ExtResource("6_cbpdq")
+texture_hover = ExtResource("6_cbpdq")
 
 [node name="Label" type="Label" parent="AnimationPositioner/Menu"]
 layout_mode = 0
 offset_left = 8.0
 offset_right = 232.0
 offset_bottom = 64.0
-theme = ExtResource("6_6c4yl")
+theme = ExtResource("7_wrrjb")
 text = "BACK TO MENU"
 horizontal_alignment = 1
 vertical_alignment = 1

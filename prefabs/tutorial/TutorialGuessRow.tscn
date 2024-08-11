@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cd0ucewskw06l"]
 
-[ext_resource type="PackedScene" uid="uid://prvg6lawgu2y" path="res://prefabs/tutorial/tutorial_row_color_picker.tscn" id="1_kjfwh"]
+[ext_resource type="PackedScene" uid="uid://prvg6lawgu2y" path="res://prefabs/tutorial/TutorialRowColorChooser.tscn" id="1_kjfwh"]
 [ext_resource type="Script" path="res://code/tutorial/tutorial_guess_row.cs" id="1_ur3ac"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="2_ey6sc"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="3_3hseg"]

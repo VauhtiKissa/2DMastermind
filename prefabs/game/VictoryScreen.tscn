@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://hisj55gj1gkd"]
 
-[ext_resource type="Script" path="res://code/game/EndScreen.cs" id="1_7d6l6"]
-[ext_resource type="Texture2D" uid="uid://c2fqy0ygoebwi" path="res://sprites/backs/Victory_back.png" id="2_rmp2x"]
-[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/other_buttons/menu_button_background.png" id="4_lksm3"]
-[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/other_buttons/menu_button_hover.png" id="5_h25p7"]
-[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="6_jbrqk"]
+[ext_resource type="Script" path="res://code/game/EndScreen.cs" id="1_0qakv"]
+[ext_resource type="Texture2D" uid="uid://c2fqy0ygoebwi" path="res://sprites/backs/Victory_back.png" id="2_6qn1c"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/other_buttons/menu_button_background.png" id="3_b8knm"]
+[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="4_oi2gw"]
+[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/other_buttons/menu_button_hover.png" id="5_873ee"]
 
 [sub_resource type="Animation" id="Animation_x56o3"]
 resource_name = "victory_animation"
@@ -29,7 +29,7 @@ _data = {
 
 [node name="VictoryScreen" type="Node2D"]
 scale = Vector2(0.995039, 0.911584)
-script = ExtResource("1_7d6l6")
+script = ExtResource("1_0qakv")
 victory = true
 
 [node name="AnimationPositioner" type="Node2D" parent="."]
@@ -38,11 +38,11 @@ position = Vector2(0, -500)
 
 [node name="LossBackground" type="Sprite2D" parent="AnimationPositioner"]
 position = Vector2(512, 240)
-texture = ExtResource("2_rmp2x")
+texture = ExtResource("2_6qn1c")
 
 [node name="TimerBack" type="Sprite2D" parent="AnimationPositioner"]
 position = Vector2(512, 192)
-texture = ExtResource("4_lksm3")
+texture = ExtResource("3_b8knm")
 
 [node name="Label" type="Label" parent="AnimationPositioner/TimerBack"]
 offset_left = -120.0
@@ -50,7 +50,7 @@ offset_top = -32.0
 offset_right = 119.0
 offset_bottom = 32.0
 scale = Vector2(1.00485, 1.03302)
-theme = ExtResource("6_jbrqk")
+theme = ExtResource("4_oi2gw")
 text = "Time: XX:XX.XXX"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -62,7 +62,7 @@ offset_top = 104.0
 offset_right = 664.0
 offset_bottom = 155.0
 scale = Vector2(1.00588, 1)
-theme = ExtResource("6_jbrqk")
+theme = ExtResource("4_oi2gw")
 theme_override_font_sizes/font_size = 45
 text = "YOU WON!"
 horizontal_alignment = 1
@@ -72,16 +72,16 @@ offset_left = 392.0
 offset_top = 240.0
 offset_right = 632.0
 offset_bottom = 304.0
-texture_normal = ExtResource("4_lksm3")
-texture_pressed = ExtResource("5_h25p7")
-texture_hover = ExtResource("5_h25p7")
+texture_normal = ExtResource("3_b8knm")
+texture_pressed = ExtResource("5_873ee")
+texture_hover = ExtResource("5_873ee")
 
 [node name="Label" type="Label" parent="AnimationPositioner/Restart"]
 layout_mode = 0
 offset_left = 16.0
 offset_right = 224.0
 offset_bottom = 64.0
-theme = ExtResource("6_jbrqk")
+theme = ExtResource("4_oi2gw")
 text = "NEW GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -91,16 +91,16 @@ offset_left = 392.0
 offset_top = 320.0
 offset_right = 632.0
 offset_bottom = 384.0
-texture_normal = ExtResource("4_lksm3")
-texture_pressed = ExtResource("5_h25p7")
-texture_hover = ExtResource("5_h25p7")
+texture_normal = ExtResource("3_b8knm")
+texture_pressed = ExtResource("5_873ee")
+texture_hover = ExtResource("5_873ee")
 
 [node name="Label" type="Label" parent="AnimationPositioner/Menu"]
 layout_mode = 0
 offset_left = 16.0
 offset_right = 224.0
 offset_bottom = 64.0
-theme = ExtResource("6_jbrqk")
+theme = ExtResource("4_oi2gw")
 text = "BACK TO MENU"
 horizontal_alignment = 1
 vertical_alignment = 1

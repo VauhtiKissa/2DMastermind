@@ -34,12 +34,12 @@ public partial class ColorChooser : Node2D
 	
 	}
 
-	public void pick_color(int given_color){
+	public void pickColor(int given_color){
 
 		parent.chosen_color = (GameColors)given_color;
 	}
 	
-	public void round_end_button_pressed(){
+	public void roundEndButtonPressed(){
 
 		if(!parent.tutorial){
 			for (int i = 0; i < buttons.Length; i++)

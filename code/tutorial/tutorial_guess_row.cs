@@ -23,13 +23,13 @@ public partial class tutorial_guess_row : Node2D
 		wrong_place_number = GetChild(3);
 
 		for (int i = 0 ; i < buttons.GetChildCount(); i++){
-        	((SoundHandler)GetNode("/root/ButtonSoundMaker")).connectButton((TextureButton)buttons.GetChild(i), false);
+        	((SoundHandler)GetNode("/root/SoundHandler")).connectButton((TextureButton)buttons.GetChild(i), false);
 			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.color_sprites[8]);
 			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.color_sprites[8]);
 			((TextureButton)buttons.GetChild(i)).TextureHover = (Texture2D)GD.Load(Color_values.color_sprites_pressed[8]);
 		}
 
-        ((SoundHandler)GetNode("/root/ButtonSoundMaker")).connectButton((TextureButton)GetChild(4), true);
+        ((SoundHandler)GetNode("/root/SoundHandler")).connectButton((TextureButton)GetChild(4), true);
 
 		correct_values = new GameColors[4];
 		for (int i = 0 ; i < correct_values.Length ; i++){

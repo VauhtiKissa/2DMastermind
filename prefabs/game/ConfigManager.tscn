@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://6ejlykaabwov"]
 
-[ext_resource type="Script" path="res://code/config_manager.cs" id="1_ajdey"]
-[ext_resource type="Texture2D" uid="uid://de18u72rrrxmk" path="res://sprites/other_buttons/fullscreen_on.png" id="2_wprxi"]
+[ext_resource type="Script" path="res://code/game/ConfigManager.cs" id="1_s1ueo"]
+[ext_resource type="Texture2D" uid="uid://de18u72rrrxmk" path="res://sprites/other_buttons/fullscreen_on.png" id="2_hdbev"]
 
-[node name="config_manager" type="Node"]
-script = ExtResource("1_ajdey")
+[node name="ConfigManager" type="Node"]
+script = ExtResource("1_s1ueo")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 z_index = 1
@@ -13,6 +13,6 @@ offset_left = 928.0
 offset_top = 512.0
 offset_right = 952.0
 offset_bottom = 536.0
-texture_normal = ExtResource("2_wprxi")
+texture_normal = ExtResource("2_hdbev")
 
 [connection signal="pressed" from="TextureButton" to="." method="change_full_screen"]
