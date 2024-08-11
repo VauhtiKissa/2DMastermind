@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://prvg6lawgu2y"]
 
-[ext_resource type="Script" path="res://code/game/ColorChooser.cs" id="1_wqv07"]
+[ext_resource type="Script" path="res://code/ColorChooser.cs" id="1_wqv07"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="2_d7v87"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="3_nhvmw"]
 [ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/end_button.png" id="4_mx0ib"]

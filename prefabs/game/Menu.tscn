@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://c4tujkaq1p20m"]
 
-[ext_resource type="Script" path="res://code/game/GridMaker.cs" id="1_tjpm1"]
+[ext_resource type="Script" path="res://code/GridMaker.cs" id="1_tjpm1"]
 [ext_resource type="Texture2D" uid="uid://dlmx3cypm5o3m" path="res://sprites/color_button_sprites/color_button_background.png" id="2_b7hbh"]
-[ext_resource type="Script" path="res://code/game/Menu.cs" id="3_urtfn"]
+[ext_resource type="Script" path="res://code/Menu.cs" id="3_urtfn"]
 [ext_resource type="Texture2D" uid="uid://c0hm22dwo3jha" path="res://sprites/backs/title_background.png" id="4_1fvrb"]
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="5_ouipg"]
 [ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/other_buttons/menu_button_background.png" id="6_b522c"]

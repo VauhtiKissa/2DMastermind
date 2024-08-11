@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dtbsds82xs85o"]
 
-[ext_resource type="Script" path="res://code/tutorial/Tutorial.cs" id="1_h4gew"]
+[ext_resource type="Script" path="res://code/Tutorial.cs" id="1_h4gew"]
 [ext_resource type="PackedScene" uid="uid://82b6ui050fvi" path="res://prefabs/tutorial/2DMastermindExplination.tscn" id="2_m10n0"]
 [ext_resource type="Texture2D" uid="uid://cr62evgaywidk" path="res://sprites/backs/background.png" id="2_vq8sq"]
 [ext_resource type="PackedScene" uid="uid://dhc0k2wkd4qvc" path="res://prefabs/tutorial/GameProgressionExplination.tscn" id="3_551kd"]
