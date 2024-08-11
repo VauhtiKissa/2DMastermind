@@ -23,7 +23,7 @@ public partial class tutorial_guess_cube : Node2D
 		wrong_place_numbers = GetChild(4);
 
 		for (int i = 0 ; i < buttons.GetChildCount(); i++){
-			((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)buttons.GetChild(i), false);
+			((SoundHandler)GetNode("/root/ButtonSoundMaker")).connectButton((TextureButton)buttons.GetChild(i), false);
 			((TextureButton)buttons.GetChild(i)).TextureNormal = (Texture2D)GD.Load(Color_values.color_sprites[8]);
 			((TextureButton)buttons.GetChild(i)).TexturePressed = (Texture2D)GD.Load(Color_values.color_sprites[8]);
 			((TextureButton)buttons.GetChild(i)).TextureHover = (Texture2D)GD.Load(Color_values.color_sprites_pressed[8]);

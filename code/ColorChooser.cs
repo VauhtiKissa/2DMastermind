@@ -27,10 +27,10 @@ public partial class ColorChooser : Node2D
 			buttons[i].TextureNormal = GD.Load<Texture2D>(Color_values.color_sprites[i]);
 			buttons[i].TexturePressed = GD.Load<Texture2D>(Color_values.color_sprites_pressed[i]);
 			buttons[i].TextureHover = GD.Load<Texture2D>(Color_values.color_sprites_pressed[i]);
-			GetNode<button_sound>("/root/ButtonSoundMaker").connect_button(buttons[i], false);
+			GetNode<SoundHandler>("/root/SoundHandler").connectButton(buttons[i], false);
 		}
 
-        GetNode<button_sound>("/root/ButtonSoundMaker").connect_button(buttons[8], true);
+        GetNode<SoundHandler>("/root/SoundHandler").connectButton(buttons[8], true);
 	
 	}
 

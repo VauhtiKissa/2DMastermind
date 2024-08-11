@@ -22,8 +22,7 @@ buses/default_bus_layout=""
 [autoload]
 
 ConfigManager="*res://prefabs/game/config_manager.tscn"
-MusicPlayer="*res://prefabs/game/music_player.tscn"
-ButtonSoundMaker="*res://prefabs/game/button_sound_maker.tscn"
+SoundHandler="*res://prefabs/game/SoundHandler.tscn"
 
 [display]
 

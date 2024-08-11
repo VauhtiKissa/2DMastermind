@@ -34,6 +34,7 @@ texture_filter = 1
 
 [node name="Sprites" type="Node2D" parent="."]
 position = Vector2(-144, 0)
+scale = Vector2(1, 0.996454)
 
 [node name="Button" type="Sprite2D" parent="Sprites"]
 position = Vector2(15, 15)

@@ -6,36 +6,37 @@
 [ext_resource type="Texture2D" uid="uid://bn1328xhcyggn" path="res://sprites/other_buttons/corner_button_pressed.png" id="4_22dik"]
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="5_chc5p"]
 
-[node name="game_coordinator" type="Node2D"]
+[node name="GameCoordinator" type="Node2D"]
 texture_filter = 1
+scale = Vector2(0.994547, 0.996931)
 script = ExtResource("1_m2ipn")
 
-[node name="guess_cubes" type="Node2D" parent="."]
+[node name="GuessCubes" type="Node2D" parent="."]
 position = Vector2(-8, -8)
 
-[node name="Node2D" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
+[node name="Node2D" parent="GuessCubes" instance=ExtResource("2_6jxxe")]
 position = Vector2(-1, 88)
 
-[node name="Node2D2" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
+[node name="Node2D2" parent="GuessCubes" instance=ExtResource("2_6jxxe")]
 position = Vector2(255, 88)
 
-[node name="Node2D3" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
+[node name="Node2D3" parent="GuessCubes" instance=ExtResource("2_6jxxe")]
 position = Vector2(511, 88)
 
-[node name="Node2D4" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
+[node name="Node2D4" parent="GuessCubes" instance=ExtResource("2_6jxxe")]
 position = Vector2(767, 88)
 sliding = true
 
-[node name="Node2D5" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
+[node name="Node2D5" parent="GuessCubes" instance=ExtResource("2_6jxxe")]
 position = Vector2(-1, 280)
 
-[node name="Node2D6" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
+[node name="Node2D6" parent="GuessCubes" instance=ExtResource("2_6jxxe")]
 position = Vector2(255, 280)
 
-[node name="Node2D7" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
+[node name="Node2D7" parent="GuessCubes" instance=ExtResource("2_6jxxe")]
 position = Vector2(511, 280)
 
-[node name="Node2D8" parent="guess_cubes" instance=ExtResource("2_6jxxe")]
+[node name="Node2D8" parent="GuessCubes" instance=ExtResource("2_6jxxe")]
 position = Vector2(767, 280)
 sliding = true
 

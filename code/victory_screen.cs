@@ -3,25 +3,27 @@ using System;
 
 public partial class victory_screen : Node2D
 {
-
+	[Export]
+	public bool victory = false;
 	public override void _Ready()
 	{
-        ((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(3), false);
-        ((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(4), false);
+        GetNode<SoundHandler>("/root/SoundHandler").connectButton(GetNode<TextureButton>("./Restart"), false);
+        GetNode<SoundHandler>("/root/SoundHandler").connectButton(GetNode<TextureButton>("./Menu"), false);
 
-		((AnimationPlayer)GetChild(5)).Active = true;
-		((AnimationPlayer)GetChild(5)).Play("victory_animation");
+		AnimationPlayer animationPlayer = GetNode<AnimationPlayer>("./");
+
+		animationPlayer.Play("victory_animation");
 	}
 
 	public void back_to_menu(){
-		((music_player)GetNode("/root/MusicPlayer")).restart_sound_level();
+		GetNode<SoundHandler>("/root/SoundHandler").restartSoundLevel();
 		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/menu.tscn").Instantiate());
-		GetParent().GetParent().QueueFree();
+		GetNode<Node>("/root/Game").QueueFree();
 	}
 
 	public void restart(){
-		((music_player)GetNode("/root/MusicPlayer")).restart_sound_level();
+		GetNode<SoundHandler>("/root/SoundHandler").restartSoundLevel();
 		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/game.tscn").Instantiate());
-		GetParent().GetParent().QueueFree();
+		GetNode<Node>("/root/Game").QueueFree();
 	}
 }

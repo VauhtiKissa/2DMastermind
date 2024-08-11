@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d0bfuitfo4vlu" path="res://prefabs/game/game_coordinator.tscn" id="1_obfu3"]
 [ext_resource type="Texture2D" uid="uid://bo8tvmhvmxit0" path="res://sprites/backs/game_background.png" id="1_xn0ix"]
 
-[node name="game" type="Node2D"]
+[node name="Game" type="Node2D"]
 texture_filter = 5
 
 [node name="GameBackground" type="Sprite2D" parent="."]

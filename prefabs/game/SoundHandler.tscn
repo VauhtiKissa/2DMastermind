@@ -1,0 +1,115 @@
+[gd_scene load_steps=14 format=3 uid="uid://de3pa55pwsysx"]
+
+[ext_resource type="Script" path="res://code/SoundHandler.cs" id="1_21qoi"]
+[ext_resource type="AudioStream" uid="uid://cptikro853bl8" path="res://sounds/music/bitchin 1.wav" id="2_0c0p7"]
+[ext_resource type="AudioStream" uid="uid://cadcd4q50cbq1" path="res://sounds/button_sounds/hover-sound-effect.mp3" id="2_8ughu"]
+[ext_resource type="AudioStream" uid="uid://batk5ydkuhf70" path="res://sounds/button_sounds/click_sound.wav" id="3_6hqhq"]
+[ext_resource type="AudioStream" uid="uid://bfibqxbbt1dfr" path="res://sounds/music/bitchin 2.wav" id="3_fwynn"]
+[ext_resource type="AudioStream" uid="uid://cpxni0sl4wvak" path="res://sounds/music/bitchin 3.wav" id="4_1nfue"]
+[ext_resource type="Texture2D" uid="uid://2c1uis7xbvk3" path="res://sprites/other_buttons/mute_button_on.png" id="4_vjipd"]
+[ext_resource type="Texture2D" uid="uid://ctjuxrkecw03y" path="res://sprites/other_buttons/music_button_on.png" id="5_22g65"]
+[ext_resource type="AudioStream" uid="uid://g4rck2580hbw" path="res://sounds/music/bitchin 4.wav" id="5_j47rr"]
+[ext_resource type="AudioStream" uid="uid://c041nbswn5rea" path="res://sounds/music/bitchin 5 .wav" id="6_7npxi"]
+[ext_resource type="AudioStream" uid="uid://j5tpbqo0nafi" path="res://sounds/music/bitchin 6.wav" id="7_sct8p"]
+[ext_resource type="AudioStream" uid="uid://cbloawnmucdhf" path="res://sounds/music/bitchin 7.wav" id="8_nhhmq"]
+[ext_resource type="AudioStream" uid="uid://db83qyspwir3y" path="res://sounds/music/bitchin 8.wav" id="9_xouem"]
+
+[node name="SoundHandler" type="Node"]
+script = ExtResource("1_21qoi")
+
+[node name="Music" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("2_0c0p7")
+volume_db = -1.0
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("3_fwynn")
+volume_db = -80.0
+autoplay = true
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("4_1nfue")
+volume_db = -80.0
+autoplay = true
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("5_j47rr")
+volume_db = -80.0
+autoplay = true
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("6_7npxi")
+volume_db = -80.0
+autoplay = true
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("7_sct8p")
+volume_db = -80.0
+autoplay = true
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("8_nhhmq")
+volume_db = -80.0
+autoplay = true
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("9_xouem")
+volume_db = -80.0
+autoplay = true
+
+[node name="ButtonSounds" type="Node" parent="."]
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="ButtonSounds"]
+stream = ExtResource("2_8ughu")
+volume_db = -4.0
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="ButtonSounds"]
+stream = ExtResource("3_6hqhq")
+volume_db = -6.0
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 768.0
+offset_top = 416.0
+offset_right = 768.0
+offset_bottom = 416.0
+
+[node name="MusicButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+z_as_relative = false
+layout_mode = 0
+offset_left = 108.0
+offset_top = 96.0
+offset_right = 132.0
+offset_bottom = 120.0
+texture_normal = ExtResource("5_22g65")
+
+[node name="VSlider" type="VSlider" parent="Buttons/MusicButton"]
+layout_mode = 0
+offset_top = -68.0
+offset_right = 24.0
+offset_bottom = -8.0
+
+[node name="SoundButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+z_as_relative = false
+layout_mode = 0
+offset_left = 136.0
+offset_top = 96.0
+offset_right = 160.0
+offset_bottom = 120.0
+texture_normal = ExtResource("4_vjipd")
+
+[node name="VSlider" type="VSlider" parent="Buttons/SoundButton"]
+layout_mode = 0
+offset_top = -68.0
+offset_right = 24.0
+offset_bottom = -8.0
+
+[connection signal="pressed" from="Buttons/MusicButton" to="." method="musicButtonPessed"]
+[connection signal="value_changed" from="Buttons/MusicButton/VSlider" to="." method="musicSliderMoved"]
+[connection signal="pressed" from="Buttons/SoundButton" to="." method="soundButtonPressed"]
+[connection signal="value_changed" from="Buttons/SoundButton/VSlider" to="." method="noiseSliderMoved"]

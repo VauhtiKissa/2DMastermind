@@ -13,14 +13,14 @@ public partial class menu : Node2D
 		normal_game = ResourceLoader.Load<PackedScene>("res://prefabs/game/game.tscn").Instantiate();
 		tutorial_game = ResourceLoader.Load<PackedScene>("res://prefabs/tutorial/tutorial.tscn").Instantiate();
 
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button(GetNode<TextureButton>("./start"), true);
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button(GetNode<TextureButton>("./tutorial"), true);
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button(GetNode<TextureButton>("./quit"), true);
+		GetNode<SoundHandler>("/root/SoundHandler").connectButton(GetNode<TextureButton>("./start"), true);
+		GetNode<SoundHandler>("/root/SoundHandler").connectButton(GetNode<TextureButton>("./tutorial"), true);
+		GetNode<SoundHandler>("/root/SoundHandler").connectButton(GetNode<TextureButton>("./quit"), true);
 
 		if(config_manager.config.did_tutorial == false){
-			((TextureButton)GetNode("./start")).Position = new Vector2(0,1000);
-			((TextureButton)GetNode("./tutorial")).Position = new Vector2(360,160);
-			((TextureButton)GetNode("./quit")).Position = new Vector2(360,248);
+			GetNode<TextureButton>("./start").Position = new Vector2(0,1000);
+			GetNode<TextureButton>("./tutorial").Position = new Vector2(360,160);
+			GetNode<TextureButton>("./quit").Position = new Vector2(360,248);
 		}
 
 	}

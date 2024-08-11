@@ -31,21 +31,21 @@ _data = {
 
 [node name="loss_screen" type="Node2D"]
 
-[node name="node 2d" type="Node2D" parent="."]
+[node name="AnimationPositioner" type="Node2D" parent="."]
 z_index = 10
 texture_filter = 1
 position = Vector2(0, 500)
 script = ExtResource("1_82uua")
 
-[node name="correct_answer_display" parent="node 2d" instance=ExtResource("7_uhcg1")]
+[node name="CorrectAnswerDisplay" parent="AnimationPositioner" instance=ExtResource("7_uhcg1")]
 z_as_relative = false
-position = Vector2(672, 140)
+position = Vector2(676, 144)
 
-[node name="LossBackground" type="Sprite2D" parent="node 2d"]
+[node name="LossBackground" type="Sprite2D" parent="AnimationPositioner"]
 position = Vector2(512, 206)
 texture = ExtResource("2_0xmii")
 
-[node name="Label" type="Label" parent="node 2d"]
+[node name="Label" type="Label" parent="AnimationPositioner"]
 texture_filter = 1
 offset_left = 360.0
 offset_top = 104.0
@@ -56,7 +56,7 @@ theme_override_font_sizes/font_size = 45
 text = "YOU LOST"
 horizontal_alignment = 1
 
-[node name="restart" type="TextureButton" parent="node 2d"]
+[node name="Restart" type="TextureButton" parent="AnimationPositioner"]
 offset_left = 392.0
 offset_top = 160.0
 offset_right = 632.0
@@ -65,7 +65,7 @@ texture_normal = ExtResource("4_nxuug")
 texture_pressed = ExtResource("5_s2l87")
 texture_hover = ExtResource("5_s2l87")
 
-[node name="Label" type="Label" parent="node 2d/restart"]
+[node name="Label" type="Label" parent="AnimationPositioner/Restart"]
 layout_mode = 0
 offset_left = 8.0
 offset_right = 232.0
@@ -75,7 +75,7 @@ text = "NEW GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="menu" type="TextureButton" parent="node 2d"]
+[node name="Menu" type="TextureButton" parent="AnimationPositioner"]
 offset_left = 388.0
 offset_top = 240.0
 offset_right = 628.0
@@ -84,7 +84,7 @@ texture_normal = ExtResource("4_nxuug")
 texture_pressed = ExtResource("5_s2l87")
 texture_hover = ExtResource("5_s2l87")
 
-[node name="Label" type="Label" parent="node 2d/menu"]
+[node name="Label" type="Label" parent="AnimationPositioner/Menu"]
 layout_mode = 0
 offset_left = 8.0
 offset_right = 232.0
@@ -94,10 +94,10 @@ text = "BACK TO MENU"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="node 2d"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationPositioner"]
 libraries = {
 "": SubResource("AnimationLibrary_ywlv4")
 }
 
-[connection signal="pressed" from="node 2d/restart" to="node 2d" method="restart"]
-[connection signal="pressed" from="node 2d/menu" to="node 2d" method="back_to_menu"]
+[connection signal="pressed" from="AnimationPositioner/Restart" to="AnimationPositioner" method="restart"]
+[connection signal="pressed" from="AnimationPositioner/Menu" to="AnimationPositioner" method="back_to_menu"]

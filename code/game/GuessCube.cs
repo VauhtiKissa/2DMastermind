@@ -31,7 +31,7 @@ public partial class GuessCube : Node
 			buttons[i].TextureNormal = GD.Load<Texture2D>(Color_values.color_sprites[0]);
 			buttons[i].TexturePressed = GD.Load<Texture2D>(Color_values.color_sprites_pressed[0]);
 			buttons[i].TextureHover = GD.Load<Texture2D>(Color_values.color_sprites_pressed[0]);
-        	GetNode<button_sound>("/root/ButtonSoundMaker").connect_button(buttons[i], false);
+        	GetNode<SoundHandler>("/root/SoundHandler").connectButton(buttons[i], false);
 
 			current_colors[i] = GameColors.blank;
 		}

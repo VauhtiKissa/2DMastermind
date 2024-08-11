@@ -11,9 +11,9 @@ public partial class tutorial : Node2D
 	public override void _Ready()
 	{
 
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(1), true);
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(2), true);
-		((button_sound)GetNode("/root/ButtonSoundMaker")).connect_button((TextureButton)GetChild(3), true);
+		((SoundHandler)GetNode("/root/ButtonSoundMaker")).connectButton((TextureButton)GetChild(1), true);
+		((SoundHandler)GetNode("/root/ButtonSoundMaker")).connectButton((TextureButton)GetChild(2), true);
+		((SoundHandler)GetNode("/root/ButtonSoundMaker")).connectButton((TextureButton)GetChild(3), true);
 		config_manager.config.did_tutorial = true;
 		config_manager.save();
 	}
