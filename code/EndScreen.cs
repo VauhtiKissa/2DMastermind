@@ -12,7 +12,7 @@ public partial class EndScreen : Node2D
 
 		if (victory)
 		{
-			GetNode<AnimationPlayer>("./").Play("victory_animation");
+			GetNode<AnimationPlayer>("./AnimationPositioner/AnimationPlayer").Play("victory_animation");
 		}else
 		{
 			GetNode<AnimationPlayer>("./AnimationPositioner/AnimationPlayer").Play("loss_pop_up");

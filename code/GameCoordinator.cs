@@ -52,7 +52,7 @@ public partial class GameCoordinator : Node2D
 
 	public void victory(){
 		AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/ConfettiCannon.tscn").Instantiate());
-		AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/victory_screen.tscn").Instantiate());
+		AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/VictoryScreen.tscn").Instantiate());
 		int milliseconds = (int)(time*1000);
 		int minutes = milliseconds / 60000;
 		milliseconds -= minutes * 60000;

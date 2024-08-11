@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dmp7lrp2l6qjy"]
 
-[ext_resource type="Script" path="res://code/GuessCube.cs" id="1_3tr56"]
+[ext_resource type="Script" path="res://code/GuessCube.cs" id="1_666wo"]
 [ext_resource type="Texture2D" uid="uid://bs3a8hp3pkalb" path="res://sprites/backs/cube_background.png" id="2_dgroa"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="3_ftt8o"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="4_ovptb"]
@@ -30,7 +30,7 @@ _data = {
 
 [node name="GuessCube" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_3tr56")
+script = ExtResource("1_666wo")
 
 [node name="AnimationPositioner" type="Node2D" parent="."]
 

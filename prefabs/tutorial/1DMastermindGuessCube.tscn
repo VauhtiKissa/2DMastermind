@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cd0ucewskw06l"]
 
-[ext_resource type="Script" path="res://code/GuessCube.cs" id="1_kq5ss"]
+[ext_resource type="Script" path="res://code/GuessCube.cs" id="1_3jbj5"]
 [ext_resource type="PackedScene" uid="uid://prvg6lawgu2y" path="res://prefabs/tutorial/1DMastermindColorChooser.tscn" id="2_8ekwh"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="3_cv5rk"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="4_0dqh7"]
@@ -8,7 +8,7 @@
 
 [node name="TutorialGuessRow" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_kq5ss")
+script = ExtResource("1_3jbj5")
 tutorial = true
 
 [node name="AnimationPositioner" type="Node2D" parent="."]

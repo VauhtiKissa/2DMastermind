@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bfliice1hm1nj"]
 
-[ext_resource type="Script" path="res://code/ColorChooser.cs" id="1_7jupv"]
+[ext_resource type="Script" path="res://code/ColorChooser.cs" id="1_tr66p"]
 [ext_resource type="Texture2D" uid="uid://rrl7wea34xrw" path="res://sprites/backs/color_picker_background.png" id="2_gx7wh"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="3_xg4ih"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="4_x1mt0"]
@@ -50,7 +50,7 @@ _data = {
 
 [node name="ColorChooser" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_7jupv")
+script = ExtResource("1_tr66p")
 
 [node name="AnimationPositioner" type="Node2D" parent="."]
 

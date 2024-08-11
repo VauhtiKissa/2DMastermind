@@ -1,17 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://prvg6lawgu2y"]
+[gd_scene load_steps=7 format=3 uid="uid://prvg6lawgu2y"]
 
-[ext_resource type="Script" path="res://code/ColorChooser.cs" id="1_wqv07"]
+[ext_resource type="Script" path="res://code/ColorChooser.cs" id="1_vc4n1"]
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="2_d7v87"]
 [ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="3_nhvmw"]
 [ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/end_button.png" id="4_mx0ib"]
 [ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/end_button_hover.png" id="5_f5bnk"]
-[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="6_jv7ek"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_fuikl"]
 
 [node name="TutorialColorChooser" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_wqv07")
+script = ExtResource("1_vc4n1")
 
 [node name="AnimationPositioner" type="Node2D" parent="."]
 
@@ -125,20 +124,6 @@ offset_right = 204.0
 offset_bottom = 28.0
 texture_normal = ExtResource("4_mx0ib")
 texture_hover = ExtResource("5_f5bnk")
-
-[node name="Label" type="Label" parent="AnimationPositioner/Buttons/TextureButton9"]
-texture_filter = 1
-layout_mode = 0
-offset_left = -8.0
-offset_top = 16.0
-offset_right = 156.0
-offset_bottom = 94.0
-scale = Vector2(0.5, 0.5)
-theme = ExtResource("6_jv7ek")
-text = "Press the checkmark"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
 
 [connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton" to="." method="pickColor" binds= [0]]
 [connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton3" to="." method="pickColor" binds= [2]]

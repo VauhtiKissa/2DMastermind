@@ -46,6 +46,18 @@ theme = ExtResource("1_dmluq")
 text = "The amount of right colors in wrong places"
 autowrap_mode = 2
 
+[node name="Label5" type="Label" parent="Texts"]
+texture_filter = 1
+offset_left = 624.0
+offset_top = 304.0
+offset_right = 788.0
+offset_bottom = 382.0
+theme = ExtResource("1_dmluq")
+text = "Press the checkmark"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="TutorialGuessRow" parent="." instance=ExtResource("2_hlyv6")]
 position = Vector2(304, 88)
 scale = Vector2(2, 2)
