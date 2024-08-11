@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bbr5uh4icnv22" path="res://sprites/GameScreenshot.png" id="1_el7x1"]
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="2_v2rrn"]
 
-[node name="game_progression_explination" type="Node2D"]
+[node name="GameProgressionExplination" type="Node2D"]
 
 [node name="GameScreenshot" type="Sprite2D" parent="."]
 position = Vector2(504, 280)

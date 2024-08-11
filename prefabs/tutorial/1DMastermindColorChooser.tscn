@@ -1,0 +1,151 @@
+[gd_scene load_steps=8 format=3 uid="uid://prvg6lawgu2y"]
+
+[ext_resource type="Script" path="res://code/game/ColorChooser.cs" id="1_wqv07"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="2_d7v87"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="3_nhvmw"]
+[ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/end_button.png" id="4_mx0ib"]
+[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/end_button_hover.png" id="5_f5bnk"]
+[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="6_jv7ek"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_fuikl"]
+
+[node name="TutorialColorChooser" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_wqv07")
+
+[node name="AnimationPositioner" type="Node2D" parent="."]
+
+[node name="Buttons" type="Node2D" parent="AnimationPositioner"]
+position = Vector2(-4, 0)
+
+[node name="TextureButton" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 4.0
+offset_right = 34.0
+offset_bottom = 30.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("2_d7v87")
+texture_pressed = ExtResource("3_nhvmw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 64.0
+offset_right = 94.0
+offset_bottom = 30.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("2_d7v87")
+texture_pressed = ExtResource("3_nhvmw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 34.0
+offset_right = 64.0
+offset_bottom = 30.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("2_d7v87")
+texture_pressed = ExtResource("3_nhvmw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton4" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 94.0
+offset_right = 124.0
+offset_bottom = 30.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("2_d7v87")
+texture_pressed = ExtResource("3_nhvmw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton5" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 4.0
+offset_top = 30.0
+offset_right = 34.0
+offset_bottom = 60.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("2_d7v87")
+texture_pressed = ExtResource("3_nhvmw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton6" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 34.0
+offset_top = 30.0
+offset_right = 64.0
+offset_bottom = 60.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("2_d7v87")
+texture_pressed = ExtResource("3_nhvmw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton7" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 64.0
+offset_top = 30.0
+offset_right = 94.0
+offset_bottom = 60.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("2_d7v87")
+texture_pressed = ExtResource("3_nhvmw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton8" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 94.0
+offset_top = 30.0
+offset_right = 124.0
+offset_bottom = 60.0
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("2_d7v87")
+texture_pressed = ExtResource("3_nhvmw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton9" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 144.0
+offset_top = 8.0
+offset_right = 204.0
+offset_bottom = 28.0
+texture_normal = ExtResource("4_mx0ib")
+texture_hover = ExtResource("5_f5bnk")
+
+[node name="Label" type="Label" parent="AnimationPositioner/Buttons/TextureButton9"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -8.0
+offset_top = 16.0
+offset_right = 156.0
+offset_bottom = 94.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("6_jv7ek")
+text = "Press the checkmark"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton" to="." method="pickColor" binds= [0]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton3" to="." method="pickColor" binds= [2]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton2" to="." method="pickColor" binds= [1]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton4" to="." method="pickColor" binds= [3]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton5" to="." method="pickColor" binds= [4]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton6" to="." method="pickColor" binds= [5]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton7" to="." method="pickColor" binds= [6]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton8" to="." method="pickColor" binds= [7]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton9" to="." method="roundEndButtonPressed"]

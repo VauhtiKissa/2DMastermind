@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dtbsds82xs85o"]
 
-[ext_resource type="Script" path="res://code/tutorial/tutorial.cs" id="1_h4gew"]
+[ext_resource type="Script" path="res://code/tutorial/Tutorial.cs" id="1_h4gew"]
 [ext_resource type="PackedScene" uid="uid://82b6ui050fvi" path="res://prefabs/tutorial/2DMastermindExplination.tscn" id="2_m10n0"]
 [ext_resource type="Texture2D" uid="uid://cr62evgaywidk" path="res://sprites/backs/background.png" id="2_vq8sq"]
 [ext_resource type="PackedScene" uid="uid://dhc0k2wkd4qvc" path="res://prefabs/tutorial/GameProgressionExplination.tscn" id="3_551kd"]
@@ -12,17 +12,17 @@
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="7_ysk8h"]
 [ext_resource type="PackedScene" uid="uid://cbcbj8r4rsyr5" path="res://prefabs/tutorial/BlankExplination.tscn" id="8_k87n1"]
 
-[node name="tutorial" type="Node2D" node_paths=PackedStringArray("Pages")]
+[node name="Tutorial" type="Node2D" node_paths=PackedStringArray("Pages")]
 texture_filter = 3
 script = ExtResource("1_h4gew")
-Pages = [NodePath("mastermind_explination"), NodePath("2d_mastermind_explination"), NodePath("game_progression_explination"), NodePath("blank_spaces")]
+Pages = []
 
-[node name="Backgorund" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 z_index = -10
 position = Vector2(480, 270)
 texture = ExtResource("2_vq8sq")
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="LastPage" type="TextureButton" parent="."]
 offset_top = 142.0
 offset_right = 44.0
 offset_bottom = 398.0
@@ -30,7 +30,7 @@ texture_normal = ExtResource("3_exa76")
 texture_hover = ExtResource("4_3lndt")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="TextureButton"]
+[node name="Label" type="Label" parent="LastPage"]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 2.0
@@ -42,7 +42,7 @@ text = "LAST PAGE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton2" type="TextureButton" parent="."]
+[node name="NextPage" type="TextureButton" parent="."]
 offset_left = 960.0
 offset_top = 396.0
 offset_right = 1004.0
@@ -52,7 +52,7 @@ texture_normal = ExtResource("3_exa76")
 texture_hover = ExtResource("4_3lndt")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="TextureButton2"]
+[node name="Label" type="Label" parent="NextPage"]
 layout_mode = 0
 offset_left = 44.0
 offset_right = 300.0
@@ -63,14 +63,14 @@ text = "NEXT PAGE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton3" type="TextureButton" parent="."]
+[node name="BackToMenu" type="TextureButton" parent="."]
 offset_right = 100.0
 offset_bottom = 30.0
 texture_normal = ExtResource("6_8u6xj")
 texture_hover = ExtResource("7_o1g4m")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="TextureButton3"]
+[node name="Label" type="Label" parent="BackToMenu"]
 layout_mode = 0
 offset_right = 96.0
 offset_bottom = 28.0
@@ -80,17 +80,19 @@ text = "BACK TO MENU"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="mastermind_explination" parent="." instance=ExtResource("4_ougmf")]
+[node name="Pages" type="Node2D" parent="."]
 
-[node name="2d_mastermind_explination" parent="." instance=ExtResource("2_m10n0")]
+[node name="MastermindExplination" parent="Pages" instance=ExtResource("4_ougmf")]
+
+[node name="2DMastermindExplination" parent="Pages" instance=ExtResource("2_m10n0")]
 position = Vector2(-560, -528)
 
-[node name="game_progression_explination" parent="." instance=ExtResource("3_551kd")]
+[node name="GameProgressionExplination" parent="Pages" instance=ExtResource("3_551kd")]
 position = Vector2(240, -496)
 
-[node name="blank_spaces" parent="." instance=ExtResource("8_k87n1")]
+[node name="BlankSpaceExplination" parent="Pages" instance=ExtResource("8_k87n1")]
 position = Vector2(808, -496)
 
-[connection signal="pressed" from="TextureButton" to="." method="change_page_backward"]
-[connection signal="pressed" from="TextureButton2" to="." method="change_page_forward"]
-[connection signal="pressed" from="TextureButton3" to="." method="back_to_menu"]
+[connection signal="pressed" from="LastPage" to="." method="changePageBackward"]
+[connection signal="pressed" from="NextPage" to="." method="changePageForward"]
+[connection signal="pressed" from="BackToMenu" to="." method="backToMenu"]

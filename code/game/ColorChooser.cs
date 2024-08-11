@@ -12,14 +12,7 @@ public partial class ColorChooser : Node2D
 
 		parent = (GuessCube)GetParent().GetParent();
 
-		try
-		{
-			animator = GetNode<AnimationPlayer>("./AnimationPlayer");
-		}
-		catch (Exception)
-		{
-			
-		}
+		animator = GetNodeOrNull<AnimationPlayer>("./AnimationPlayer");
 
 		buttons = GetNode<Node2D>("./AnimationPositioner/Buttons").GetChildren().Cast<TextureButton>().ToArray();
 		

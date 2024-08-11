@@ -1,24 +1,26 @@
 using Godot;
 using System;
+using System.Linq;
 
-public partial class tutorial : Node2D
+public partial class Tutorial : Node2D
 {
 	[Export]
 	private Node2D[] Pages;
 	private int current_page = 0;
-
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 
-		((SoundHandler)GetNode("/root/SoundHandler")).connectButton((TextureButton)GetChild(1), true);
-		((SoundHandler)GetNode("/root/SoundHandler")).connectButton((TextureButton)GetChild(2), true);
-		((SoundHandler)GetNode("/root/SoundHandler")).connectButton((TextureButton)GetChild(3), true);
+		Pages = GetNode<Node2D>("./Pages").GetChildren().Cast<Node2D>().ToArray();
+
+		GetNode<SoundHandler>("/root/SoundHandler").connectButton(GetNode<TextureButton>("./LastPage"), true);
+		GetNode<SoundHandler>("/root/SoundHandler").connectButton(GetNode<TextureButton>("./NextPage"), true);
+		GetNode<SoundHandler>("/root/SoundHandler").connectButton(GetNode<TextureButton>("./BackToMenu"), true);
+
 		ConfigManager.config.did_tutorial = true;
 		ConfigManager.save();
 	}
 
-	public void change_page_forward(){
+	public void changePageForward(){
 		current_page += 1;
 		if(current_page <= Pages.Length-1){
 			Pages[current_page].Position = new Vector2(0,0);
@@ -30,7 +32,7 @@ public partial class tutorial : Node2D
 		}
 	}
 
-	public void change_page_backward(){
+	public void changePageBackward(){
 		current_page -= 1;
 		if(current_page >= 0){
 			Pages[current_page].Position = new Vector2(0,0);
@@ -43,7 +45,7 @@ public partial class tutorial : Node2D
 	}
 
 
-	public void back_to_menu(){
+	public void backToMenu(){
 		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/Menu.tscn").Instantiate());
 		QueueFree();
 	}

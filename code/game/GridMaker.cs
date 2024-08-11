@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Data;
 
-public partial class grid_maker : Node2D
+public partial class GridMaker : Node2D
 {
 	/*
 		makes the background for the main menu

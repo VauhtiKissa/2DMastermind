@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class menu : Node2D
+public partial class Menu : Node2D
 {
 
 	public Node normal_game;

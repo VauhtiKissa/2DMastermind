@@ -1,0 +1,390 @@
+[gd_scene load_steps=6 format=3 uid="uid://cd0ucewskw06l"]
+
+[ext_resource type="Script" path="res://code/game/GuessCube.cs" id="1_kq5ss"]
+[ext_resource type="PackedScene" uid="uid://prvg6lawgu2y" path="res://prefabs/tutorial/1DMastermindColorChooser.tscn" id="2_8ekwh"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="3_cv5rk"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="4_0dqh7"]
+[ext_resource type="Theme" uid="uid://6jqlv17sxrpw" path="res://fonts/guess_cube_text.tres" id="5_wla1e"]
+
+[node name="TutorialGuessRow" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_kq5ss")
+tutorial = true
+
+[node name="AnimationPositioner" type="Node2D" parent="."]
+
+[node name="ColorChooser" parent="AnimationPositioner" instance=ExtResource("2_8ekwh")]
+position = Vector2(29, 80)
+
+[node name="Buttons" type="Node2D" parent="AnimationPositioner"]
+position = Vector2(29, 30)
+
+[node name="TextureButton" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_right = 30.0
+offset_bottom = 30.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton2" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 30.0
+offset_right = 60.0
+offset_bottom = 30.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton3" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 60.0
+offset_right = 90.0
+offset_bottom = 30.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton4" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 90.0
+offset_right = 120.0
+offset_bottom = 30.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton5" type="TextureButton" parent="AnimationPositioner/Buttons"]
+visible = false
+offset_top = 30.0
+offset_right = 30.0
+offset_bottom = 60.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton6" type="TextureButton" parent="AnimationPositioner/Buttons"]
+visible = false
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 60.0
+offset_bottom = 60.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton7" type="TextureButton" parent="AnimationPositioner/Buttons"]
+visible = false
+offset_left = 60.0
+offset_top = 30.0
+offset_right = 90.0
+offset_bottom = 60.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton8" type="TextureButton" parent="AnimationPositioner/Buttons"]
+visible = false
+offset_left = 90.0
+offset_top = 30.0
+offset_right = 120.0
+offset_bottom = 60.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton9" type="TextureButton" parent="AnimationPositioner/Buttons"]
+visible = false
+offset_top = 60.0
+offset_right = 30.0
+offset_bottom = 90.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton10" type="TextureButton" parent="AnimationPositioner/Buttons"]
+visible = false
+offset_left = 30.0
+offset_top = 60.0
+offset_right = 60.0
+offset_bottom = 90.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton11" type="TextureButton" parent="AnimationPositioner/Buttons"]
+visible = false
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 90.0
+offset_bottom = 90.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton12" type="TextureButton" parent="AnimationPositioner/Buttons"]
+visible = false
+offset_left = 90.0
+offset_top = 60.0
+offset_right = 120.0
+offset_bottom = 90.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton13" type="TextureButton" parent="AnimationPositioner/Buttons"]
+visible = false
+offset_top = 90.0
+offset_right = 30.0
+offset_bottom = 120.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton14" type="TextureButton" parent="AnimationPositioner/Buttons"]
+visible = false
+offset_left = 30.0
+offset_top = 90.0
+offset_right = 60.0
+offset_bottom = 120.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton15" type="TextureButton" parent="AnimationPositioner/Buttons"]
+visible = false
+offset_left = 60.0
+offset_top = 90.0
+offset_right = 90.0
+offset_bottom = 120.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="TextureButton16" type="TextureButton" parent="AnimationPositioner/Buttons"]
+visible = false
+offset_left = 90.0
+offset_top = 90.0
+offset_right = 120.0
+offset_bottom = 120.0
+disabled = true
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("3_cv5rk")
+texture_pressed = ExtResource("4_0dqh7")
+
+[node name="CorrectAnswerNumbers" type="Node2D" parent="AnimationPositioner"]
+modulate = Color(0, 0.909804, 0.0313726, 1)
+texture_filter = 1
+position = Vector2(16, 16)
+
+[node name="Label" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
+offset_left = -13.0
+offset_top = 14.0
+offset_right = 13.0
+offset_bottom = 44.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
+visible = false
+offset_left = -12.0
+offset_top = 44.0
+offset_right = 14.0
+offset_bottom = 74.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
+visible = false
+offset_left = -12.0
+offset_top = 74.0
+offset_right = 14.0
+offset_bottom = 104.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
+visible = false
+offset_left = -12.0
+offset_top = 104.0
+offset_right = 14.0
+offset_bottom = 134.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
+visible = false
+offset_left = 14.0
+offset_top = 134.0
+offset_right = 44.0
+offset_bottom = 160.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
+visible = false
+offset_left = 44.0
+offset_top = 134.0
+offset_right = 74.0
+offset_bottom = 160.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
+visible = false
+offset_left = 74.0
+offset_top = 134.0
+offset_right = 104.0
+offset_bottom = 160.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="AnimationPositioner/CorrectAnswerNumbers"]
+visible = false
+offset_left = 106.0
+offset_top = 134.0
+offset_right = 134.0
+offset_bottom = 160.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WrongPlaceNumbers" type="Node2D" parent="AnimationPositioner"]
+modulate = Color(0.933333, 0.717647, 0, 1)
+texture_filter = 1
+position = Vector2(160, 16)
+
+[node name="Label" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
+offset_left = -11.0
+offset_top = 14.0
+offset_right = 15.0
+offset_bottom = 44.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
+visible = false
+offset_left = -10.0
+offset_top = 44.0
+offset_right = 16.0
+offset_bottom = 74.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
+visible = false
+offset_left = -10.0
+offset_top = 74.0
+offset_right = 16.0
+offset_bottom = 104.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
+visible = false
+offset_left = -10.0
+offset_top = 104.0
+offset_right = 16.0
+offset_bottom = 134.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
+visible = false
+offset_left = -130.0
+offset_top = -12.0
+offset_right = -100.0
+offset_bottom = 14.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
+visible = false
+offset_left = -100.0
+offset_top = -12.0
+offset_right = -70.0
+offset_bottom = 14.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
+visible = false
+offset_left = -70.0
+offset_top = -12.0
+offset_right = -40.0
+offset_bottom = 14.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="AnimationPositioner/WrongPlaceNumbers"]
+visible = false
+offset_left = -40.0
+offset_top = -12.0
+offset_right = -10.0
+offset_bottom = 14.0
+theme = ExtResource("5_wla1e")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton" to="." method="button_pressed" binds= [0]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton2" to="." method="button_pressed" binds= [1]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton3" to="." method="button_pressed" binds= [2]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton4" to="." method="button_pressed" binds= [3]]

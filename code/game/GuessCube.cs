@@ -20,6 +20,7 @@ public partial class GuessCube : Node
 	{
 
 		color_chooser = GetNode<ColorChooser>("./AnimationPositioner/ColorChooser");
+		
 		buttons = GetNode<Node2D>("./AnimationPositioner/Buttons").GetChildren().Cast<TextureButton>().ToArray();
 		correct_answer_numbers = GetNode<Node2D>("./AnimationPositioner/CorrectAnswerNumbers").GetChildren().Cast<Label>().ToArray();
 		wrong_place_numbers = GetNode<Node2D>("./AnimationPositioner/WrongPlaceNumbers").GetChildren().Cast<Label>().ToArray();
