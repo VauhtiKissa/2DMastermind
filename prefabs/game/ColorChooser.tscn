@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://code/ColorChooser.cs" id="1_tr66p"]
 [ext_resource type="Texture2D" uid="uid://rrl7wea34xrw" path="res://sprites/backs/color_picker_background.png" id="2_gx7wh"]
-[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="3_xg4ih"]
-[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="4_x1mt0"]
-[ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/end_button.png" id="5_oscm4"]
-[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/end_button_hover.png" id="6_w6pc4"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/colorButtonSprites/Button.png" id="3_xg4ih"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/colorButtonSprites/ButtonPressed.png" id="4_x1mt0"]
+[ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/endButton.png" id="5_oscm4"]
+[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/endButtonHover.png" id="6_w6pc4"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_d2wfw"]
 allow_unpress = true

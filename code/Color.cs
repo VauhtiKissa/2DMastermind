@@ -6,56 +6,56 @@ public static class Color_values
 
     public static string[] colorSprites =
     {
-        "res://sprites/color_button_sprites/white.png",
-        "res://sprites/color_button_sprites/black.png",
-        "res://sprites/color_button_sprites/red.png",
-        "res://sprites/color_button_sprites/green.png",
-        "res://sprites/color_button_sprites/blue.png",
-        "res://sprites/color_button_sprites/yellow.png",
-        "res://sprites/color_button_sprites/turquoise.png",
-        "res://sprites/color_button_sprites/purple.png",
-        "res://sprites/color_button_sprites/blank.png",
+        "res://sprites/colorButtonSprites/white.png",
+        "res://sprites/colorButtonSprites/black.png",
+        "res://sprites/colorButtonSprites/red.png",
+        "res://sprites/colorButtonSprites/green.png",
+        "res://sprites/colorButtonSprites/blue.png",
+        "res://sprites/colorButtonSprites/yellow.png",
+        "res://sprites/colorButtonSprites/turquoise.png",
+        "res://sprites/colorButtonSprites/purple.png",
+        "res://sprites/colorButtonSprites/blank.png",
     };
 
     // paths to pressed button sprites
     public static string[] colorSpritesPressed =
     {
-        "res://sprites/color_button_sprites/whitePressed.png",
-        "res://sprites/color_button_sprites/blackPressed.png",
-        "res://sprites/color_button_sprites/redPressed.png",
-        "res://sprites/color_button_sprites/greenPressed.png",
-        "res://sprites/color_button_sprites/bluePressed.png",
-        "res://sprites/color_button_sprites/yellowPressed.png",
-        "res://sprites/color_button_sprites/turquoisePressed.png",
-        "res://sprites/color_button_sprites/purplePressed.png",
-        "res://sprites/color_button_sprites/blankPressed.png",
+        "res://sprites/colorButtonSprites/whitePressed.png",
+        "res://sprites/colorButtonSprites/blackPressed.png",
+        "res://sprites/colorButtonSprites/redPressed.png",
+        "res://sprites/colorButtonSprites/greenPressed.png",
+        "res://sprites/colorButtonSprites/bluePressed.png",
+        "res://sprites/colorButtonSprites/yellowPressed.png",
+        "res://sprites/colorButtonSprites/turquoisePressed.png",
+        "res://sprites/colorButtonSprites/purplePressed.png",
+        "res://sprites/colorButtonSprites/blankPressed.png",
     };
 
     // paths to crossed button sprites
     public static string[] colorSpritesCrossed =
     {
-        "res://sprites/color_button_sprites/whiteCrossed.png",
-        "res://sprites/color_button_sprites/blackCrossed.png",
-        "res://sprites/color_button_sprites/redCrossed.png",
-        "res://sprites/color_button_sprites/greenCrossed.png",
-        "res://sprites/color_button_sprites/blueCrossed.png",
-        "res://sprites/color_button_sprites/yellowCrossed.png",
-        "res://sprites/color_button_sprites/turquoiseCrossed.png",
-        "res://sprites/color_button_sprites/purpleCrossed.png",
-        "res://sprites/color_button_sprites/blankCrossed.png",
+        "res://sprites/colorButtonSprites/whiteCrossed.png",
+        "res://sprites/colorButtonSprites/blackCrossed.png",
+        "res://sprites/colorButtonSprites/redCrossed.png",
+        "res://sprites/colorButtonSprites/greenCrossed.png",
+        "res://sprites/colorButtonSprites/blueCrossed.png",
+        "res://sprites/colorButtonSprites/yellowCrossed.png",
+        "res://sprites/colorButtonSprites/turquoiseCrossed.png",
+        "res://sprites/colorButtonSprites/purpleCrossed.png",
+        "res://sprites/colorButtonSprites/blankCrossed.png",
     };
 
-    // paths to crossed button sprites
+    // paths to pressed crossed button sprites
     public static string[] colorSpritesCrossedPressed =
     {
-        "res://sprites/color_button_sprites/whiteCrossedPressed.png",
-        "res://sprites/color_button_sprites/blackCrossedPressed.png",
-        "res://sprites/color_button_sprites/redCrossedPressed.png",
-        "res://sprites/color_button_sprites/greenCrossedPressed.png",
-        "res://sprites/color_button_sprites/blueCrossedPressed.png",
-        "res://sprites/color_button_sprites/yellowCrossedPressed.png",
-        "res://sprites/color_button_sprites/turquoiseCrossedPressed.png",
-        "res://sprites/color_button_sprites/purpleCrossedPressed.png",
-        "res://sprites/color_button_sprites/blankCrossedPressed.png",
+        "res://sprites/colorButtonSprites/whiteCrossedPressed.png",
+        "res://sprites/colorButtonSprites/blackCrossedPressed.png",
+        "res://sprites/colorButtonSprites/redCrossedPressed.png",
+        "res://sprites/colorButtonSprites/greenCrossedPressed.png",
+        "res://sprites/colorButtonSprites/blueCrossedPressed.png",
+        "res://sprites/colorButtonSprites/yellowCrossedPressed.png",
+        "res://sprites/colorButtonSprites/turquoiseCrossedPressed.png",
+        "res://sprites/colorButtonSprites/purpleCrossedPressed.png",
+        "res://sprites/colorButtonSprites/blankCrossedPressed.png",
     };
 }

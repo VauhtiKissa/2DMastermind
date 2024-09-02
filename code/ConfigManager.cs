@@ -31,7 +31,7 @@ public partial class ConfigManager : Node
         if (config.Fullscreen)
         {
             GetWindow().Mode = Window.ModeEnum.Fullscreen;
-            fullscreen_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/fullscreen_off.png");
+            fullscreen_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/fullScreenOff.png");
         }
     }
 
@@ -49,12 +49,12 @@ public partial class ConfigManager : Node
         if (config.Fullscreen)
         {
             GetWindow().Mode = Window.ModeEnum.Fullscreen;
-            fullscreen_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/fullscreen_off.png");
+            fullscreen_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/fullScreenOff.png");
         }
         else
         {
             GetWindow().Mode = Window.ModeEnum.Maximized;
-            fullscreen_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/fullscreen_on.png");
+            fullscreen_button.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/fullScreenOn.png");
         }
         save();
     }

@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://c4tujkaq1p20m"]
 
 [ext_resource type="Script" path="res://code/GridMaker.cs" id="1_tjpm1"]
-[ext_resource type="Texture2D" uid="uid://dlmx3cypm5o3m" path="res://sprites/color_button_sprites/colorButtonBackground.png" id="2_b7hbh"]
+[ext_resource type="Texture2D" uid="uid://dlmx3cypm5o3m" path="res://sprites/colorButtonSprites/colorButtonBackground.png" id="2_b7hbh"]
 [ext_resource type="Script" path="res://code/Menu.cs" id="3_urtfn"]
 [ext_resource type="Texture2D" uid="uid://c0hm22dwo3jha" path="res://sprites/backs/title_background.png" id="4_1fvrb"]
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="5_ouipg"]
-[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/other_buttons/menu_button_background.png" id="6_b522c"]
-[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/other_buttons/menu_button_hover.png" id="7_yn50k"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/other_buttons/menuButtonBackground.png" id="6_b522c"]
+[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/other_buttons/menuButtonHover.png" id="7_yn50k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uedwu"]
 texture = ExtResource("2_b7hbh")

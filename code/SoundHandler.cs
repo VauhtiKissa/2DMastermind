@@ -62,11 +62,11 @@ public partial class SoundHandler : Node
 		ConfigManager.save();
 
 		if(new_number == 0 ){
-			soundButton.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/mute_button_off.png");
+			soundButton.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/muteButtonOff.png");
 			hoverSoundMaker.VolumeDb = -80;
 			clickSoundMaker.VolumeDb = -80;
 		}else{
-			soundButton.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/mute_button_on.png");
+			soundButton.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/muteButtonOn.png");
 			hoverSoundMaker.VolumeDb = ConfigManager.config.buttonVolume / 10 -5;
 			clickSoundMaker.VolumeDb = ConfigManager.config.buttonVolume / 10 -5;
 		}
@@ -97,13 +97,13 @@ public partial class SoundHandler : Node
 		ConfigManager.save();
 
 		if(new_number == 0 ){
-			musicButton.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/music_button_off.png");
+			musicButton.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/musicButtonOff.png");
 			for (int i = 0; i < musicLevel; i++)
 			{
 				sources[i].VolumeDb = -80;
 			}
 		}else{
-			musicButton.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/music_button_on.png");
+			musicButton.TextureNormal = GD.Load<Texture2D>("res://sprites/other_buttons/musicButtonOn.png");
 			for (int i = 0; i < musicLevel; i++)
 			{
 				sources[i].VolumeDb = ConfigManager.config.musicVolume /10 -5;

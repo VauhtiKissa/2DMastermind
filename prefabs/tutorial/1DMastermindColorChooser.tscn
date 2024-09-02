@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://prvg6lawgu2y"]
 
 [ext_resource type="Script" path="res://code/ColorChooser.cs" id="1_vc4n1"]
-[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="2_d7v87"]
-[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="3_nhvmw"]
-[ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/end_button.png" id="4_mx0ib"]
-[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/end_button_hover.png" id="5_f5bnk"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/colorButtonSprites/Button.png" id="2_d7v87"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/colorButtonSprites/ButtonPressed.png" id="3_nhvmw"]
+[ext_resource type="Texture2D" uid="uid://u1tr6iauomxr" path="res://sprites/other_buttons/endButton.png" id="4_ht8vi"]
+[ext_resource type="Texture2D" uid="uid://govdynpc4hru" path="res://sprites/other_buttons/endButtonHover.png" id="5_m2py5"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_fuikl"]
 
@@ -122,8 +122,8 @@ offset_left = 144.0
 offset_top = 8.0
 offset_right = 204.0
 offset_bottom = 28.0
-texture_normal = ExtResource("4_mx0ib")
-texture_hover = ExtResource("5_f5bnk")
+texture_normal = ExtResource("4_ht8vi")
+texture_hover = ExtResource("5_m2py5")
 
 [connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton" to="." method="pickColor" binds= [0]]
 [connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton2" to="." method="pickColor" binds= [1]]

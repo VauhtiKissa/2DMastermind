@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://lycdrrph1w68"]
 
-[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="1_vn1w7"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/colorButtonSprites/Button.png" id="1_vn1w7"]
 [ext_resource type="Texture2D" uid="uid://b3xgabk48f7rm" path="res://sprites/backs/correct_answer_display_background.png" id="2_0drm5"]
 
 [sub_resource type="Animation" id="Animation_thdyq"]

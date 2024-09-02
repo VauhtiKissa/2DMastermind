@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://code/GuessCube.cs" id="1_666wo"]
 [ext_resource type="Texture2D" uid="uid://bs3a8hp3pkalb" path="res://sprites/backs/cube_background.png" id="2_dgroa"]
-[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/color_button_sprites/Button.png" id="3_ftt8o"]
-[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/color_button_sprites/ButtonPressed.png" id="4_ovptb"]
+[ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/colorButtonSprites/Button.png" id="3_ftt8o"]
+[ext_resource type="Texture2D" uid="uid://dfs6eolctoj14" path="res://sprites/colorButtonSprites/ButtonPressed.png" id="4_ovptb"]
 [ext_resource type="Theme" uid="uid://6jqlv17sxrpw" path="res://fonts/guess_cube_text.tres" id="5_eeewd"]
 [ext_resource type="PackedScene" uid="uid://bfliice1hm1nj" path="res://prefabs/game/ColorChooser.tscn" id="6_nsy2u"]
 

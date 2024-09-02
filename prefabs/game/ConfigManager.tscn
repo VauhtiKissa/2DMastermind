@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://6ejlykaabwov"]
 
 [ext_resource type="Script" path="res://code/ConfigManager.cs" id="1_s1ueo"]
-[ext_resource type="Texture2D" uid="uid://de18u72rrrxmk" path="res://sprites/other_buttons/fullscreen_on.png" id="2_hdbev"]
+[ext_resource type="Texture2D" uid="uid://de18u72rrrxmk" path="res://sprites/other_buttons/fullScreenOn.png" id="2_hdbev"]
 
 [node name="ConfigManager" type="Node"]
 script = ExtResource("1_s1ueo")

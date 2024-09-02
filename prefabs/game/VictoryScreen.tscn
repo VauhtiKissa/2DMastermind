@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://code/EndScreen.cs" id="1_0qakv"]
 [ext_resource type="Texture2D" uid="uid://c2fqy0ygoebwi" path="res://sprites/backs/Victory_back.png" id="2_6qn1c"]
-[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/other_buttons/menu_button_background.png" id="3_b8knm"]
+[ext_resource type="Texture2D" uid="uid://0vc7kx244ejk" path="res://sprites/other_buttons/menuButtonBackground.png" id="3_b8knm"]
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="4_oi2gw"]
-[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/other_buttons/menu_button_hover.png" id="5_873ee"]
+[ext_resource type="Texture2D" uid="uid://d3nsakkvcdmh4" path="res://sprites/other_buttons/menuButtonHover.png" id="5_873ee"]
 
 [sub_resource type="Animation" id="Animation_x56o3"]
 resource_name = "victory_animation"

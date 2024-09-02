@@ -13,7 +13,7 @@ config_version=5
 config/name="2DMastermind"
 run/main_scene="res://prefabs/game/Menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
-config/icon="res://sprites/color_button_sprites/white.png"
+config/icon="res://sprites/colorButtonSprites/white.png"
 
 [audio]
 
