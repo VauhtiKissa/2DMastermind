@@ -1,151 +1,168 @@
-using Godot;
 using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
+using Godot;
 
 public partial class GuessCube : Node
 {
-	public GameColors chosen_color;
-	private GameColors[] current_colors;
-	private TextureButton[] buttons;
-	private Label[] correct_answer_numbers;
-	private Label[] wrong_place_numbers;
-	private ColorChooser color_chooser;
-	[Export]
-	public bool tutorial = false;
-	[Export]
-	public bool sliding = false;
+    public GameColors chosenColor;
+    private GameColors[] currentColors;
+    private TextureButton[] buttons;
+    private Label[] correctAnswerNumbers;
+    private Label[] wrongPlaceNumbers;
+    private ColorChooser colorChooser;
 
-	public override void _Ready()
-	{
+    [Export]
+    public bool tutorial = false;
 
-		color_chooser = GetNode<ColorChooser>("./AnimationPositioner/ColorChooser");
-		
-		buttons = GetNode<Node2D>("./AnimationPositioner/Buttons").GetChildren().Cast<TextureButton>().ToArray();
-		correct_answer_numbers = GetNode<Node2D>("./AnimationPositioner/CorrectAnswerNumbers").GetChildren().Cast<Label>().ToArray();
-		wrong_place_numbers = GetNode<Node2D>("./AnimationPositioner/WrongPlaceNumbers").GetChildren().Cast<Label>().ToArray();
+    [Export]
+    public bool sliding = false;
 
-		current_colors = new GameColors[16];
+    public override void _Ready()
+    {
+        colorChooser = GetNode<ColorChooser>("./AnimationPositioner/ColorChooser");
 
-		for (int i = 0; i < buttons.Length; i++)
-		{
-			buttons[i].TextureNormal = GD.Load<Texture2D>(Color_values.color_sprites[0]);
-			buttons[i].TexturePressed = GD.Load<Texture2D>(Color_values.color_sprites_pressed[0]);
-			buttons[i].TextureHover = GD.Load<Texture2D>(Color_values.color_sprites_pressed[0]);
-        	GetNode<SoundHandler>("/root/SoundHandler").connectButton(buttons[i], false);
+        buttons = GetNode<Node2D>("./AnimationPositioner/Buttons").GetChildren().Cast<TextureButton>().ToArray();
+        correctAnswerNumbers = GetNode<Node2D>("./AnimationPositioner/CorrectAnswerNumbers").GetChildren().Cast<Label>().ToArray();
+        wrongPlaceNumbers = GetNode<Node2D>("./AnimationPositioner/WrongPlaceNumbers").GetChildren().Cast<Label>().ToArray();
 
-			current_colors[i] = GameColors.blank;
-		}
+        currentColors = new GameColors[16];
 
-		if(tutorial){
-			GameCoordinator.generate_answer();
-			activate();
-		}
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].TextureNormal = GD.Load<Texture2D>(Color_values.colorSprites[0]);
+            buttons[i].TexturePressed = GD.Load<Texture2D>(Color_values.colorSpritesPressed[0]);
+            buttons[i].TextureHover = GD.Load<Texture2D>(Color_values.colorSpritesPressed[0]);
+            GetNode<SoundHandler>("/root/SoundHandler").connectButton(buttons[i], false);
 
-	}
+            currentColors[i] = GameColors.blank;
+        }
 
-	public void button_pressed(int button_index){
+        if (tutorial)
+        {
+            GameCoordinator.generate_answer();
+            activate();
+        }
+    }
 
-		current_colors[button_index] = Input.IsActionPressed("left_click") ? chosen_color : GameColors.blank;
+    public void button_pressed(int button_index)
+    {
+        currentColors[button_index] = Input.IsActionPressed("left_click")
+            ? chosenColor
+            : GameColors.blank;
 
-		int color_index = (int)current_colors[button_index];
+        int color_index = (int)currentColors[button_index];
 
-		buttons[button_index].TextureNormal = GD.Load<Texture2D>(Color_values.color_sprites[color_index]);
-		buttons[button_index].TexturePressed = GD.Load<Texture2D>(Color_values.color_sprites_pressed[color_index]);
-		buttons[button_index].TextureHover = GD.Load<Texture2D>(Color_values.color_sprites_pressed[color_index]);
-	}
+        buttons[button_index].TextureNormal = GD.Load<Texture2D>(Color_values.colorSprites[color_index]);
+        buttons[button_index].TexturePressed = GD.Load<Texture2D>(Color_values.colorSpritesPressed[color_index]);
+        buttons[button_index].TextureHover = GD.Load<Texture2D>(Color_values.colorSpritesPressed[color_index]);
+    }
 
-	public void round_end(){
-		if(!tutorial){
-			GetNode<GameCoordinator>("../../").submitAnswer(check_answer());
-			disable();
-		}else{
-			check_answer();
-		}
-	}
+    public void round_end()
+    {
+        if (!tutorial)
+        {
+            GetNode<GameCoordinator>("../../").submitAnswer(check_answer());
+            disable();
+        }
+        else
+        {
+            check_answer();
+        }
+    }
 
-	public bool check_answer(){
+    public bool check_answer()
+    {
+        int correctAnswers = 0;
 
-		int correct_answers = 0;
+        for (int i = 0; i < 4; i++)
+        {
+            int rowCorrectAnswers = 0;
+            int rowWrongPositionAnswers = 0;
+            int columnCorrectAnswers = 0;
+            int columnWrongPositionAnswers = 0;
 
-		for (int i = 0; i < 4; i++)
-		{
+            List<GameColors> rowIncorrectlyGuessedCorrectColors = new List<GameColors>();
+            List<GameColors> rowIncorrectlyGuessedColors = new List<GameColors>();
+            List<GameColors> columnIncorrectlyGuessedCorrectColors = new List<GameColors>();
+            List<GameColors> columnIncorrectlyGuessedColors = new List<GameColors>();
 
-			int row_correct_answers = 0;
-			int row_wrong_position_answers = 0;
-			int column_correct_answers = 0;
-			int column_wrong_position_answers = 0;
+            for (int e = 0; e < 4; e++)
+            {
+                // check row
+                if (currentColors[i * 4 + e] == GameCoordinator.correctAnswer[i * 4 + e])
+                {
+                    correctAnswers += 1;
+                    rowCorrectAnswers += 1;
+                }
+                else
+                {
+                    rowIncorrectlyGuessedCorrectColors.Add(
+                        GameCoordinator.correctAnswer[i * 4 + e]
+                    );
+                    rowIncorrectlyGuessedColors.Add(currentColors[i * 4 + e]);
+                }
+                // check column
+                if (currentColors[i + e * 4] == GameCoordinator.correctAnswer[i + e * 4])
+                {
+                    columnCorrectAnswers += 1;
+                }
+                else
+                {
+                    columnIncorrectlyGuessedCorrectColors.Add(GameCoordinator.correctAnswer[i + e * 4]);
+                    columnIncorrectlyGuessedColors.Add(currentColors[i + e * 4]);
+                }
+            }
+            foreach (GameColors color in rowIncorrectlyGuessedColors)
+            {
+                if (rowIncorrectlyGuessedCorrectColors.Contains(color))
+                {
+                    rowWrongPositionAnswers += 1;
+                    rowIncorrectlyGuessedCorrectColors.Remove(color);
+                }
+            }
+            foreach (GameColors color in columnIncorrectlyGuessedColors)
+            {
+                if (columnIncorrectlyGuessedCorrectColors.Contains(color))
+                {
+                    columnWrongPositionAnswers += 1;
+                    columnIncorrectlyGuessedCorrectColors.Remove(color);
+                }
+            }
+            correctAnswerNumbers[i].Text = rowCorrectAnswers.ToString();
+            correctAnswerNumbers[i + 4].Text = columnCorrectAnswers.ToString();
+            wrongPlaceNumbers[i].Text = rowWrongPositionAnswers.ToString();
+            wrongPlaceNumbers[i + 4].Text = columnWrongPositionAnswers.ToString();
+        }
+        return correctAnswers == 16;
+    }
 
-			List<GameColors>row_incorrectly_guessed_correct_colors = new List<GameColors>();
-			List<GameColors>row_incorrectly_guessed_colors = new List<GameColors>();
-			List<GameColors>column_incorrectly_guessed_correct_colors = new List<GameColors>();
-			List<GameColors>column_incorrectly_guessed_colors = new List<GameColors>();
+    public void activate()
+    {
+        if (sliding)
+        {
+            GetNode<AnimationPlayer>("./AnimationPlayer").Play("GuessCubeSlide");
+        }
 
-			for (int e = 0; e < 4; e++)
-			{
-				// check row
-				if(current_colors[i*4+e] == GameCoordinator.correct_answer[i*4+e]){
-					correct_answers += 1;
-					row_correct_answers += 1;
-				}else{
-					row_incorrectly_guessed_correct_colors.Add(GameCoordinator.correct_answer[i*4+e]);
-					row_incorrectly_guessed_colors.Add(current_colors[i*4+e]);
-				}
-				// check column
-				if(current_colors[i+e*4] == GameCoordinator.correct_answer[i+e*4]){
-					column_correct_answers += 1;
-				}else{
-					column_incorrectly_guessed_correct_colors.Add(GameCoordinator.correct_answer[i+e*4]);
-					column_incorrectly_guessed_colors.Add(current_colors[i+e*4]);
-				}
-			}
-			foreach (GameColors color in row_incorrectly_guessed_colors)
-			{
-				if(row_incorrectly_guessed_correct_colors.Contains(color)){
-					row_wrong_position_answers += 1;
-					row_incorrectly_guessed_correct_colors.Remove(color);
-				}
+        for (int i = 0; i < 16; i++)
+        {
+            buttons[i].Disabled = false;
+            buttons[i].TextureNormal = GD.Load<Texture2D>(Color_values.colorSprites[(int)GameColors.blank]);
+            buttons[i].TexturePressed = GD.Load<Texture2D>(Color_values.colorSpritesPressed[(int)GameColors.blank]);
+            buttons[i].TextureHover = GD.Load<Texture2D>(Color_values.colorSpritesPressed[(int)GameColors.blank]);
+        }
+        colorChooser.activate();
+    }
 
-			}
-			foreach (GameColors color in column_incorrectly_guessed_colors)
-			{
-				if(column_incorrectly_guessed_correct_colors.Contains(color)){
-					column_wrong_position_answers += 1;
-					column_incorrectly_guessed_correct_colors.Remove(color);
-				}
-
-			}
-			correct_answer_numbers[i].Text = row_correct_answers.ToString();
-			correct_answer_numbers[i+4].Text = column_correct_answers.ToString();
-			wrong_place_numbers[i].Text = row_wrong_position_answers.ToString();
-			wrong_place_numbers[i+4].Text = column_wrong_position_answers.ToString();
-		}
-		return correct_answers == 16;
-	}
-
-	public void activate(){
-		if(sliding){
-			GetNode<AnimationPlayer>("./AnimationPlayer").Play("GuessCubeSlide");
-		}
-
-		for (int i = 0; i < 16; i++)
-		{
-			buttons[i].Disabled = false;
-			buttons[i].TextureNormal = GD.Load<Texture2D>(Color_values.color_sprites[(int)GameColors.blank]);
-			buttons[i].TexturePressed = GD.Load<Texture2D>(Color_values.color_sprites_pressed[(int)GameColors.blank]);
-			buttons[i].TextureHover = GD.Load<Texture2D>(Color_values.color_sprites_pressed[(int)GameColors.blank]);
-		}
-		color_chooser.activate();
-	}
-
-	public void disable(){
-		if(sliding){
-			GetNode<AnimationPlayer>("./AnimationPlayer").PlayBackwards("GuessCubeSlide");
-		}
-		for (int i = 0; i < 16; i++)
-		{
-			buttons[i].Disabled = true;
-		}
-	}
-
+    public void disable()
+    {
+        if (sliding)
+        {
+            GetNode<AnimationPlayer>("./AnimationPlayer").PlayBackwards("GuessCubeSlide");
+        }
+        for (int i = 0; i < 16; i++)
+        {
+            buttons[i].Disabled = true;
+        }
+    }
 }

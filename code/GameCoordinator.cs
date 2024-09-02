@@ -4,19 +4,19 @@ using System.Linq;
 
 public partial class GameCoordinator : Node2D
 {
-	private int round_number = 0;
-	public static GameColors[] correct_answer;
-	private GuessCube[] guess_cubes;
+	private int roundNumber = 0;
+	public static GameColors[] correctAnswer;
+	private GuessCube[] guessCubes;
 	private double time = 0;
-	private SoundHandler sound_handler;
+	private SoundHandler soundHandler;
 
 	public override void _Ready()
 	{
-		sound_handler = GetNode<SoundHandler>("/root/SoundHandler");
-		guess_cubes = GetNode<Node2D>("./GuessCubes").GetChildren().Cast<GuessCube>().ToArray();
+		soundHandler = GetNode<SoundHandler>("/root/SoundHandler");
+		guessCubes = GetNode<Node2D>("./GuessCubes").GetChildren().Cast<GuessCube>().ToArray();
 		generate_answer();
 		start_round();
-		sound_handler.connectButton(GetNode<TextureButton>("./TextureButton"), true);
+		soundHandler.connectButton(GetNode<TextureButton>("./TextureButton"), true);
 	}
 
 	public override void _Process(double delta)
@@ -25,9 +25,9 @@ public partial class GameCoordinator : Node2D
 	}
 
 	public static void generate_answer(){
-		correct_answer = new GameColors[16];
+		correctAnswer = new GameColors[16];
 		for (int i = 0 ; i < 16 ; i++){
-			correct_answer[i] = (GameColors)GD.RandRange(0,7);
+			correctAnswer[i] = (GameColors)GD.RandRange(0,7);
 		}
 	}
 
@@ -39,12 +39,12 @@ public partial class GameCoordinator : Node2D
 		}
 	}
 	public void start_round(){
-		if(round_number < 8){
+		if(roundNumber < 8){
 
-			sound_handler.roundUp(round_number);
+			soundHandler.roundUp(roundNumber);
 
-			guess_cubes[round_number].activate();
-			round_number += 1;
+			guessCubes[roundNumber].activate();
+			roundNumber += 1;
 		}else{
 			AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/LossScreen.tscn").Instantiate());
 		}
@@ -67,7 +67,7 @@ public partial class GameCoordinator : Node2D
 	}
 
 	public void back_to_menu(){
-		sound_handler.restartSoundLevel();
+		soundHandler.restartSoundLevel();
 		GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://prefabs/game/Menu.tscn").Instantiate());
 		GetParent().QueueFree();
 	}

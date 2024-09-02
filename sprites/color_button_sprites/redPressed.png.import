@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djapeqni4rwb4"
-path="res://.godot/imported/turquoise_pressed.png-d42744cfdebe8e74a0ba69d87fb49f3f.ctex"
+uid="uid://bkkeqnp0ja8fv"
+path="res://.godot/imported/redPressed.png-ab3500d6f0797d6be13a9e6d7fcc0394.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/color_button_sprites/turquoise_pressed.png"
-dest_files=["res://.godot/imported/turquoise_pressed.png-d42744cfdebe8e74a0ba69d87fb49f3f.ctex"]
+source_file="res://sprites/color_button_sprites/redPressed.png"
+dest_files=["res://.godot/imported/redPressed.png-ab3500d6f0797d6be13a9e6d7fcc0394.ctex"]
 
 [params]
 

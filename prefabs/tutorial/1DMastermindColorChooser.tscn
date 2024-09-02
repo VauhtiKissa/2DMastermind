@@ -21,20 +21,8 @@ position = Vector2(-4, 0)
 offset_left = 4.0
 offset_right = 34.0
 offset_bottom = 30.0
-toggle_mode = true
 action_mode = 0
-button_group = SubResource("ButtonGroup_fuikl")
-texture_normal = ExtResource("2_d7v87")
-texture_pressed = ExtResource("3_nhvmw")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="TextureButton3" type="TextureButton" parent="AnimationPositioner/Buttons"]
-offset_left = 64.0
-offset_right = 94.0
-offset_bottom = 30.0
-toggle_mode = true
-action_mode = 0
+button_mask = 3
 button_group = SubResource("ButtonGroup_fuikl")
 texture_normal = ExtResource("2_d7v87")
 texture_pressed = ExtResource("3_nhvmw")
@@ -45,8 +33,20 @@ stretch_mode = 0
 offset_left = 34.0
 offset_right = 64.0
 offset_bottom = 30.0
-toggle_mode = true
 action_mode = 0
+button_mask = 3
+button_group = SubResource("ButtonGroup_fuikl")
+texture_normal = ExtResource("2_d7v87")
+texture_pressed = ExtResource("3_nhvmw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="AnimationPositioner/Buttons"]
+offset_left = 64.0
+offset_right = 94.0
+offset_bottom = 30.0
+action_mode = 0
+button_mask = 3
 button_group = SubResource("ButtonGroup_fuikl")
 texture_normal = ExtResource("2_d7v87")
 texture_pressed = ExtResource("3_nhvmw")
@@ -57,8 +57,8 @@ stretch_mode = 0
 offset_left = 94.0
 offset_right = 124.0
 offset_bottom = 30.0
-toggle_mode = true
 action_mode = 0
+button_mask = 3
 button_group = SubResource("ButtonGroup_fuikl")
 texture_normal = ExtResource("2_d7v87")
 texture_pressed = ExtResource("3_nhvmw")
@@ -70,8 +70,8 @@ offset_left = 4.0
 offset_top = 30.0
 offset_right = 34.0
 offset_bottom = 60.0
-toggle_mode = true
 action_mode = 0
+button_mask = 3
 button_group = SubResource("ButtonGroup_fuikl")
 texture_normal = ExtResource("2_d7v87")
 texture_pressed = ExtResource("3_nhvmw")
@@ -83,8 +83,8 @@ offset_left = 34.0
 offset_top = 30.0
 offset_right = 64.0
 offset_bottom = 60.0
-toggle_mode = true
 action_mode = 0
+button_mask = 3
 button_group = SubResource("ButtonGroup_fuikl")
 texture_normal = ExtResource("2_d7v87")
 texture_pressed = ExtResource("3_nhvmw")
@@ -96,8 +96,8 @@ offset_left = 64.0
 offset_top = 30.0
 offset_right = 94.0
 offset_bottom = 60.0
-toggle_mode = true
 action_mode = 0
+button_mask = 3
 button_group = SubResource("ButtonGroup_fuikl")
 texture_normal = ExtResource("2_d7v87")
 texture_pressed = ExtResource("3_nhvmw")
@@ -109,8 +109,8 @@ offset_left = 94.0
 offset_top = 30.0
 offset_right = 124.0
 offset_bottom = 60.0
-toggle_mode = true
 action_mode = 0
+button_mask = 3
 button_group = SubResource("ButtonGroup_fuikl")
 texture_normal = ExtResource("2_d7v87")
 texture_pressed = ExtResource("3_nhvmw")
@@ -126,8 +126,8 @@ texture_normal = ExtResource("4_mx0ib")
 texture_hover = ExtResource("5_f5bnk")
 
 [connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton" to="." method="pickColor" binds= [0]]
-[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton3" to="." method="pickColor" binds= [2]]
 [connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton2" to="." method="pickColor" binds= [1]]
+[connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton3" to="." method="pickColor" binds= [2]]
 [connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton4" to="." method="pickColor" binds= [3]]
 [connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton5" to="." method="pickColor" binds= [4]]
 [connection signal="pressed" from="AnimationPositioner/Buttons/TextureButton6" to="." method="pickColor" binds= [5]]

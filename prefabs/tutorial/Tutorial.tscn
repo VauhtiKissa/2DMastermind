@@ -12,10 +12,10 @@
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="7_ysk8h"]
 [ext_resource type="PackedScene" uid="uid://cbcbj8r4rsyr5" path="res://prefabs/tutorial/BlankExplination.tscn" id="8_k87n1"]
 
-[node name="Tutorial" type="Node2D" node_paths=PackedStringArray("Pages")]
+[node name="Tutorial" type="Node2D" node_paths=PackedStringArray("pages")]
 texture_filter = 3
 script = ExtResource("1_h4gew")
-Pages = []
+pages = []
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -10

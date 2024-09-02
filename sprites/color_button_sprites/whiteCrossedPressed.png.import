@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0nyui6qc32op"
-path="res://.godot/imported/green_pressed.png-d69bc01591e56de1ad038051a5f23310.ctex"
+uid="uid://c8r083c8smrak"
+path="res://.godot/imported/whiteCrossedPressed.png-1860d549fb54607f661ff7b4abfac5be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/color_button_sprites/green_pressed.png"
-dest_files=["res://.godot/imported/green_pressed.png-d69bc01591e56de1ad038051a5f23310.ctex"]
+source_file="res://sprites/color_button_sprites/whiteCrossedPressed.png"
+dest_files=["res://.godot/imported/whiteCrossedPressed.png-1860d549fb54607f661ff7b4abfac5be.ctex"]
 
 [params]
 

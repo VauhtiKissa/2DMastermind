@@ -1,23 +1,33 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhc0k2wkd4qvc"]
 
 [ext_resource type="Texture2D" uid="uid://bbr5uh4icnv22" path="res://sprites/GameScreenshot.png" id="1_el7x1"]
-[ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="2_v2rrn"]
+[ext_resource type="Theme" uid="uid://6jqlv17sxrpw" path="res://fonts/guess_cube_text.tres" id="2_rh855"]
 
 [node name="GameProgressionExplination" type="Node2D"]
+texture_filter = 1
 
 [node name="GameScreenshot" type="Sprite2D" parent="."]
-position = Vector2(504, 280)
-scale = Vector2(0.330021, 0.35239)
+position = Vector2(500, 236)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_el7x1")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 289.0
-offset_top = 78.0
-offset_right = 681.0
-offset_bottom = 156.0
-theme = ExtResource("2_v2rrn")
+[node name="Label3" type="Label" parent="."]
+offset_left = 280.0
+offset_top = 352.0
+offset_right = 720.0
+offset_bottom = 375.0
+theme = ExtResource("2_rh855")
+text = "Each cube represents a guess"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 332.0
+offset_top = 60.0
+offset_right = 676.0
+offset_bottom = 160.0
+theme = ExtResource("2_rh855")
 text = "You have 8 guesses to get the correct combination"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
-metadata/_edit_use_anchors_ = true

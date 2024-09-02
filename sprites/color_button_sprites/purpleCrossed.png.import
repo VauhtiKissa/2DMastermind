@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://douh27bcopm63"
-path="res://.godot/imported/black_pressed.png-cd9c9a3678846002ca65d46cccb4aff3.ctex"
+uid="uid://cquufofmvj5ol"
+path="res://.godot/imported/purpleCrossed.png-1a55d101fa4b509b5832b7d4baa4b63b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/color_button_sprites/black_pressed.png"
-dest_files=["res://.godot/imported/black_pressed.png-cd9c9a3678846002ca65d46cccb4aff3.ctex"]
+source_file="res://sprites/color_button_sprites/purpleCrossed.png"
+dest_files=["res://.godot/imported/purpleCrossed.png-1a55d101fa4b509b5832b7d4baa4b63b.ctex"]
 
 [params]
 

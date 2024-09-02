@@ -1,34 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbcbj8r4rsyr5"]
+[gd_scene load_steps=4 format=3 uid="uid://cbcbj8r4rsyr5"]
 
 [ext_resource type="Texture2D" uid="uid://dayrjy5g8oopy" path="res://sprites/color_button_sprites/blank.png" id="1_dw68j"]
+[ext_resource type="Texture2D" uid="uid://bqfuu13t6yni0" path="res://sprites/color_button_sprites/blackCrossed.png" id="2_ko4up"]
 [ext_resource type="Theme" uid="uid://c6ryupqswrbrf" path="res://fonts/basic_click_button_theme.tres" id="2_ty5fl"]
 
 [node name="BlankExplination" type="Node2D"]
 
 [node name="Blank" type="Sprite2D" parent="."]
-position = Vector2(480, 216)
+position = Vector2(264, 272)
 scale = Vector2(3, 3)
 texture = ExtResource("1_dw68j")
+
+[node name="BlackCrossed" type="Sprite2D" parent="."]
+position = Vector2(672, 272)
+scale = Vector2(3, 3)
+texture = ExtResource("2_ko4up")
 
 [node name="Texts" type="Node2D" parent="."]
 position = Vector2(64, 0)
 
 [node name="Label" type="Label" parent="Texts"]
-offset_left = 224.0
-offset_top = 80.0
-offset_right = 608.0
-offset_bottom = 158.0
+offset_left = 24.0
+offset_top = 152.0
+offset_right = 408.0
+offset_bottom = 195.0
 theme = ExtResource("2_ty5fl")
 text = "You can right click to make a block blank"
 horizontal_alignment = 1
-vertical_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="Texts"]
-offset_left = 224.0
-offset_top = 272.0
-offset_right = 608.0
-offset_bottom = 350.0
+offset_left = 24.0
+offset_top = 328.0
+offset_right = 408.0
+offset_bottom = 406.0
 theme = ExtResource("2_ty5fl")
 text = "The code never contains blank blocks"
 horizontal_alignment = 1
@@ -36,12 +42,22 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="Texts"]
-offset_left = 640.0
+offset_left = 664.0
 offset_top = 424.0
-offset_right = 792.0
+offset_right = 816.0
 offset_bottom = 536.0
 theme = ExtResource("2_ty5fl")
 text = "The settings are in the corner"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="Texts"]
+offset_left = 392.0
+offset_top = 152.0
+offset_right = 808.0
+offset_bottom = 230.0
+theme = ExtResource("2_ty5fl")
+text = "You can right click to mark color picker buttons"
+horizontal_alignment = 1
 autowrap_mode = 2

@@ -4,7 +4,7 @@ importer="texture_atlas"
 type="Texture2D"
 uid="uid://bd4ndyqw8cvbf"
 path="res://.godot/imported/yellow.png-7610813e7f5f97639dbff08de5c39ad9.res"
-group_file="res://sprites/color_button_sprites/color_button_background.png"
+group_file="res://sprites/color_button_sprites/colorButtonBackground.png"
 valid=true
 [deps]
 
@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/yellow.png-7610813e7f5f97639dbff08de5c39ad9.r
 
 [params]
 
-atlas_file="res://sprites/color_button_sprites/color_button_background.png"
+atlas_file="res://sprites/color_button_sprites/colorButtonBackground.png"
 import_mode=0
 crop_to_region=false
 trim_alpha_border_from_region=true

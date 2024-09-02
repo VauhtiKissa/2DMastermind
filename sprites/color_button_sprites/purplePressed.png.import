@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctylput7mqu6b"
-path="res://.godot/imported/yellow_pressed.png-dc7977c924f61b241755f081b8bddc1a.ctex"
+uid="uid://g2f52d032s6i"
+path="res://.godot/imported/purplePressed.png-d45fc8b52b68cd9c725c0fde4fa78aef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/color_button_sprites/yellow_pressed.png"
-dest_files=["res://.godot/imported/yellow_pressed.png-dc7977c924f61b241755f081b8bddc1a.ctex"]
+source_file="res://sprites/color_button_sprites/purplePressed.png"
+dest_files=["res://.godot/imported/purplePressed.png-d45fc8b52b68cd9c725c0fde4fa78aef.ctex"]
 
 [params]
 
