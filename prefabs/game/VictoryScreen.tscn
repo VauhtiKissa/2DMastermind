@@ -16,10 +16,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.3, 1.3, 1.7, 2.1),
+"times": PackedFloat32Array(0, 1.3, 1.7, 2.1),
 "transitions": PackedFloat32Array(1.7411, 0.435275, 2.21914, 1),
 "update": 0,
-"values": [Vector2(0, -500), Vector2(0, 50), Vector2(0, -50), Vector2(0, 0)]
+"values": [Vector2(480, -500), Vector2(480, 300), Vector2(480, 250), Vector2(480, 300)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uhg7e"]
@@ -34,33 +34,33 @@ victory = true
 
 [node name="AnimationPositioner" type="Node2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -500)
+position = Vector2(480, 300)
 
 [node name="LossBackground" type="Sprite2D" parent="AnimationPositioner"]
-position = Vector2(512, 240)
 texture = ExtResource("2_6qn1c")
 
 [node name="TimerBack" type="Sprite2D" parent="AnimationPositioner"]
-position = Vector2(512, 192)
+position = Vector2(0, -41.031)
 texture = ExtResource("3_b8knm")
 
 [node name="Label" type="Label" parent="AnimationPositioner/TimerBack"]
 offset_left = -120.0
-offset_top = -32.0
+offset_top = -33.0
 offset_right = 119.0
-offset_bottom = 32.0
+offset_bottom = 30.0
 scale = Vector2(1.00485, 1.03302)
 theme = ExtResource("4_oi2gw")
 text = "Time: XX:XX.XXX"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="AnimationPositioner"]
 texture_filter = 1
-offset_left = 360.0
-offset_top = 104.0
-offset_right = 664.0
-offset_bottom = 155.0
+offset_left = -150.0
+offset_top = -132.0
+offset_right = 149.0
+offset_bottom = -81.0
 scale = Vector2(1.00588, 1)
 theme = ExtResource("4_oi2gw")
 theme_override_font_sizes/font_size = 45
@@ -68,10 +68,10 @@ text = "YOU WON!"
 horizontal_alignment = 1
 
 [node name="Restart" type="TextureButton" parent="AnimationPositioner"]
-offset_left = 392.0
-offset_top = 240.0
-offset_right = 632.0
-offset_bottom = 304.0
+offset_left = -120.215
+offset_top = -0.228165
+offset_right = 119.785
+offset_bottom = 63.7718
 texture_normal = ExtResource("3_b8knm")
 texture_pressed = ExtResource("5_873ee")
 texture_hover = ExtResource("5_873ee")
@@ -85,12 +85,13 @@ theme = ExtResource("4_oi2gw")
 text = "NEW GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="Menu" type="TextureButton" parent="AnimationPositioner"]
-offset_left = 392.0
-offset_top = 320.0
-offset_right = 632.0
-offset_bottom = 384.0
+offset_left = -122.225
+offset_top = 74.3673
+offset_right = 117.775
+offset_bottom = 138.367
 texture_normal = ExtResource("3_b8knm")
 texture_pressed = ExtResource("5_873ee")
 texture_hover = ExtResource("5_873ee")
@@ -104,6 +105,7 @@ theme = ExtResource("4_oi2gw")
 text = "BACK TO MENU"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationPositioner"]
 libraries = {

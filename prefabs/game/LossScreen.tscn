@@ -19,9 +19,9 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.8, 1.1),
-"transitions": PackedFloat32Array(2, 0.170755, 0.15932),
+"transitions": PackedFloat32Array(2, 0.574349, 0.15932),
 "update": 0,
-"values": [Vector2(0, 500), Vector2(0, 0), Vector2(0, 50)]
+"values": [Vector2(480, 700), Vector2(480, 200), Vector2(480, 300)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ywlv4"]
@@ -35,32 +35,32 @@ script = ExtResource("1_ux3e3")
 [node name="AnimationPositioner" type="Node2D" parent="."]
 z_index = 10
 texture_filter = 1
-position = Vector2(0, 500)
+position = Vector2(480, 300)
 
 [node name="CorrectAnswerDisplay" parent="AnimationPositioner" instance=ExtResource("2_g88as")]
 z_as_relative = false
-position = Vector2(676, 144)
+position = Vector2(8, -100)
 
 [node name="LossBackground" type="Sprite2D" parent="AnimationPositioner"]
-position = Vector2(512, 206)
+position = Vector2(0, -26)
 texture = ExtResource("3_1c5mu")
 
 [node name="Label" type="Label" parent="AnimationPositioner"]
 texture_filter = 1
-offset_left = 360.0
-offset_top = 104.0
-offset_right = 664.0
-offset_bottom = 155.0
+offset_left = -152.0
+offset_top = -128.0
+offset_right = 152.0
+offset_bottom = -77.0
 theme_override_fonts/font = ExtResource("4_a5xc5")
 theme_override_font_sizes/font_size = 45
 text = "YOU LOST"
 horizontal_alignment = 1
 
 [node name="Restart" type="TextureButton" parent="AnimationPositioner"]
-offset_left = 392.0
-offset_top = 160.0
-offset_right = 632.0
-offset_bottom = 224.0
+offset_left = -120.0
+offset_top = -72.0
+offset_right = 120.0
+offset_bottom = -8.0
 texture_normal = ExtResource("5_orrpo")
 texture_pressed = ExtResource("6_cbpdq")
 texture_hover = ExtResource("6_cbpdq")
@@ -76,10 +76,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Menu" type="TextureButton" parent="AnimationPositioner"]
-offset_left = 388.0
-offset_top = 240.0
-offset_right = 628.0
-offset_bottom = 304.0
+offset_left = -124.0
+offset_top = 8.0
+offset_right = 116.0
+offset_bottom = 72.0
 texture_normal = ExtResource("5_orrpo")
 texture_pressed = ExtResource("6_cbpdq")
 texture_hover = ExtResource("6_cbpdq")

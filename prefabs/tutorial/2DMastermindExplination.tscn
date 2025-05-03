@@ -30,9 +30,9 @@ and 4 rows"
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="Texts"]
-offset_left = 480.0
+offset_left = 492.0
 offset_top = 376.0
-offset_right = 776.0
+offset_right = 788.0
 offset_bottom = 439.0
 theme = ExtResource("1_hda1k")
 text = "Press here to check your answer"

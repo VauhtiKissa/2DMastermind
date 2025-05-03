@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://lycdrrph1w68"]
+[gd_scene load_steps=7 format=3 uid="uid://lycdrrph1w68"]
 
 [ext_resource type="Texture2D" uid="uid://s67bakqjiykh" path="res://sprites/colorButtonSprites/Button.png" id="1_vn1w7"]
 [ext_resource type="Texture2D" uid="uid://b3xgabk48f7rm" path="res://sprites/backs/correct_answer_display_background.png" id="2_0drm5"]
 
-[sub_resource type="Animation" id="Animation_thdyq"]
-resource_name = "correct_answer_display_slide"
-length = 2.0
+[sub_resource type="Animation" id="Animation_ona6s"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -13,10 +12,26 @@ tracks/0/path = NodePath("Sprites:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(1.6, 2),
-"transitions": PackedFloat32Array(1, 0.5),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-144, 0), Vector2(0, 0)]
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_thdyq"]
+resource_name = "correct_answer_display_slide"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.1, 1.6, 2, 2.4),
+"transitions": PackedFloat32Array(0.210224, 0.28, 1, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(140, 0), Vector2(130, 0), Vector2(140, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_f4rct"]
@@ -24,6 +39,7 @@ resource_name = "new_animation"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ahqwu"]
 _data = {
+"RESET": SubResource("Animation_ona6s"),
 "correct_answer_display_slide": SubResource("Animation_thdyq"),
 "new_animation": SubResource("Animation_f4rct")
 }
@@ -33,78 +49,94 @@ z_index = 5
 texture_filter = 1
 
 [node name="Sprites" type="Node2D" parent="."]
-position = Vector2(-144, 0)
 scale = Vector2(1, 0.996454)
 
 [node name="Button" type="Sprite2D" parent="Sprites"]
-position = Vector2(15, 15)
+position = Vector2(27, 27.0427)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button2" type="Sprite2D" parent="Sprites"]
-position = Vector2(45, 15)
+position = Vector2(57, 27.0427)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button3" type="Sprite2D" parent="Sprites"]
-position = Vector2(75, 15)
+position = Vector2(87, 27.0427)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button4" type="Sprite2D" parent="Sprites"]
-position = Vector2(105, 15)
+position = Vector2(117, 27.0427)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button5" type="Sprite2D" parent="Sprites"]
-position = Vector2(15, 45)
+position = Vector2(27, 57.0427)
 scale = Vector2(1, 1.02087)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button6" type="Sprite2D" parent="Sprites"]
-position = Vector2(45, 45)
+position = Vector2(57, 57.0427)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button7" type="Sprite2D" parent="Sprites"]
-position = Vector2(75, 45)
+position = Vector2(87, 57.0427)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button8" type="Sprite2D" parent="Sprites"]
-position = Vector2(105, 45)
+position = Vector2(117, 57.0427)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button9" type="Sprite2D" parent="Sprites"]
-position = Vector2(15, 75)
+position = Vector2(27, 87.0427)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button10" type="Sprite2D" parent="Sprites"]
-position = Vector2(45, 75)
+position = Vector2(57, 87.0427)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button11" type="Sprite2D" parent="Sprites"]
-position = Vector2(75, 75)
+position = Vector2(87, 87.0427)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button12" type="Sprite2D" parent="Sprites"]
-position = Vector2(105, 75)
+position = Vector2(117, 87.0427)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button13" type="Sprite2D" parent="Sprites"]
-position = Vector2(15, 105)
+position = Vector2(27, 117.043)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button14" type="Sprite2D" parent="Sprites"]
-position = Vector2(45, 105)
+position = Vector2(57, 117.043)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button15" type="Sprite2D" parent="Sprites"]
-position = Vector2(75, 105)
+position = Vector2(87, 117.043)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="Button16" type="Sprite2D" parent="Sprites"]
-position = Vector2(105, 105)
+position = Vector2(117, 117.043)
 texture = ExtResource("1_vn1w7")
+metadata/_edit_lock_ = true
 
 [node name="CorrectAnswerDisplayBackground" type="Sprite2D" parent="Sprites"]
 z_index = -1
-position = Vector2(60, 60)
+position = Vector2(72, 72.2562)
 texture = ExtResource("2_0drm5")
+metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

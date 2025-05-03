@@ -116,6 +116,18 @@ text = "QUIT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label" type="Label" parent="Menu/Quit/Label"]
+modulate = Color(0.201527, 0.201527, 0.201527, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = -364.0
+offset_top = 164.0
+offset_right = -268.0
+offset_bottom = 192.0
+theme = ExtResource("5_ouipg")
+text = "V:1"
+vertical_alignment = 1
+
 [node name="Camera2D" type="Camera2D" parent="Menu"]
 position = Vector2(480, 270)
 
